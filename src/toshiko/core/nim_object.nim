@@ -67,11 +67,15 @@ proc `$`*(a: NimRef): string =
     else:
       return $a.integer
   of NIMOBJECT_STRING:
-    return "\"" & a.str & "\""
+    return a.str
   of NIMOBJECT_ARRAY:
     var r = "["
     for i in a.arr:
-      r &= $i & ", "
+      r =
+        if i.kind == NIMOBJECT_STRING:
+          r & "\"" & $i & "\"" & ", "
+        else:
+          r & $i & ", "
     if r != "[":
       r = r[0..^3] & "]"
     else:
@@ -80,7 +84,11 @@ proc `$`*(a: NimRef): string =
   of NIMOBJECT_OBJECT:
     var r = "{"
     for i in a.dict:
-      r &= $i.key & ": " & $i.value & ", "
+      r =
+        if i.key.kind == NIMOBJECT_STRING:
+          r & "\"" & $i.key & "\"" & ": " & $i.value & ", "
+        else:
+          r & $i.key & ": " & $i.value & ", "
     if r != "{":
       r = r[0..^3] & "}"
     else:
@@ -147,11 +155,11 @@ proc `[]`*(a, b: NimRef): NimRef =
         return i.value
 
 
-proc `[]=`*(a: var NimRef, i: int, v: NimRef) =
+proc `[]=`*(a: NimRef, i: int, v: NimRef) =
   if a.kind == NIMOBJECT_ARRAY:
     a.arr[i] = v
 
-proc `[]=`*(a: var NimRef, i, v: NimRef) =
+proc `[]=`*(a: NimRef, i, v: NimRef) =
   if a.kind == NIMOBJECT_OBJECT:
     for j in 0..a.dict.high:
       if a.dict[j].key == i:
@@ -165,8 +173,16 @@ proc `[]=`*(a: var NimRef, i, v: NimRef) =
         return
     a.attrs.add((i.str, v))
 
+proc `[]=`*(a: NimRef, i: string, v: NimRef) =
+  if a.kind == NIMOBJECT_TYPE:
+    for j in 0..a.attrs.high:
+      if a.attrs[j].name == i:
+        a.attrs[j].value = v
+        return
+    a.attrs.add((i, v))
+
 # --- Standard functions --- #
-proc add*(a: var NimRef, b: NimRef) =
+proc add*(a: NimRef, b: NimRef) =
   if a.kind == NIMOBJECT_ARRAY:
     a.arr.add(b)
   elif a.kind == NIMOBJECT_NUMBER and a.kind == b.kind:
@@ -177,7 +193,7 @@ proc len*(a: NimRef): int =
   if a.kind == NIMOBJECT_ARRAY:
     return a.arr.len()
 
-proc pop*(a: var NimRef, index: int = -1): NimRef =
+proc pop*(a: NimRef, index: int = -1): NimRef =
   if a.kind == NIMOBJECT_ARRAY:
     var j = index
     if j == -1:

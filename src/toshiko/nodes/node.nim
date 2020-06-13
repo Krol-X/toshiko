@@ -12,6 +12,7 @@ type
     name*: string
     kind*: NodeKind
     nodetype*: NodeType
+    pausemode*: PauseMode
     parent*: NodeRef
     children*: seq[NodeRef]
 
@@ -21,7 +22,7 @@ type
     on_ready*: NodeHandler  ## Called after `on_enter`.
     on_process*: NodeHandler  ## Called every tick.
 
-    properties: NimRef  ## Custom properties. You can change it at any time.
+    properties*: NimRef  ## Custom properties. You can change it at any time.
   NodeRef* = ref NodeObj
 
 var standard_handler*: NodeHandler = proc(self: NodeRef) = discard
@@ -33,6 +34,7 @@ template nodepattern*(t: untyped) =
   result.name = name
   result.children = @[]
   result.nodetype = NODETYPE_DEFAULT
+  result.pausemode = PAUSE_MODE_INHERIT
 
   result.on_enter = standard_handler
   result.on_exit = standard_handler
@@ -137,6 +139,17 @@ method getPath*(self: NodeRef): string {.base.} =
   while current.parent != nil:
     current = current.parent
     result = current.name & "/" & result
+
+method getPauseMode*(self: NodeRef): PauseMode {.base.} =
+  result = self.pausemode
+  var current = self
+
+  while result == PAUSE_MODE_INHERIT and current.parent != nil:
+    current = current.parent
+    result = current.pausemode
+
+  if result == PAUSE_MODE_INHERIT:
+    result = PAUSE_MODE_PAUSE
 
 method getRoot*(self: NodeRef): NodeRef {.base.} =
   ## Returns root node.

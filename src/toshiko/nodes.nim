@@ -1,5 +1,6 @@
 import
-  nodes/node
+  nodes/node,
+  nodes/scene
 
 export
-  node
+  node, scene
