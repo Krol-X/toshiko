@@ -52,6 +52,10 @@ proc Color*(hexstr: string): ColorRef =
 
 
 proc normalize*(a: ColorRef): ColorRef =
+  ## Normalizes color.
+  runnableExamples:
+    var clr = Color(-1f, 0.2, 10f)
+    assert clr == Color(0f, 0.2, 1f)
   result.r = if a.r > 1: 1 elif a.r < 0: 0 else: a.r
   result.g = if a.g > 1: 1 elif a.g < 0: 0 else: a.g
   result.b = if a.b > 1: 1 elif a.b < 0: 0 else: a.b
@@ -60,4 +64,7 @@ proc normalize*(a: ColorRef): ColorRef =
 
 proc `$`*(a: ColorRef): string =
   "Color(" & $a.r & ", " & $a.g & ", " & $a.b & ", " & $a.a & ")"
+
+proc `==`*(a, b: ColorRef): bool =
+  a.r == b.r and a.g == b.g and a.b == b.b and a.a == b.a
 
