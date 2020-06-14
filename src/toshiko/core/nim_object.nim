@@ -54,9 +54,10 @@ proc nimobj*(val: seq[tuple[key, value: NimRef]]): NimRef =
   NimRef(kind: NIMOBJECT_OBJECT, dict: val)
 
 proc nimtype*(name: string = "NimType"): NimRef =
-  NimRef(kind: NIMOBJECT_TYPE)
+  NimRef(kind: NIMOBJECT_TYPE, name: name)
 
 
+# --- Operators --- #
 proc `$`*(a: NimRef): string =
   case a.kind
   of NIMOBJECT_BOOLEAN:
@@ -99,6 +100,23 @@ proc `$`*(a: NimRef): string =
   else:
     return ""
 
+proc repr*(a: NimRef): string =
+  case a.kind
+  of NIMOBJECT_VOID:
+    return "<VoidObject>"
+  of NIMOBJECT_BOOLEAN:
+    return "<Boolean " & $a & ">"
+  of NIMOBJECT_NUMBER:
+    return "<Number " & $a & ">"
+  of NIMOBJECT_STRING:
+    return "<String \"" & $a & "\">"
+  of NIMOBJECT_ARRAY:
+    return "<Array " & $a & ">"
+  of NIMOBJECT_OBJECT:
+    return "<Object " & $a & ">"
+  of NIMOBJECT_TYPE:
+    return "<Type " & $a & ">"
+
 proc `==`*(a, b: NimRef): bool =
   if a.kind == b.kind:
     case a.kind
@@ -129,7 +147,38 @@ proc `+`*(a, b: NimRef): NimRef =
         res.add(i)
       return nimobj(res)
     else:
-      discard
+      raise newException(ValueError, "Can not use '+' on '" & repr(a) & "' and '" & repr(b) & "'.")
+
+proc `-`*(a, b: NimRef): NimRef =
+  if a.kind == b.kind:
+    case a.kind
+    of NIMOBJECT_NUMBER:
+      return nimobj(a.floating - b.floating)
+    else:
+      raise newException(ValueError, "Can not use '-' on '" & repr(a) & "' and '" & repr(b) & "'.")
+
+proc `*`*(a, b: NimRef): NimRef =
+  if a.kind == b.kind:
+    case a.kind
+    of NIMOBJECT_NUMBER:
+      return nimobj(a.floating * b.floating)
+    else:
+      raise newException(ValueError, "Can not use '*' on '" & repr(a) & "' and '" & repr(b) & "'.")
+  elif a.kind == NIMOBJECT_STRING and b.kind == NIMOBJECT_NUMBER:
+    var res = nimobj("")
+    for i in 0..b.integer:
+      res.str &= a.str
+    return res
+  else:
+    raise newException(ValueError, "Can not use '*' on '" & repr(a) & "' and '" & repr(b) & "'.")
+
+proc `/`*(a, b: NimRef): NimRef =
+  if a.kind == b.kind:
+    case a.kind
+    of NIMOBJECT_NUMBER:
+      return nimobj(a.floating / b.floating)
+    else:
+      raise newException(ValueError, "Can not use '/' on '" & repr(a) & "' and '" & repr(b) & "'.")
 
 
 proc `[]`*(a: NimRef, index: int): NimRef =
@@ -188,6 +237,17 @@ proc add*(a: NimRef, b: NimRef) =
   elif a.kind == NIMOBJECT_NUMBER and a.kind == b.kind:
     a.floating += b.floating
     a.integer = a.floating.int
+  elif a.kind == NIMOBJECT_STRING and b.kind == a.kind:
+    a.str &= b.str
+
+proc add*(self: NimRef, val: int | float | string | bool | seq[tuple[key, value: NimRef]] | seq[NimRef]) =
+  self.add(nimobj(val))
+
+proc dir*(a: NimRef): NimRef =
+  result = NimRef(kind: NIMOBJECT_ARRAY, arr: @[])
+  if a.kind == NIMOBJECT_TYPE:
+    for i in a.attrs:
+      result.add(nimobj(i.name))
 
 proc len*(a: NimRef): int =
   if a.kind == NIMOBJECT_ARRAY:
