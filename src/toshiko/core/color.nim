@@ -1,6 +1,7 @@
 # author: Ethosa
 import
-  strutils
+  strutils,
+  re
 
 
 type
@@ -26,7 +27,10 @@ proc Color*: ColorRef =
   Color(0, 0, 0, 0)
 
 proc Color*(r, g, b, a: int): ColorRef =
-  Color(255 / r, 255 / g, 255 / b, 255 / a)
+  Color(r / 255, g / 255, b / 255, a / 255)
+
+proc Color*(r, g, b: int, a: float): ColorRef =
+  Color(r / 255, g / 255, b / 255, a)
 
 proc Color*(r, g, b: int): ColorRef =
   Color(r, g, b, 255)
@@ -41,16 +45,27 @@ proc Color*(hexint: int): ColorRef =
 
 proc Color*(hexstr: string): ColorRef =
   var target = hexstr
-  if target[0] == '#':
-    target = target[1..^1]
-  elif target[0..1] == "0x" or target[0..1] == "0X":
-    target = target[2..^1]
+  var matched: array[20, string]
 
-  if target.len() == 3:  # #fff -> #ffffffff
-    target = target[0] & target[0] & target[1] & target[1] & target[2] & target[2] & "ff"
-  elif target.len() == 6:  # #ffffff -> #ffffffff
-    target &= "ff"
-  Color(parseHexInt(target))
+  # #FFFFFFFF, #FFF, #FFFFFF, etc
+  if target.startsWith('#') or target.startsWith("0x") or target.startsWith("0X"):
+    target = target[1..^1]
+    if target[0] == 'x' or target[0] == 'X':
+      target = target[1..^1]
+
+    if target.len() == 3:  # #fff -> #ffffffff
+      target = target[0] & target[0] & target[1] & target[1] & target[2] & target[2] & "ff"
+    elif target.len() == 6:  # #ffffff -> #ffffffff
+      target &= "ff"
+    return Color(parseHexInt(target))
+
+  # rgba(255, 255, 255, 1.0)
+  elif target.match(re"\A\s*rgba\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+.?\d*?)\s*\)\s*\Z", matched):
+    return Color(parseInt(matched[0]), parseInt(matched[1]), parseInt(matched[2]), parseFloat(matched[3]))
+
+  # rgb(255, 255, 255)
+  elif target.match(re"\A\s*rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)\s*\Z", matched):
+    return Color(parseInt(matched[0]), parseInt(matched[1]), parseInt(matched[2]))
 
 
 proc normalize*(a: ColorRef) =

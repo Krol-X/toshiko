@@ -21,6 +21,7 @@ type
       x2, y2: float
     of DRAW_CIRCLE:
       radius: float
+      detail: int
     else:
       nil
     color: ColorRef
@@ -65,8 +66,8 @@ method draw*(self: CanvasRef, w, h: float) =
     of DRAW_CIRCLE:
       glBegin(GL_TRIANGLE_FAN)
       glVertex2f(x + cmd.x1, y - cmd.y1)
-      for i in 0..180:
-        let angle = TAU * (i / 180)
+      for i in 0..cmd.detail:
+        let angle = TAU * (i / cmd.detail)
         glVertex2f(x + cmd.x1 + cmd.radius*cos(angle), y - cmd.y1 - cmd.radius*sin(angle))
     glEnd()
 
@@ -82,5 +83,5 @@ method pixel*(self: CanvasRef, x, y: float, color: ColorRef) {.base.} =
 method rect*(self: CanvasRef, x1, y1, x2, y2: float, color: ColorRef) {.base.} =
   self.commands.add(DrawCommand(kind: DRAW_RECT, x1: x1, y1: y1, x2: x2, y2: y2, color: color))
 
-method circle*(self: CanvasRef, cx, cy, r: float, color: ColorRef) {.base.} =
-  self.commands.add(DrawCommand(kind: DRAW_CIRCLE, x1: cx, y1: cy, color: color, radius: r))
+method circle*(self: CanvasRef, cx, cy, r: float, color: ColorRef, detail: int = 180) {.base.} =
+  self.commands.add(DrawCommand(kind: DRAW_CIRCLE, x1: cx, y1: cy, color: color, radius: r, detail: detail))
