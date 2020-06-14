@@ -56,7 +56,7 @@ proc Node*(name: string = "Node"): NodeRef =
 
 
 method draw*(self: NodeRef, w, h: float) {.base.} = discard
-method handle*(self: NodeRef) {.base.} = discard
+method handle*(self: NodeRef, mouse_on: NodeRef) {.base.} = discard
 
 
 method addChild*(self, child: NodeRef) {.base.} =

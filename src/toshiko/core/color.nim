@@ -29,7 +29,6 @@ proc Color*(r, g, b: int): ColorRef =
   Color(r, g, b, 255)
 
 proc Color*(hexint: int): ColorRef =
-  echo hexint
   Color(
     ((hexint shr 24) and 255) / 255,
     ((hexint shr 16) and 255) / 255,
@@ -56,10 +55,10 @@ proc normalize*(a: ColorRef): ColorRef =
   runnableExamples:
     var clr = Color(-1f, 0.2, 10f)
     assert clr == Color(0f, 0.2, 1f)
-  result.r = if a.r > 1: 1 elif a.r < 0: 0 else: a.r
-  result.g = if a.g > 1: 1 elif a.g < 0: 0 else: a.g
-  result.b = if a.b > 1: 1 elif a.b < 0: 0 else: a.b
-  result.a = if a.a > 1: 1 elif a.a < 0: 0 else: a.a
+  result.r = if a.r > 1f: 1f elif a.r < 0f: 0f else: a.r
+  result.g = if a.g > 1f: 1f elif a.g < 0f: 0f else: a.g
+  result.b = if a.b > 1f: 1f elif a.b < 0f: 0f else: a.b
+  result.a = if a.a > 1f: 1f elif a.a < 0f: 0f else: a.a
 
 
 proc `$`*(a: ColorRef): string =

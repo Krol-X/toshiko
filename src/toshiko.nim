@@ -1,8 +1,9 @@
 import
   toshiko/thirdparty,
   toshiko/window,
+  toshiko/environment,
   toshiko/core,
   toshiko/nodes
 
 export
-  window, core, nodes, thirdparty
+  window, environment, core, nodes, thirdparty

@@ -11,6 +11,9 @@ type
 proc Vector2*(x, y: float): Vector2Ref =
   Vector2Ref(x: x, y: y)
 
+proc Vector2*(other: Vector2Ref): Vector2Ref =
+  Vector2(other.x, other.y)
+
 proc Vector2*(xy: float): Vector2Ref =
   Vector2(xy, xy)
 

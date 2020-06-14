@@ -1,10 +1,15 @@
 # author: Ethosa
 import
   thirdparty/opengl,
+  thirdparty/opengl/glu,
   thirdparty/opengl/glut,
+
+  core/color,
 
   nodes/node,
   nodes/scene,
+
+  environment,
 
   os
 
@@ -16,6 +21,7 @@ var
 
 
 var
+  env* = EnvironmentRef(delay: 17, background_color: Color("#333"))
   width, height: cint
   main_scene*: SceneRef = nil
   current_scene*: SceneRef = nil
@@ -30,7 +36,7 @@ var
 
 proc display {.cdecl.} =
   ## Displays window.
-  glClearColor(1, 1, 1, 1)
+  glClearColor(env.background_color.r, env.background_color.g, env.background_color.b, env.background_color.a)
   glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT)
   glEnable(GL_BLEND)
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
@@ -43,7 +49,7 @@ proc display {.cdecl.} =
   # Update window.
   glFlush()
   glutSwapBuffers()
-  os.sleep(17)
+  os.sleep(env.delay)
 
 
 proc reshape(w, h: cint) {.cdecl.} =
@@ -55,6 +61,8 @@ proc reshape(w, h: cint) {.cdecl.} =
     glOrtho(-w.GLdouble/2, w.GLdouble/2, -h.GLdouble/2, h.GLdouble/2, -w.GLdouble, w.GLdouble)
     glMatrixMode(GL_MODELVIEW)
     glLoadIdentity()
+    gluLookAt(0d, 0d, -width.GLdouble/2d, 0d, 0d, 0d, 0d, 1d, 0d)
+    glEnable(GL_DEPTH_TEST)
     width = w
     height = h
 
@@ -129,7 +137,7 @@ proc Window*(title: cstring, w: cint = 640, h: cint = 360) {.cdecl.} =
   discard glutCreateWindow(title)
 
   # Set up OpenGL
-  glClearColor(1, 1, 1, 1)
+  glClearColor(env.background_color.r, env.background_color.g, env.background_color.b, env.background_color.a)
   glShadeModel(GL_FLAT)
   glClear(GL_COLOR_BUFFER_BIT)
 
