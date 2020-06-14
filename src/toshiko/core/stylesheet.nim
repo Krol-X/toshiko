@@ -1,8 +1,5 @@
 # author: Ethosa
-import
-  macros,
-  color,
-  vector2
+import macros
 
 
 type
