@@ -1,6 +1,7 @@
 import
   nodes/node,
-  nodes/scene
+  nodes/scene,
+  nodes/canvas
 
 export
-  node, scene
+  node, scene, canvas

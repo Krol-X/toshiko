@@ -19,6 +19,9 @@ proc Color*(r, g, b: float): ColorRef =
 proc Color*(rgb: float): ColorRef =
   Color(rgb, rgb, rgb, 1)
 
+proc Color*(clr: ColorRef): ColorRef =
+  Color(clr.r, clr.g, clr.b, clr.a)
+
 proc Color*: ColorRef =
   Color(0, 0, 0, 0)
 
@@ -50,15 +53,19 @@ proc Color*(hexstr: string): ColorRef =
   Color(parseHexInt(target))
 
 
-proc normalize*(a: ColorRef): ColorRef =
+proc normalize*(a: ColorRef) =
   ## Normalizes color.
   runnableExamples:
     var clr = Color(-1f, 0.2, 10f)
     assert clr == Color(0f, 0.2, 1f)
-  result.r = if a.r > 1f: 1f elif a.r < 0f: 0f else: a.r
-  result.g = if a.g > 1f: 1f elif a.g < 0f: 0f else: a.g
-  result.b = if a.b > 1f: 1f elif a.b < 0f: 0f else: a.b
-  result.a = if a.a > 1f: 1f elif a.a < 0f: 0f else: a.a
+  a.r = if a.r > 1f: 1f elif a.r < 0f: 0f else: a.r
+  a.g = if a.g > 1f: 1f elif a.g < 0f: 0f else: a.g
+  a.b = if a.b > 1f: 1f elif a.b < 0f: 0f else: a.b
+  a.a = if a.a > 1f: 1f elif a.a < 0f: 0f else: a.a
+
+proc normalized*(a: ColorRef): ColorRef =
+  result = Color(a)
+  result.normalize
 
 
 proc `$`*(a: ColorRef): string =

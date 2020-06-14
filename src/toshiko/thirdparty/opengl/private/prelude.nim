@@ -77,6 +77,7 @@ else:
   {.pragma: oglx, dynlib: glGetProc("0").}
   {.pragma: wgl, dynlib: glGetProc("0").}
   {.pragma: glu, dynlib: gluGetProc("").}
+  {.pragma: glew, dynlib: "glew32.dll".}
 
   proc nimLoadProcs0() {.importc.}
 

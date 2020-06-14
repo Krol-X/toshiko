@@ -1,7 +1,6 @@
 # author: Ethosa
 import
   thirdparty/opengl,
-  thirdparty/opengl/glu,
   thirdparty/opengl/glut,
 
   core/color,
@@ -61,8 +60,6 @@ proc reshape(w, h: cint) {.cdecl.} =
     glOrtho(-w.GLdouble/2, w.GLdouble/2, -h.GLdouble/2, h.GLdouble/2, -w.GLdouble, w.GLdouble)
     glMatrixMode(GL_MODELVIEW)
     glLoadIdentity()
-    gluLookAt(0d, 0d, -width.GLdouble/2d, 0d, 0d, 0d, 0d, 1d, 0d)
-    glEnable(GL_DEPTH_TEST)
     width = w
     height = h
 
@@ -149,6 +146,7 @@ proc showWindow* =
   ## Start main window loop.
   glutDisplayFunc(display)
   glutIdleFunc(display)
+  glutReshapeFunc(reshape)
   changeScene(main_scene.name)
   glutMainLoop()
   current_scene.exit()
