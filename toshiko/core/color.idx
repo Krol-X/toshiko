@@ -1,0 +1,16 @@
+ColorObj	toshiko/core/color.html#ColorObj	color: ColorObj	
+ColorRef	toshiko/core/color.html#ColorRef	color: ColorRef	
+Color	toshiko/core/color.html#Color,float,float,float,float	color: Color(r, g, b, a: float): ColorRef	
+Color	toshiko/core/color.html#Color,float,float,float	color: Color(r, g, b: float): ColorRef	
+Color	toshiko/core/color.html#Color,float	color: Color(rgb: float): ColorRef	
+Color	toshiko/core/color.html#Color,ColorRef	color: Color(clr: ColorRef): ColorRef	
+Color	toshiko/core/color.html#Color	color: Color(): ColorRef	
+Color	toshiko/core/color.html#Color,int,int,int,int	color: Color(r, g, b, a: int): ColorRef	
+Color	toshiko/core/color.html#Color,int,int,int,float	color: Color(r, g, b: int; a: float): ColorRef	
+Color	toshiko/core/color.html#Color,int,int,int	color: Color(r, g, b: int): ColorRef	
+Color	toshiko/core/color.html#Color,int	color: Color(hexint: int): ColorRef	
+Color	toshiko/core/color.html#Color,string	color: Color(hexstr: string): ColorRef	
+normalize	toshiko/core/color.html#normalize,ColorRef	color: normalize(a: ColorRef)	
+normalized	toshiko/core/color.html#normalized,ColorRef	color: normalized(a: ColorRef): ColorRef	
+`$`	toshiko/core/color.html#$,ColorRef	color: `$`(a: ColorRef): string	
+`==`	toshiko/core/color.html#==,ColorRef,ColorRef	color: `==`(a, b: ColorRef): bool	

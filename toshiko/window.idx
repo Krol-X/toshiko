@@ -1,0 +1,12 @@
+env	toshiko/window.html#env	window: env	
+main_scene	toshiko/window.html#main_scene	window: main_scene	
+current_scene	toshiko/window.html#current_scene	window: current_scene	
+scenes	toshiko/window.html#scenes	window: scenes	
+paused	toshiko/window.html#paused	window: paused	
+addScene	toshiko/window.html#addScene,SceneRef	window: addScene(scene: SceneRef)	
+addMainScene	toshiko/window.html#addMainScene,SceneRef	window: addMainScene(scene: SceneRef)	
+changeScene	toshiko/window.html#changeScene,string	window: changeScene(name: string): bool	
+setMainScene	toshiko/window.html#setMainScene,string	window: setMainScene(name: string)	
+setTitle	toshiko/window.html#setTitle,cstring	window: setTitle(title: cstring)	
+Window	toshiko/window.html#Window,cstring,cint,cint	window: Window(title: cstring; w: cint = 640; h: cint = 360)	
+showWindow	toshiko/window.html#showWindow	window: showWindow()	

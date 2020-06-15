@@ -1,0 +1,11 @@
+DrawCommandType	toshiko/nodes/canvas.html#DrawCommandType	canvas: DrawCommandType	
+DrawCommand	toshiko/nodes/canvas.html#DrawCommand	canvas: DrawCommand	
+CanvasObj	toshiko/nodes/canvas.html#CanvasObj	canvas: CanvasObj	
+CanvasRef	toshiko/nodes/canvas.html#CanvasRef	canvas: CanvasRef	
+Canvas	toshiko/nodes/canvas.html#Canvas,string	canvas: Canvas(name: string = &quot;Canvas&quot;): CanvasRef	
+draw	toshiko/nodes/canvas.html#draw.e,CanvasRef,float,float	canvas: draw(self: CanvasRef; w, h: float)	
+fill	toshiko/nodes/canvas.html#fill.e,CanvasRef,ColorRef	canvas: fill(self: CanvasRef; color: ColorRef)	
+line	toshiko/nodes/canvas.html#line.e,CanvasRef,float,float,float,float,ColorRef	canvas: line(self: CanvasRef; x1, y1, x2, y2: float; color: ColorRef)	
+pixel	toshiko/nodes/canvas.html#pixel.e,CanvasRef,float,float,ColorRef	canvas: pixel(self: CanvasRef; x, y: float; color: ColorRef)	
+rect	toshiko/nodes/canvas.html#rect.e,CanvasRef,float,float,float,float,ColorRef	canvas: rect(self: CanvasRef; x1, y1, x2, y2: float; color: ColorRef)	
+circle	toshiko/nodes/canvas.html#circle.e,CanvasRef,float,float,float,ColorRef,int	canvas: circle(self: CanvasRef; cx, cy, r: float; color: ColorRef; detail: int = 180)	

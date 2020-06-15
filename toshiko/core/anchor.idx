@@ -1,0 +1,4 @@
+AnchorRef	toshiko/core/anchor.html#AnchorRef	anchor: AnchorRef	
+Anchor	toshiko/core/anchor.html#Anchor,float,float,float,float	anchor: Anchor(x1, y1, x2, y2: float): AnchorRef	
+Anchor	toshiko/core/anchor.html#Anchor,AnchorRef	anchor: Anchor(a: AnchorRef): AnchorRef	
+`$`	toshiko/core/anchor.html#$,AnchorRef	anchor: `$`(a: AnchorRef): string	

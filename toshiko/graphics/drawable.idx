@@ -1,0 +1,12 @@
+DrawableObj	toshiko/graphics/drawable.html#DrawableObj	drawable: DrawableObj	
+DrawableRef	toshiko/graphics/drawable.html#DrawableRef	drawable: DrawableRef	
+Drawable	toshiko/graphics/drawable.html#Drawable	drawable: Drawable(): DrawableRef	
+draw	toshiko/graphics/drawable.html#draw,DrawableRef,float,float,float,float	drawable: draw(self: DrawableRef; x, y, width, height: float)	
+setBorderColor	toshiko/graphics/drawable.html#setBorderColor,DrawableRef,ColorRef	drawable: setBorderColor(self: DrawableRef; color: ColorRef)	
+setBorderWidth	toshiko/graphics/drawable.html#setBorderWidth,DrawableRef,float	drawable: setBorderWidth(self: DrawableRef; width: float)	
+setColor	toshiko/graphics/drawable.html#setColor,DrawableRef,ColorRef	drawable: setColor(self: DrawableRef; color: ColorRef)	
+setCornerRadius	toshiko/graphics/drawable.html#setCornerRadius,DrawableRef,float	drawable: setCornerRadius(self: DrawableRef; radius: float)	
+setCornerRadius	toshiko/graphics/drawable.html#setCornerRadius,DrawableRef,float,float,float,float	drawable: setCornerRadius(self: DrawableRef; r1, r2, r3, r4: float)	
+setCornerDetail	toshiko/graphics/drawable.html#setCornerDetail,DrawableRef,int	drawable: setCornerDetail(self: DrawableRef; detail: int)	
+setCornerDetail	toshiko/graphics/drawable.html#setCornerDetail,DrawableRef,int,int,int,int	drawable: setCornerDetail(self: DrawableRef; d1, d2, d3, d4: int)	
+setStyle	toshiko/graphics/drawable.html#setStyle,DrawableRef,StyleSheetRef	drawable: setStyle(self: DrawableRef; s: StyleSheetRef)	

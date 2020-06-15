@@ -1,0 +1,31 @@
+NodeHandler	toshiko/nodes/node.html#NodeHandler	node: NodeHandler	
+NodeInputHandler	toshiko/nodes/node.html#NodeInputHandler	node: NodeInputHandler	
+NodeObj	toshiko/nodes/node.html#NodeObj	node: NodeObj	
+NodeRef	toshiko/nodes/node.html#NodeRef	node: NodeRef	
+standard_handler	toshiko/nodes/node.html#standard_handler	node: standard_handler	
+standard_input_handler	toshiko/nodes/node.html#standard_input_handler	node: standard_input_handler	
+nodepattern	toshiko/nodes/node.html#nodepattern.t,untyped	node: nodepattern(t: untyped)	
+Node	toshiko/nodes/node.html#Node,string	node: Node(name: string = &quot;Node&quot;): NodeRef	
+draw	toshiko/nodes/node.html#draw.e,NodeRef,float,float	node: draw(self: NodeRef; w, h: float)	
+handle	toshiko/nodes/node.html#handle.e,NodeRef,InputEvent,NodeRef	node: handle(self: NodeRef; event: InputEvent; mouse_on: var NodeRef)	
+addChild	toshiko/nodes/node.html#addChild.e,NodeRef,NodeRef	node: addChild(self, child: NodeRef)	
+addChilds	toshiko/nodes/node.html#addChilds.e,NodeRef,varargs[NodeRef]	node: addChilds(self: NodeRef; childs: varargs[NodeRef])	
+duplicate	toshiko/nodes/node.html#duplicate.t,NodeRef	node: duplicate(self: NodeRef): untyped	
+getAllChilds	toshiko/nodes/node.html#getAllChilds.e,NodeRef	node: getAllChilds(self: NodeRef): seq[NodeRef]	
+getChild	toshiko/nodes/node.html#getChild.e,NodeRef,int	node: getChild(self: NodeRef; index: int): NodeRef	
+getChildCount	toshiko/nodes/node.html#getChildCount.e,NodeRef	node: getChildCount(self: NodeRef): int	
+getChildPosition	toshiko/nodes/node.html#getChildPosition.e,NodeRef,NodeRef	node: getChildPosition(self, other: NodeRef): int	
+getNode	toshiko/nodes/node.html#getNode.e,NodeRef,string	node: getNode(self: NodeRef; path: string): NodeRef	
+getParent	toshiko/nodes/node.html#getParent.e,NodeRef	node: getParent(self: NodeRef): NodeRef	
+getPath	toshiko/nodes/node.html#getPath.e,NodeRef	node: getPath(self: NodeRef): string	
+getPauseMode	toshiko/nodes/node.html#getPauseMode.e,NodeRef	node: getPauseMode(self: NodeRef): PauseMode	
+getRoot	toshiko/nodes/node.html#getRoot.e,NodeRef	node: getRoot(self: NodeRef): NodeRef	
+hasNode	toshiko/nodes/node.html#hasNode.e,NodeRef,string	node: hasNode(self: NodeRef; name: string): bool	
+hasNode	toshiko/nodes/node.html#hasNode.e,NodeRef,NodeRef	node: hasNode(self, other: NodeRef): bool	
+hasParent	toshiko/nodes/node.html#hasParent.e,NodeRef	node: hasParent(self: NodeRef): bool	
+isParentOf	toshiko/nodes/node.html#isParentOf.e,NodeRef,NodeRef	node: isParentOf(self, other: NodeRef): bool	
+remove	toshiko/nodes/node.html#remove.e,NodeRef,NodeRef	node: remove(self, other: NodeRef)	
+`~`	toshiko/nodes/node.html#~,NodeRef,string	node: `~`(self: NodeRef; path: string): NodeRef	
+contains	toshiko/nodes/node.html#contains,NodeRef,NodeRef	node: contains(self, other: NodeRef): bool	
+Example	node.html#example	  Example	
+`@`	toshiko/nodes/node.html#@.m,NodeRef,untyped,untyped	node: `@`(node: NodeRef; callable, code: untyped): untyped	

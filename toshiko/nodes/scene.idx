@@ -1,0 +1,10 @@
+SceneObj	toshiko/nodes/scene.html#SceneObj	scene: SceneObj	
+SceneRef	toshiko/nodes/scene.html#SceneRef	scene: SceneRef	
+Scene	toshiko/nodes/scene.html#Scene,string	scene: Scene(name: string = &quot;Scene&quot;): SceneRef	
+draw	toshiko/nodes/scene.html#draw.e,SceneRef,float,float	scene: draw(self: SceneRef; w, h: float)	
+draw	toshiko/nodes/scene.html#draw.e,SceneRef,float,float,bool	scene: draw(self: SceneRef; w, h: float; paused: bool)	
+enter	toshiko/nodes/scene.html#enter.e,SceneRef	scene: enter(self: SceneRef)	
+exit	toshiko/nodes/scene.html#exit.e,SceneRef	scene: exit(self: SceneRef)	
+handle	toshiko/nodes/scene.html#handle.e,SceneRef,InputEvent,NodeRef	scene: handle(self: SceneRef; event: InputEvent; mouse_on: var NodeRef)	
+instance	toshiko/nodes/scene.html#instance.e,SceneRef	scene: instance(self: SceneRef): SceneRef	
+reAnchorScene	toshiko/nodes/scene.html#reAnchorScene.e,SceneRef,float,float,bool	scene: reAnchorScene(self: SceneRef; w, h: float; paused: bool)	
