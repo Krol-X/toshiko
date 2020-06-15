@@ -4,7 +4,7 @@ import macros
 
 type
   StyleSheetObj* = object
-    dict: seq[tuple[key, value: string]]
+    dict*: seq[tuple[key, value: string]]
   StyleSheetRef* = ref StyleSheetObj
 
 

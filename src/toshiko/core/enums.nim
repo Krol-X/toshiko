@@ -5,9 +5,12 @@ type
     # default
     NODE_NODE,
     SCENE_NODE,
-    CANVAS_NODE
+    CANVAS_NODE,
+    # Control nodes
+    CONTROL_NODE
   NodeType* {.pure.} = enum
-    NODETYPE_DEFAULT
+    NODETYPE_DEFAULT,
+    NODETYPE_CONTROL
   PauseMode* {.pure.} = enum
     PAUSE_MODE_PAUSE,
     PAUSE_MODE_RUN,

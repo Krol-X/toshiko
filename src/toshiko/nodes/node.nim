@@ -227,5 +227,15 @@ macro `@`*(node: NodeRef, callable, code: untyped): untyped =
         `node`.`name` =
           proc(`self`: NodeRef): void =
             `code`
+    of "on_hover", "on_out", "on_click", "on_press", "on_focus", "on_unfocus", "on_release":
+      var
+        name = callable[0]
+        self = callable[1]
+        x = callable[2]
+        y = callable[3]
+      result = quote do:
+        `node`.`name` =
+          proc(`self`: ControlRef, `x`, `y`: float): void =
+            `code`
     else:
       discard

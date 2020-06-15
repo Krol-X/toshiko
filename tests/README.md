@@ -6,3 +6,5 @@
 4. [Use Canas.](https://github.com/Ethosa/toshiko/blob/master/tests/test4.nim)
 5. [Use Color object.](https://github.com/Ethosa/toshiko/blob/master/tests/test5.nim)
 6. [Use StyleSheet object.](https://github.com/Ethosa/toshiko/blob/master/tests/test6.nim)
+7. [Use NimObject.](https://github.com/Ethosa/toshiko/blob/master/tests/test7.nim)
+8. [Use Drawable and Control.](https://github.com/Ethosa/toshiko/blob/master/tests/test8.nim)

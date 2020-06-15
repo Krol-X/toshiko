@@ -3,7 +3,10 @@ import
   toshiko/window,
   toshiko/environment,
   toshiko/core,
-  toshiko/nodes
+  toshiko/nodes,
+  toshiko/graphics,
+  toshiko/control
 
 export
-  window, environment, core, nodes, thirdparty
+  window, environment, core, nodes, thirdparty,
+  graphics, control
