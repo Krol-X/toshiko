@@ -61,6 +61,7 @@ proc Control*(name: string = "Control"): ControlRef =
 
 
 method calcRectGlobalPosition*(self: ControlRef) {.base.} =
+  ## Calculates `rect_global_position`.
   self.rect_global_position = self.rect_position
   var current = self.NodeRef
   while current.parent != nil:
@@ -69,6 +70,7 @@ method calcRectGlobalPosition*(self: ControlRef) {.base.} =
       self.rect_global_position += current.ControlRef.rect_position
 
 method calcAnchor*(self: ControlRef) {.base.} =
+  ## Calculates `rect_position` and `rect_size`, if available.
   if not self.parent.isNil() and self.parent.nodetype == NODETYPE_CONTROL:
     if not self.size_anchor.isNil():
       if self.size_anchor.x > 0:
@@ -80,6 +82,7 @@ method calcAnchor*(self: ControlRef) {.base.} =
       self.rect_position.y = self.parent.ControlRef.rect_size.y*self.position_anchor.y1 - self.rect_size.y*self.position_anchor.y2
 
 method draw*(self: ControlRef, w, h: float) =
+  ## This method uses for redraw Control object.
   {.warning[LockLevel]: off.}
   self.calcRectGlobalPosition()
   let
@@ -92,12 +95,15 @@ method draw*(self: ControlRef, w, h: float) =
     self.on_press(self, last_event.x, last_event.y)
 
 method getBackground*(self: ControlRef): DrawableRef {.base.} =
+  ## Returns background drawable.
   self.background
 
 method getGlobalMousePosition*(self: ControlRef): Vector2Ref {.base.} =
+  ## Returns global mouse position.
   Vector2(last_event.x, last_event.y)
 
 method handle(self: ControlRef, event: InputEvent, mouse_on: var NodeRef) =
+  ## This method uses for handle user input.
   if mouse_on.isNil():
     let hasmouse = Rect2(self.rect_global_position, self.rect_size).contains(event.x, event.y)
     if hasmouse:
@@ -127,11 +133,19 @@ method handle(self: ControlRef, event: InputEvent, mouse_on: var NodeRef) =
         self.on_unfocus(self, event.x, event.y)
 
 method move*(self: ControlRef, x, y: float) {.base.} =
+  ## Moves Control node by `x` and `y`.
+  ## Note: It also disables `position_anchor`.
   self.position_anchor = nil
   self.rect_position.x += x
   self.rect_position.y += y
 
 method resize*(self: ControlRef, w, h: float) {.base.} =
+  ## Resizes Control, if `w` or `h` more then `rect_size`.
+  ## Note: It also disables `size_anchor`.
+  ##
+  ## Arguments:
+  ## - `w` is a new width.
+  ## - `h` is a new height.
   if w > self.rect_min_size.x:
     self.rect_size.x = w
     self.size_anchor = nil
@@ -140,18 +154,29 @@ method resize*(self: ControlRef, w, h: float) {.base.} =
     self.size_anchor = nil
 
 method setBackground*(self: ControlRef, back: DrawableRef) {.base.} =
+  ## Changes background drawable.
+  ##
+  ## Arguments:
+  ## - `back` is a DrawableRef object.
   self.background = back
 
 method setBackgroundColor*(self: ControlRef, color: ColorRef) {.base.} =
+  ## Changes background drawable color.
+  ##
+  ## Arguments:
+  ## - `color` is a new drawable color.
   self.background.setColor(color)
 
 method setAnchor*(self: ControlRef, anchor: AnchorRef) {.base.} =
+  ## Changes `position_anchor`.
   self.position_anchor = anchor
 
 method setSizeAnchor*(self: ControlRef, anchor: Vector2Ref) {.base.} =
+  ## Changes `size_anchor`.
   self.size_anchor = anchor
 
 method setStyle*(self: ControlRef, s: StyleSheetRef) {.base.} =
+  ## Changes Drawable and Control stylesheet.
   self.background.setStyle(s)
   for i in s.dict:
     case i.key

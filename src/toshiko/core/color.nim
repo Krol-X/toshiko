@@ -231,30 +231,48 @@ var color_names = {
 }
 
 proc Color*(r, g, b, a: float): ColorRef =
+  runnableExamples:
+    var clr = Color(0f, 1f, 1f, 0.5)
   ColorRef(r: r, g: g, b: b, a: a)
 
 proc Color*(r, g, b: float): ColorRef =
+  runnableExamples:
+    var clr = Color(1f, 1f, 1f)
   Color(r, g, b, 1)
 
 proc Color*(rgb: float): ColorRef =
+  runnableExamples:
+    var clr = Color(1f)
   Color(rgb, rgb, rgb, 1)
 
 proc Color*(clr: ColorRef): ColorRef =
+  runnableExamples:
+    var clr = Color(Color(1f, 1f, 1f, 1f))
   Color(clr.r, clr.g, clr.b, clr.a)
 
 proc Color*: ColorRef =
+  runnableExamples:
+    var clr = Color()
   Color(0, 0, 0, 0)
 
 proc Color*(r, g, b, a: int): ColorRef =
+  runnableExamples:
+    var clr = Color(255, 255, 255, 255)
   Color(r / 255, g / 255, b / 255, a / 255)
 
 proc Color*(r, g, b: int, a: float): ColorRef =
+  runnableExamples:
+    var clr = Color(255, 255, 255, 1f)
   Color(r / 255, g / 255, b / 255, a)
 
 proc Color*(r, g, b: int): ColorRef =
-  Color(r, g, b, 255)
+  runnableExamples:
+    var clr = Color(255, 255, 255)
+  Color(r, g, b, 1f)
 
 proc Color*(hexint: int): ColorRef =
+  runnableExamples:
+    var clr = Color(0xFF64CCFF'i32)
   Color(
     ((hexint shr 24) and 255) / 255,
     ((hexint shr 16) and 255) / 255,
@@ -264,6 +282,14 @@ proc Color*(hexint: int): ColorRef =
 
 
 proc Color*(hexstr: string): ColorRef =
+  runnableExamples:
+    var
+      hex1 = Color("#f6f")
+      hex2 = Color("#f77ff7")
+      hex3 = Color("#7ff77fff")
+      named = Color("red")
+      rgb = Color("rgb(255, 255, 255)")
+      rgba = Color("rgba(255, 255, 255, 1.0)")
   var target = hexstr
   var matched: array[20, string]
 
@@ -298,8 +324,10 @@ proc Color*(hexstr: string): ColorRef =
 proc normalize*(a: ColorRef) =
   ## Normalizes color.
   runnableExamples:
-    var clr = Color(-1f, 0.2, 10f)
-    assert clr == Color(0f, 0.2, 1f)
+    var clr = Color(-1f, 0.5, 10f)
+    clr.normalize()
+    echo clr
+    assert clr == Color(0f, 0.5, 1f)
   a.r = if a.r > 1f: 1f elif a.r < 0f: 0f else: a.r
   a.g = if a.g > 1f: 1f elif a.g < 0f: 0f else: a.g
   a.b = if a.b > 1f: 1f elif a.b < 0f: 0f else: a.b
