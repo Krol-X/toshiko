@@ -7,7 +7,8 @@ type
     SCENE_NODE,
     CANVAS_NODE,
     # Control nodes
-    CONTROL_NODE
+    CONTROL_NODE,
+    COLOR_RECT_NODE
   NodeType* {.pure.} = enum
     NODETYPE_DEFAULT,
     NODETYPE_CONTROL
@@ -15,3 +16,6 @@ type
     PAUSE_MODE_PAUSE,
     PAUSE_MODE_RUN,
     PAUSE_MODE_INHERIT
+  MouseMode* {.pure.} = enum
+    MOUSEMODE_HANDLE,
+    MOUSEMODE_IGNORE

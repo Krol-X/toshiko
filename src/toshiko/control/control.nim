@@ -14,6 +14,7 @@ type
     hovered*: bool
     focused*: bool
     pressed*: bool
+    mousemode*: MouseMode
     rect_position*: Vector2Ref
     rect_global_position*: Vector2Ref
     rect_size*: Vector2Ref
@@ -42,6 +43,7 @@ template controlpattern* =
   result.rect_size = Vector2()
   result.rect_min_size = Vector2()
   result.background = Drawable()
+  result.mousemode = MOUSEMODE_HANDLE
 
   result.on_hover = standard_control_handler
   result.on_out = standard_control_handler
@@ -104,6 +106,8 @@ method getGlobalMousePosition*(self: ControlRef): Vector2Ref {.base.} =
 
 method handle(self: ControlRef, event: InputEvent, mouse_on: var NodeRef) =
   ## This method uses for handle user input.
+  if self.mousemode == MOUSEMODE_IGNORE:
+    return
   if mouse_on.isNil():
     let hasmouse = Rect2(self.rect_global_position, self.rect_size).contains(event.x, event.y)
     if hasmouse:
