@@ -87,7 +87,8 @@ template draw_template(drawtype, color, function, secondfunc: untyped): untyped 
 
 proc draw*(self: DrawableRef, x, y, width, height: float) =
   draw_template(GL_POLYGON, background_color, vd(), vd())
-  draw_template(GL_LINE_LOOP, border_color, glLineWidth(self.border_width), glLineWidth(1))
+  if self.border_width > 0f:
+    draw_template(GL_LINE_LOOP, border_color, glLineWidth(self.border_width), glLineWidth(1))
 
 
 proc setBorderColor*(self: DrawableRef, color: ColorRef) =
