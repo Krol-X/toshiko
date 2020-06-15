@@ -4,7 +4,8 @@ import
 
   ../graphics,
   ../core,
-  ../nodes/node
+  ../nodes/node,
+  strutils
 
 
 type
@@ -17,6 +18,8 @@ type
     rect_global_position*: Vector2Ref
     rect_size*: Vector2Ref
     rect_min_size*: Vector2Ref
+    size_anchor*: Vector2Ref
+    position_anchor*: AnchorRef
     background*: DrawableRef
 
     on_hover*: ControlHandler
@@ -65,6 +68,17 @@ method calcRectGlobalPosition*(self: ControlRef) {.base.} =
     if current.nodetype == NODETYPE_CONTROL:
       self.rect_global_position += current.ControlRef.rect_position
 
+method calcAnchor*(self: ControlRef) {.base.} =
+  if not self.parent.isNil() and self.parent.nodetype == NODETYPE_CONTROL:
+    if not self.size_anchor.isNil():
+      if self.size_anchor.x > 0:
+        self.rect_size.x = self.parent.ControlRef.rect_size.x * self.size_anchor.x
+      if self.size_anchor.y > 0:
+        self.rect_size.y = self.parent.ControlRef.rect_size.y * self.size_anchor.y
+    if not self.position_anchor.isNil():
+      self.rect_position.x = self.parent.ControlRef.rect_size.x*self.position_anchor.x1 - self.rect_size.x*self.position_anchor.x2
+      self.rect_position.y = self.parent.ControlRef.rect_size.y*self.position_anchor.y1 - self.rect_size.y*self.position_anchor.y2
+
 method draw*(self: ControlRef, w, h: float) =
   {.warning[LockLevel]: off.}
   self.calcRectGlobalPosition()
@@ -79,6 +93,9 @@ method draw*(self: ControlRef, w, h: float) =
 
 method getBackground*(self: ControlRef): DrawableRef {.base.} =
   self.background
+
+method getGlobalMousePosition*(self: ControlRef): Vector2Ref {.base.} =
+  Vector2(last_event.x, last_event.y)
 
 method handle(self: ControlRef, event: InputEvent, mouse_on: var NodeRef) =
   if mouse_on.isNil():
@@ -103,7 +120,6 @@ method handle(self: ControlRef, event: InputEvent, mouse_on: var NodeRef) =
     if self.hovered:
       self.on_out(self, event.x, event.y)
       self.hovered = false
-    if event.kind == MOUSE:
       if not event.pressed:
         self.pressed = false
         self.on_release(self, event.x, event.y)
@@ -111,14 +127,17 @@ method handle(self: ControlRef, event: InputEvent, mouse_on: var NodeRef) =
         self.on_unfocus(self, event.x, event.y)
 
 method move*(self: ControlRef, x, y: float) {.base.} =
+  self.position_anchor = nil
   self.rect_position.x += x
   self.rect_position.y += y
 
 method resize*(self: ControlRef, w, h: float) {.base.} =
   if w > self.rect_min_size.x:
     self.rect_size.x = w
+    self.size_anchor = nil
   if w > self.rect_min_size.y:
     self.rect_size.y = h
+    self.size_anchor = nil
 
 method setBackground*(self: ControlRef, back: DrawableRef) {.base.} =
   self.background = back
@@ -126,5 +145,35 @@ method setBackground*(self: ControlRef, back: DrawableRef) {.base.} =
 method setBackgroundColor*(self: ControlRef, color: ColorRef) {.base.} =
   self.background.setColor(color)
 
+method setAnchor*(self: ControlRef, anchor: AnchorRef) {.base.} =
+  self.position_anchor = anchor
+
+method setSizeAnchor*(self: ControlRef, anchor: Vector2Ref) {.base.} =
+  self.size_anchor = anchor
+
 method setStyle*(self: ControlRef, s: StyleSheetRef) {.base.} =
   self.background.setStyle(s)
+  for i in s.dict:
+    case i.key
+    # size-anchor: 1.0
+    # size-anchor: 0.5 1
+    of "size-anchor":
+      let tmp = i.value.split(Whitespace)
+      if tmp.len() == 1:
+        self.setSizeAnchor(Vector2(parseFloat(tmp[0])))
+      elif tmp.len() == 2:
+        self.setSizeAnchor(Vector2(parseFloat(tmp[0]), parseFloat(tmp[1])))
+    # position-anchor: 1
+    # position-anchor: 0.5 1 0.5 1
+    of "position-anchor":
+      let tmp = i.value.split(Whitespace)
+      if tmp.len() == 1:
+        let tmp2 = parseFloat(tmp[0])
+        self.setAnchor(Anchor(tmp2, tmp2, tmp2, tmp2))
+      elif tmp.len() == 4:
+        self.setAnchor(Anchor(
+          parseFloat(tmp[0]), parseFloat(tmp[1]),
+          parseFloat(tmp[2]), parseFloat(tmp[3]))
+        )
+    else:
+      discard

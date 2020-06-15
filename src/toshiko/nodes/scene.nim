@@ -1,12 +1,12 @@
 # author: Ethosa
 import
-  ../core/enums,
-  ../core/input,
-  node
+  ../core,
+  node,
+  ../control/control
 
 
 type
-  SceneObj* {.final.} = object of NodeObj
+  SceneObj* {.final.} = object of ControlObj
     paused: bool
   SceneRef* = ref SceneObj
 
@@ -14,6 +14,7 @@ type
 proc Scene*(name: string = "Scene"): SceneRef =
   ## Creates a new scene.
   nodepattern(SceneRef)
+  controlpattern()
   result.kind = SCENE_NODE
   result.paused = false
 
@@ -55,4 +56,9 @@ method instance*(self: SceneRef): SceneRef {.base.} =
   self.deepCopy()
 
 method reAnchorScene*(self: SceneRef, w, h: float, paused: bool) {.base.} =
-  discard
+  self.rect_size = Vector2(w, h)
+  for child in self.getAllChilds():
+    if self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE:
+      continue
+    if child.nodetype == NODETYPE_CONTROL:
+      child.ControlRef.calcAnchor()

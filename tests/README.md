@@ -8,3 +8,5 @@
 6. [Use StyleSheet object.](https://github.com/Ethosa/toshiko/blob/master/tests/test6.nim)
 7. [Use NimObject.](https://github.com/Ethosa/toshiko/blob/master/tests/test7.nim)
 8. [Use Drawable and Control.](https://github.com/Ethosa/toshiko/blob/master/tests/test8.nim)
+9. [Handle Control events.](https://github.com/Ethosa/toshiko/blob/master/tests/test9.nim)
+10. [Anchor setting](https://github.com/Ethosa/toshiko/blob/master/tests/test10.nim)
