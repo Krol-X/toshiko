@@ -2,11 +2,13 @@
 import
   strutils,
   ../core/enums,
+  ../core/input,
   ../core/nim_object
 
 
 type
   NodeHandler* = proc(self: NodeRef): void
+  NodeInputHandler* = proc(self: NodeRef, event: InputEvent)
   NodeObj* = object of RootObj
     is_ready*: bool
     name*: string
@@ -21,11 +23,14 @@ type
     on_exit*: NodeHandler  ## Called, when exited from the scene.
     on_ready*: NodeHandler  ## Called after `on_enter`.
     on_process*: NodeHandler  ## Called every tick.
+    on_input*: NodeInputHandler
 
     properties*: NimRef  ## Custom properties. You can change it at any time.
   NodeRef* = ref NodeObj
 
-var standard_handler*: NodeHandler = proc(self: NodeRef) = discard
+var
+  standard_handler*: NodeHandler = proc(self: NodeRef) = discard
+  standard_input_handler*: NodeInputHandler = proc(self: NodeRef, event: InputEvent) = discard
 
 
 template nodepattern*(t: untyped) =
@@ -40,6 +45,8 @@ template nodepattern*(t: untyped) =
   result.on_exit = standard_handler
   result.on_ready = standard_handler
   result.on_process = standard_handler
+
+  result.on_input = standard_input_handler
 
   result.properties = nimtype()
 
@@ -56,7 +63,7 @@ proc Node*(name: string = "Node"): NodeRef =
 
 
 method draw*(self: NodeRef, w, h: float) {.base.} = discard
-method handle*(self: NodeRef, mouse_on: NodeRef) {.base.} = discard
+method handle*(self: NodeRef, event: InputEvent, mouse_on: var NodeRef) {.base.} = discard
 
 
 method addChild*(self, child: NodeRef) {.base.} =
@@ -226,6 +233,15 @@ macro `@`*(node: NodeRef, callable, code: untyped): untyped =
       result = quote do:
         `node`.`name` =
           proc(`self`: NodeRef): void =
+            `code`
+    of "on_input":
+      var
+        name = callable[0]
+        self = callable[1]
+        event = callable[2]
+      result = quote do:
+        `node`.`name` =
+          proc(`self`: NodeRef, `event`: InputEvent): void =
             `code`
     of "on_hover", "on_out", "on_click", "on_press", "on_focus", "on_unfocus", "on_release":
       var

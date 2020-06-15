@@ -4,6 +4,7 @@ import
   thirdparty/opengl/glut,
 
   core/color,
+  core/input,
 
   nodes/node,
   nodes/scene,
@@ -42,7 +43,7 @@ proc display {.cdecl.} =
 
   # Draw current scene.
   current_scene.draw(width.GLfloat, height.GLfloat, paused)
-  # press_state = -1
+  press_state = -1
   mouse_on = nil
 
   # Update window.
@@ -65,6 +66,126 @@ proc reshape(w, h: cint) {.cdecl.} =
 
     if current_scene != nil:
       current_scene.reAnchorScene(w.GLfloat, h.GLfloat, paused)
+
+template check(event, condition, conditionelif: untyped): untyped =
+  if last_event is `event` and `condition`:
+    press_state = 2
+  elif `conditionelif`:
+    press_state = 1
+  else:
+    press_state = 0
+
+proc mouse(button, state, x, y: cint) {.cdecl.} =
+  ## Handle mouse input.
+  check(InputEventMouseButton, last_event.pressed and state == GLUT_DOWN, state == GLUT_DOWN)
+  last_event.button_index = button
+  last_event.x = x.float
+  last_event.y = y.float
+  last_event.kind = MOUSE
+  mouse_pressed = state == GLUT_DOWN
+  last_event.pressed = state == GLUT_DOWN
+
+  current_scene.handle(last_event, mouse_on)
+
+proc wheel(button, dir, x, y: cint) {.cdecl.} =
+  ## Handle mouse wheel input.
+  check(InputEventMouseWheel, false, false)
+  last_event.button_index = button
+  last_event.x = x.float
+  last_event.y = y.float
+  last_event.kind = WHEEL
+  last_event.yrel = dir.float
+
+  current_scene.handle(last_event, mouse_on)
+
+proc keyboardpress(c: int8, x, y: cint) {.cdecl.} =
+  ## Called when press any key on keyboard.
+  if c < 0:
+    return
+  let key = $c.char
+  check(InputEventKeyboard, last_event.pressed, true)
+  last_event.key = key
+  last_event.key_int = c
+  last_event.x = x.float
+  last_event.y = y.float
+  if key notin pressed_keys:
+    pressed_keys.add(key)
+    pressed_keys_ints.add(c)
+  last_event.kind = KEYBOARD
+  last_key_state = key_state
+  key_state = true
+
+  current_scene.handle(last_event, mouse_on)
+
+proc keyboardup(c: int8, x, y: cint) {.cdecl.} =
+  ## Called when any key no more pressed.
+  if c < 0:
+    return
+  let key = $c.char
+  check(InputEventKeyboard, false, false)
+  last_event.key = key
+  last_event.key_int = c
+  last_event.x = x.float
+  last_event.y = y.float
+  last_event.kind = KEYBOARD
+  last_key_state = key_state
+  key_state = false
+  var i = 0
+  for k in pressed_keys:
+    if k == key:
+      pressed_keys.delete(i)
+      pressed_keys_ints.delete(i)
+      break
+    inc i
+
+  current_scene.handle(last_event, mouse_on)
+
+proc keyboardspecialpress(c: cint, x, y: cint) {.cdecl.} =
+  ## Called when press any key on keyboard.
+  if c < 0:
+    return
+  check(InputEventKeyboard, last_event.pressed, true)
+  last_event.key = $c
+  last_event.key_cint = c
+  last_event.x = x.float
+  last_event.y = y.float
+  if c notin pressed_keys_cints:
+    pressed_keys_cints.add(c)
+  last_event.kind = KEYBOARD
+  last_key_state = key_state
+  key_state = true
+
+  current_scene.handle(last_event, mouse_on)
+
+proc keyboardspecialup(c: cint, x, y: cint) {.cdecl.} =
+  ## Called when any key no more pressed.
+  if c < 0:
+    return
+  check(InputEventKeyboard, false, false)
+  last_event.key_cint = c
+  last_event.x = x.float
+  last_event.y = y.float
+  last_event.kind = KEYBOARD
+  last_key_state = key_state
+  key_state = false
+  var i = 0
+  for k in pressed_keys_cints:
+    if k == c:
+      pressed_keys_cints.delete(i)
+      break
+    inc i
+
+  current_scene.handle(last_event, mouse_on)
+
+proc motion(x, y: cint) {.cdecl.} =
+  ## Called on any mouse motion.
+  last_event.kind = MOTION
+  last_event.xrel = last_event.x - x.float
+  last_event.yrel = last_event.y - y.float
+  last_event.x = x.float
+  last_event.y = y.float
+
+  current_scene.handle(last_event, mouse_on)
 
 
 # ---- Public ---- #
@@ -147,6 +268,16 @@ proc showWindow* =
   glutDisplayFunc(display)
   glutIdleFunc(display)
   glutReshapeFunc(reshape)
+  when not defined(android) and not defined(ios):
+    glutReshapeFunc(reshape)
+    glutMouseWheelFunc(wheel)
+  glutMouseFunc(mouse)
+  glutKeyboardFunc(keyboardpress)
+  glutKeyboardUpFunc(keyboardup)
+  glutSpecialFunc(keyboardspecialpress)
+  glutSpecialUpFunc(keyboardspecialup)
+  glutMotionFunc(motion)
+  glutPassiveMotionFunc(motion)
   changeScene(main_scene.name)
   glutMainLoop()
   current_scene.exit()

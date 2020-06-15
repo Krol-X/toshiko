@@ -1,6 +1,7 @@
 # author: Ethosa
 import
   ../core/enums,
+  ../core/input,
   node
 
 
@@ -42,12 +43,12 @@ method exit*(self: SceneRef) {.base.} =
   for child in self.getAllChilds():
     child.on_exit(child)
 
-method handle*(self: SceneRef, mouse_on: NodeRef) =
+method handle*(self: SceneRef, event: InputEvent, mouse_on: var NodeRef) =
   {.warning[LockLevel]: off.}
   for child in self.getAllChilds():
     if self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE:
       continue
-    child.handle(mouse_on)
+    child.handle(event, mouse_on)
 
 method instance*(self: SceneRef): SceneRef {.base.} =
   ## Special alias for deepCopy proc.
