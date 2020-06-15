@@ -102,13 +102,16 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#NodeKind"
     title="NodeKind {.pure.} = enum
-  NODE_NODE, SCENE_NODE, CANVAS_NODE, CONTROL_NODE"><wbr />Node<wbr />Kind<span class="attachedType"></span></a></li>
+  NODE_NODE, SCENE_NODE, CANVAS_NODE, CONTROL_NODE, COLOR_RECT_NODE"><wbr />Node<wbr />Kind<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#NodeType"
     title="NodeType {.pure.} = enum
   NODETYPE_DEFAULT, NODETYPE_CONTROL"><wbr />Node<wbr />Type<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#PauseMode"
     title="PauseMode {.pure.} = enum
   PAUSE_MODE_PAUSE, PAUSE_MODE_RUN, PAUSE_MODE_INHERIT"><wbr />Pause<wbr />Mode<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#MouseMode"
+    title="MouseMode {.pure.} = enum
+  MOUSEMODE_HANDLE, MOUSEMODE_IGNORE"><wbr />Mouse<wbr />Mode<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -125,7 +128,7 @@ function main() {
 <dl class="item">
 <a id="NodeKind"></a>
 <dt><pre><a href="enums.html#NodeKind"><span class="Identifier">NodeKind</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">pure</span></span><span class="Other">.}</span></span> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">NODE_NODE</span><span class="Other">,</span> <span class="Identifier">SCENE_NODE</span><span class="Other">,</span> <span class="Identifier">CANVAS_NODE</span><span class="Other">,</span> <span class="Identifier">CONTROL_NODE</span></pre></dt>
+  <span class="Identifier">NODE_NODE</span><span class="Other">,</span> <span class="Identifier">SCENE_NODE</span><span class="Other">,</span> <span class="Identifier">CANVAS_NODE</span><span class="Other">,</span> <span class="Identifier">CONTROL_NODE</span><span class="Other">,</span> <span class="Identifier">COLOR_RECT_NODE</span></pre></dt>
 <dd>
 
 
@@ -147,6 +150,14 @@ function main() {
 
 
 </dd>
+<a id="MouseMode"></a>
+<dt><pre><a href="enums.html#MouseMode"><span class="Identifier">MouseMode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">pure</span></span><span class="Other">.}</span></span> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">MOUSEMODE_HANDLE</span><span class="Other">,</span> <span class="Identifier">MOUSEMODE_IGNORE</span></pre></dt>
+<dd>
+
+
+
+</dd>
 
 </dl></div>
 
@@ -157,7 +168,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-15 16:23:28 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-15 16:34:59 UTC</small>
       </div>
     </div>
   </div>
