@@ -16,7 +16,7 @@ type
     size*: Vector2Ref
 
 
-proc load*(file: cstring, x, y: var float, mode: Glenum = GL_RGB): Gluint =
+proc load*(file: cstring, x, y: var float): Gluint =
   ## Loads image from file and returns texture ID.
   ##
   ## Arguments:
@@ -30,6 +30,11 @@ proc load*(file: cstring, x, y: var float, mode: Glenum = GL_RGB): Gluint =
     return
   x = surface.w.float
   y = surface.h.float
+  var mode =
+    if surface.format.Amask != 0:
+      GL_RGBA
+    else:
+      GL_RGB
 
 
   # OpenGL:
@@ -50,7 +55,7 @@ proc load*(file: cstring, x, y: var float, mode: Glenum = GL_RGB): Gluint =
   textureid
 
 
-proc load*(file: cstring, mode: Glenum = GL_RGB): GlTextureObj =
+proc load*(file: cstring): GlTextureObj =
   ## Loads GL texture.
   ##
   ## Arguments:
@@ -59,5 +64,5 @@ proc load*(file: cstring, mode: Glenum = GL_RGB): GlTextureObj =
     x: float = 0f
     y: float = 0f
     textureid: Gluint
-  textureid = load(file, x, y, mode)
+  textureid = load(file, x, y)
   GlTextureObj(texture: textureid, size: Vector2(x, y))

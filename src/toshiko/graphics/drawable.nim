@@ -125,13 +125,12 @@ proc getColor*(self: DrawableRef): ColorRef =
   ## Returns background color.
   self.background_color
 
-proc loadTexture*(self: DrawableRef, path: string, mode: Glenum = GL_RGB) =
+proc loadTexture*(self: DrawableRef, path: string) =
   ## Loads texture from the file.
   ##
   ## Arguments:
   ## - `path` is an image path.
-  ## - `mode` is an image mode.
-  self.texture = load(path, mode)
+  self.texture = load(path)
   self.background_color = Color(1f, 1f, 1f, 1f)
 
 proc setBorderColor*(self: DrawableRef, color: ColorRef) =

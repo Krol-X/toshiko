@@ -103,12 +103,12 @@ method draw*(self: TextureRectRef, w, h: float) =
     glEnd()
     glDisable(GL_TEXTURE_2D)
 
-method loadTexture*(self: TextureRectRef, file: cstring, mode: Glenum = GL_RGB) {.base.} =
+method loadTexture*(self: TextureRectRef, file: cstring) {.base.} =
   ## Loads texture from file.
   ##
   ## Arguments:
   ## - `file` is an image file path.
-  self.texture = load(file, mode)
+  self.texture = load(file)
 
 method setTexture*(self: TextureRectRef, gltexture: GlTextureObj) {.base.} =
   ## Changes texture.
