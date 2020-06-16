@@ -8,7 +8,7 @@
 [![time tracker](https://wakatime.com/badge/github/Ethosa/toshiko.svg)](https://wakatime.com/badge/github/Ethosa/toshiko)
 [![test](https://github.com/Ethosa/toshiko/workflows/test/badge.svg)](https://github.com/Ethosa/toshiko/actions)
 
-Latest version - 0.0.1
+Latest version - 0.0.1  
 Stable version - ?.?.?
 
 </div>
