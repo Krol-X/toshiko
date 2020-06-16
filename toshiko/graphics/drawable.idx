@@ -3,6 +3,7 @@ DrawableRef	toshiko/graphics/drawable.html#DrawableRef	drawable: DrawableRef
 Drawable	toshiko/graphics/drawable.html#Drawable	drawable: Drawable(): DrawableRef	
 draw	toshiko/graphics/drawable.html#draw,DrawableRef,float,float,float,float	drawable: draw(self: DrawableRef; x, y, width, height: float)	
 getColor	toshiko/graphics/drawable.html#getColor,DrawableRef	drawable: getColor(self: DrawableRef): ColorRef	
+loadTexture	toshiko/graphics/drawable.html#loadTexture,DrawableRef,string,GLenum	drawable: loadTexture(self: DrawableRef; path: string; mode: GLenum = GL_RGB)	
 setBorderColor	toshiko/graphics/drawable.html#setBorderColor,DrawableRef,ColorRef	drawable: setBorderColor(self: DrawableRef; color: ColorRef)	
 setBorderWidth	toshiko/graphics/drawable.html#setBorderWidth,DrawableRef,float	drawable: setBorderWidth(self: DrawableRef; width: float)	
 setColor	toshiko/graphics/drawable.html#setColor,DrawableRef,ColorRef	drawable: setColor(self: DrawableRef; color: ColorRef)	

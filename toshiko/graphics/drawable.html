@@ -134,6 +134,8 @@ function main() {
     title="draw(self: DrawableRef; x, y, width, height: float)"><wbr />draw<span class="attachedType">DrawableRef</span></a></li>
   <li><a class="reference" href="#getColor%2CDrawableRef"
     title="getColor(self: DrawableRef): ColorRef"><wbr />get<wbr />Color<span class="attachedType">DrawableRef</span></a></li>
+  <li><a class="reference" href="#loadTexture%2CDrawableRef%2Cstring%2CGLenum"
+    title="loadTexture(self: DrawableRef; path: string; mode: GLenum = GL_RGB)"><wbr />load<wbr />Texture<span class="attachedType">DrawableRef</span></a></li>
   <li><a class="reference" href="#setBorderColor%2CDrawableRef%2CColorRef"
     title="setBorderColor(self: DrawableRef; color: ColorRef)"><wbr />set<wbr />Border<wbr />Color<span class="attachedType">DrawableRef</span></a></li>
   <li><a class="reference" href="#setBorderWidth%2CDrawableRef%2Cfloat"
@@ -224,6 +226,14 @@ function main() {
 
 
 </dd>
+<a id="loadTexture,DrawableRef,string,GLenum"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#loadTexture%2CDrawableRef%2Cstring%2CGLenum"><span class="Identifier">loadTexture</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a><span class="Other">;</span> <span class="Identifier">path</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <a href="../thirdparty/opengl.html#GLenum"><span class="Identifier">GLenum</span></a> <span class="Other">=</span> <span class="Identifier">GL_RGB</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">GLerror</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="setBorderColor,DrawableRef,ColorRef"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#setBorderColor%2CDrawableRef%2CColorRef"><span class="Identifier">setBorderColor</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a><span class="Other">;</span> <span class="Identifier">color</span><span class="Other">:</span> <a href="../core/color.html#ColorRef"><span class="Identifier">ColorRef</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -282,7 +292,7 @@ function main() {
 </dd>
 <a id="setStyle,DrawableRef,StyleSheetRef"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#setStyle%2CDrawableRef%2CStyleSheetRef"><span class="Identifier">setStyle</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <a href="../core/stylesheet.html#StyleSheetRef"><span class="Identifier">StyleSheetRef</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">RegexError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">RegexError</span><span class="Other">,</span> <span class="Identifier">GLerror</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -298,7 +308,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-16 01:29:16 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-16 01:48:14 UTC</small>
       </div>
     </div>
   </div>
