@@ -1,0 +1,870 @@
+LibName	toshiko/thirdparty/sdl2.html#LibName	sdl2: LibName	
+csize_t_const	toshiko/thirdparty/sdl2.html#csize_t_const	sdl2: csize_t_const	
+Scancode	toshiko/thirdparty/sdl2.html#Scancode	sdl2: Scancode	
+K_UNKNOWN	toshiko/thirdparty/sdl2.html#K_UNKNOWN	sdl2: K_UNKNOWN	
+K_BACKSPACE	toshiko/thirdparty/sdl2.html#K_BACKSPACE	sdl2: K_BACKSPACE	
+K_TAB	toshiko/thirdparty/sdl2.html#K_TAB	sdl2: K_TAB	
+K_RETURN	toshiko/thirdparty/sdl2.html#K_RETURN	sdl2: K_RETURN	
+K_ESCAPE	toshiko/thirdparty/sdl2.html#K_ESCAPE	sdl2: K_ESCAPE	
+K_SPACE	toshiko/thirdparty/sdl2.html#K_SPACE	sdl2: K_SPACE	
+K_EXCLAIM	toshiko/thirdparty/sdl2.html#K_EXCLAIM	sdl2: K_EXCLAIM	
+K_QUOTEDBL	toshiko/thirdparty/sdl2.html#K_QUOTEDBL	sdl2: K_QUOTEDBL	
+K_HASH	toshiko/thirdparty/sdl2.html#K_HASH	sdl2: K_HASH	
+K_DOLLAR	toshiko/thirdparty/sdl2.html#K_DOLLAR	sdl2: K_DOLLAR	
+K_PERCENT	toshiko/thirdparty/sdl2.html#K_PERCENT	sdl2: K_PERCENT	
+K_AMPERSAND	toshiko/thirdparty/sdl2.html#K_AMPERSAND	sdl2: K_AMPERSAND	
+K_QUOTE	toshiko/thirdparty/sdl2.html#K_QUOTE	sdl2: K_QUOTE	
+K_LEFTPAREN	toshiko/thirdparty/sdl2.html#K_LEFTPAREN	sdl2: K_LEFTPAREN	
+K_RIGHTPAREN	toshiko/thirdparty/sdl2.html#K_RIGHTPAREN	sdl2: K_RIGHTPAREN	
+K_ASTERISK	toshiko/thirdparty/sdl2.html#K_ASTERISK	sdl2: K_ASTERISK	
+K_PLUS	toshiko/thirdparty/sdl2.html#K_PLUS	sdl2: K_PLUS	
+K_COMMA	toshiko/thirdparty/sdl2.html#K_COMMA	sdl2: K_COMMA	
+K_MINUS	toshiko/thirdparty/sdl2.html#K_MINUS	sdl2: K_MINUS	
+K_PERIOD	toshiko/thirdparty/sdl2.html#K_PERIOD	sdl2: K_PERIOD	
+K_SLASH	toshiko/thirdparty/sdl2.html#K_SLASH	sdl2: K_SLASH	
+K_0	toshiko/thirdparty/sdl2.html#K_0	sdl2: K_0	
+K_1	toshiko/thirdparty/sdl2.html#K_1	sdl2: K_1	
+K_2	toshiko/thirdparty/sdl2.html#K_2	sdl2: K_2	
+K_3	toshiko/thirdparty/sdl2.html#K_3	sdl2: K_3	
+K_4	toshiko/thirdparty/sdl2.html#K_4	sdl2: K_4	
+K_5	toshiko/thirdparty/sdl2.html#K_5	sdl2: K_5	
+K_6	toshiko/thirdparty/sdl2.html#K_6	sdl2: K_6	
+K_7	toshiko/thirdparty/sdl2.html#K_7	sdl2: K_7	
+K_8	toshiko/thirdparty/sdl2.html#K_8	sdl2: K_8	
+K_9	toshiko/thirdparty/sdl2.html#K_9	sdl2: K_9	
+K_COLON	toshiko/thirdparty/sdl2.html#K_COLON	sdl2: K_COLON	
+K_SEMICOLON	toshiko/thirdparty/sdl2.html#K_SEMICOLON	sdl2: K_SEMICOLON	
+K_LESS	toshiko/thirdparty/sdl2.html#K_LESS	sdl2: K_LESS	
+K_EQUALS	toshiko/thirdparty/sdl2.html#K_EQUALS	sdl2: K_EQUALS	
+K_GREATER	toshiko/thirdparty/sdl2.html#K_GREATER	sdl2: K_GREATER	
+K_QUESTION	toshiko/thirdparty/sdl2.html#K_QUESTION	sdl2: K_QUESTION	
+K_AT	toshiko/thirdparty/sdl2.html#K_AT	sdl2: K_AT	
+K_LEFTBRACKET	toshiko/thirdparty/sdl2.html#K_LEFTBRACKET	sdl2: K_LEFTBRACKET	
+K_BACKSLASH	toshiko/thirdparty/sdl2.html#K_BACKSLASH	sdl2: K_BACKSLASH	
+K_RIGHTBRACKET	toshiko/thirdparty/sdl2.html#K_RIGHTBRACKET	sdl2: K_RIGHTBRACKET	
+K_CARET	toshiko/thirdparty/sdl2.html#K_CARET	sdl2: K_CARET	
+K_UNDERSCORE	toshiko/thirdparty/sdl2.html#K_UNDERSCORE	sdl2: K_UNDERSCORE	
+K_BACKQUOTE	toshiko/thirdparty/sdl2.html#K_BACKQUOTE	sdl2: K_BACKQUOTE	
+K_a	toshiko/thirdparty/sdl2.html#K_a	sdl2: K_a	
+K_b	toshiko/thirdparty/sdl2.html#K_b	sdl2: K_b	
+K_c	toshiko/thirdparty/sdl2.html#K_c	sdl2: K_c	
+K_d	toshiko/thirdparty/sdl2.html#K_d	sdl2: K_d	
+K_e	toshiko/thirdparty/sdl2.html#K_e	sdl2: K_e	
+K_f	toshiko/thirdparty/sdl2.html#K_f	sdl2: K_f	
+K_g	toshiko/thirdparty/sdl2.html#K_g	sdl2: K_g	
+K_h	toshiko/thirdparty/sdl2.html#K_h	sdl2: K_h	
+K_i	toshiko/thirdparty/sdl2.html#K_i	sdl2: K_i	
+K_j	toshiko/thirdparty/sdl2.html#K_j	sdl2: K_j	
+K_k	toshiko/thirdparty/sdl2.html#K_k	sdl2: K_k	
+K_l	toshiko/thirdparty/sdl2.html#K_l	sdl2: K_l	
+K_m	toshiko/thirdparty/sdl2.html#K_m	sdl2: K_m	
+K_n	toshiko/thirdparty/sdl2.html#K_n	sdl2: K_n	
+K_o	toshiko/thirdparty/sdl2.html#K_o	sdl2: K_o	
+K_p	toshiko/thirdparty/sdl2.html#K_p	sdl2: K_p	
+K_q	toshiko/thirdparty/sdl2.html#K_q	sdl2: K_q	
+K_r	toshiko/thirdparty/sdl2.html#K_r	sdl2: K_r	
+K_s	toshiko/thirdparty/sdl2.html#K_s	sdl2: K_s	
+K_t	toshiko/thirdparty/sdl2.html#K_t	sdl2: K_t	
+K_u	toshiko/thirdparty/sdl2.html#K_u	sdl2: K_u	
+K_v	toshiko/thirdparty/sdl2.html#K_v	sdl2: K_v	
+K_w	toshiko/thirdparty/sdl2.html#K_w	sdl2: K_w	
+K_x	toshiko/thirdparty/sdl2.html#K_x	sdl2: K_x	
+K_y	toshiko/thirdparty/sdl2.html#K_y	sdl2: K_y	
+K_z	toshiko/thirdparty/sdl2.html#K_z	sdl2: K_z	
+K_DELETE	toshiko/thirdparty/sdl2.html#K_DELETE	sdl2: K_DELETE	
+K_CAPSLOCK	toshiko/thirdparty/sdl2.html#K_CAPSLOCK	sdl2: K_CAPSLOCK	
+K_F1	toshiko/thirdparty/sdl2.html#K_F1	sdl2: K_F1	
+K_F2	toshiko/thirdparty/sdl2.html#K_F2	sdl2: K_F2	
+K_F3	toshiko/thirdparty/sdl2.html#K_F3	sdl2: K_F3	
+K_F4	toshiko/thirdparty/sdl2.html#K_F4	sdl2: K_F4	
+K_F5	toshiko/thirdparty/sdl2.html#K_F5	sdl2: K_F5	
+K_F6	toshiko/thirdparty/sdl2.html#K_F6	sdl2: K_F6	
+K_F7	toshiko/thirdparty/sdl2.html#K_F7	sdl2: K_F7	
+K_F8	toshiko/thirdparty/sdl2.html#K_F8	sdl2: K_F8	
+K_F9	toshiko/thirdparty/sdl2.html#K_F9	sdl2: K_F9	
+K_F10	toshiko/thirdparty/sdl2.html#K_F10	sdl2: K_F10	
+K_F11	toshiko/thirdparty/sdl2.html#K_F11	sdl2: K_F11	
+K_F12	toshiko/thirdparty/sdl2.html#K_F12	sdl2: K_F12	
+K_PRINTSCREEN	toshiko/thirdparty/sdl2.html#K_PRINTSCREEN	sdl2: K_PRINTSCREEN	
+K_SCROLLLOCK	toshiko/thirdparty/sdl2.html#K_SCROLLLOCK	sdl2: K_SCROLLLOCK	
+K_PAUSE	toshiko/thirdparty/sdl2.html#K_PAUSE	sdl2: K_PAUSE	
+K_INSERT	toshiko/thirdparty/sdl2.html#K_INSERT	sdl2: K_INSERT	
+K_HOME	toshiko/thirdparty/sdl2.html#K_HOME	sdl2: K_HOME	
+K_PAGEUP	toshiko/thirdparty/sdl2.html#K_PAGEUP	sdl2: K_PAGEUP	
+K_END	toshiko/thirdparty/sdl2.html#K_END	sdl2: K_END	
+K_PAGEDOWN	toshiko/thirdparty/sdl2.html#K_PAGEDOWN	sdl2: K_PAGEDOWN	
+K_RIGHT	toshiko/thirdparty/sdl2.html#K_RIGHT	sdl2: K_RIGHT	
+K_LEFT	toshiko/thirdparty/sdl2.html#K_LEFT	sdl2: K_LEFT	
+K_DOWN	toshiko/thirdparty/sdl2.html#K_DOWN	sdl2: K_DOWN	
+K_UP	toshiko/thirdparty/sdl2.html#K_UP	sdl2: K_UP	
+K_NUMLOCKCLEAR	toshiko/thirdparty/sdl2.html#K_NUMLOCKCLEAR	sdl2: K_NUMLOCKCLEAR	
+K_KP_DIVIDE	toshiko/thirdparty/sdl2.html#K_KP_DIVIDE	sdl2: K_KP_DIVIDE	
+K_KP_MULTIPLY	toshiko/thirdparty/sdl2.html#K_KP_MULTIPLY	sdl2: K_KP_MULTIPLY	
+K_KP_MINUS	toshiko/thirdparty/sdl2.html#K_KP_MINUS	sdl2: K_KP_MINUS	
+K_KP_PLUS	toshiko/thirdparty/sdl2.html#K_KP_PLUS	sdl2: K_KP_PLUS	
+K_KP_ENTER	toshiko/thirdparty/sdl2.html#K_KP_ENTER	sdl2: K_KP_ENTER	
+K_KP_1	toshiko/thirdparty/sdl2.html#K_KP_1	sdl2: K_KP_1	
+K_KP_2	toshiko/thirdparty/sdl2.html#K_KP_2	sdl2: K_KP_2	
+K_KP_3	toshiko/thirdparty/sdl2.html#K_KP_3	sdl2: K_KP_3	
+K_KP_4	toshiko/thirdparty/sdl2.html#K_KP_4	sdl2: K_KP_4	
+K_KP_5	toshiko/thirdparty/sdl2.html#K_KP_5	sdl2: K_KP_5	
+K_KP_6	toshiko/thirdparty/sdl2.html#K_KP_6	sdl2: K_KP_6	
+K_KP_7	toshiko/thirdparty/sdl2.html#K_KP_7	sdl2: K_KP_7	
+K_KP_8	toshiko/thirdparty/sdl2.html#K_KP_8	sdl2: K_KP_8	
+K_KP_9	toshiko/thirdparty/sdl2.html#K_KP_9	sdl2: K_KP_9	
+K_KP_0	toshiko/thirdparty/sdl2.html#K_KP_0	sdl2: K_KP_0	
+K_KP_PERIOD	toshiko/thirdparty/sdl2.html#K_KP_PERIOD	sdl2: K_KP_PERIOD	
+K_APPLICATION	toshiko/thirdparty/sdl2.html#K_APPLICATION	sdl2: K_APPLICATION	
+K_POWER	toshiko/thirdparty/sdl2.html#K_POWER	sdl2: K_POWER	
+K_KP_EQUALS	toshiko/thirdparty/sdl2.html#K_KP_EQUALS	sdl2: K_KP_EQUALS	
+K_F13	toshiko/thirdparty/sdl2.html#K_F13	sdl2: K_F13	
+K_F14	toshiko/thirdparty/sdl2.html#K_F14	sdl2: K_F14	
+K_F15	toshiko/thirdparty/sdl2.html#K_F15	sdl2: K_F15	
+K_F16	toshiko/thirdparty/sdl2.html#K_F16	sdl2: K_F16	
+K_F17	toshiko/thirdparty/sdl2.html#K_F17	sdl2: K_F17	
+K_F18	toshiko/thirdparty/sdl2.html#K_F18	sdl2: K_F18	
+K_F19	toshiko/thirdparty/sdl2.html#K_F19	sdl2: K_F19	
+K_F20	toshiko/thirdparty/sdl2.html#K_F20	sdl2: K_F20	
+K_F21	toshiko/thirdparty/sdl2.html#K_F21	sdl2: K_F21	
+K_F22	toshiko/thirdparty/sdl2.html#K_F22	sdl2: K_F22	
+K_F23	toshiko/thirdparty/sdl2.html#K_F23	sdl2: K_F23	
+K_F24	toshiko/thirdparty/sdl2.html#K_F24	sdl2: K_F24	
+K_EXECUTE	toshiko/thirdparty/sdl2.html#K_EXECUTE	sdl2: K_EXECUTE	
+K_HELP	toshiko/thirdparty/sdl2.html#K_HELP	sdl2: K_HELP	
+K_MENU	toshiko/thirdparty/sdl2.html#K_MENU	sdl2: K_MENU	
+K_SELECT	toshiko/thirdparty/sdl2.html#K_SELECT	sdl2: K_SELECT	
+K_STOP	toshiko/thirdparty/sdl2.html#K_STOP	sdl2: K_STOP	
+K_AGAIN	toshiko/thirdparty/sdl2.html#K_AGAIN	sdl2: K_AGAIN	
+K_UNDO	toshiko/thirdparty/sdl2.html#K_UNDO	sdl2: K_UNDO	
+K_CUT	toshiko/thirdparty/sdl2.html#K_CUT	sdl2: K_CUT	
+K_COPY	toshiko/thirdparty/sdl2.html#K_COPY	sdl2: K_COPY	
+K_PASTE	toshiko/thirdparty/sdl2.html#K_PASTE	sdl2: K_PASTE	
+K_FIND	toshiko/thirdparty/sdl2.html#K_FIND	sdl2: K_FIND	
+K_MUTE	toshiko/thirdparty/sdl2.html#K_MUTE	sdl2: K_MUTE	
+K_VOLUMEUP	toshiko/thirdparty/sdl2.html#K_VOLUMEUP	sdl2: K_VOLUMEUP	
+K_VOLUMEDOWN	toshiko/thirdparty/sdl2.html#K_VOLUMEDOWN	sdl2: K_VOLUMEDOWN	
+K_KP_COMMA	toshiko/thirdparty/sdl2.html#K_KP_COMMA	sdl2: K_KP_COMMA	
+K_KP_EQUALSAS400	toshiko/thirdparty/sdl2.html#K_KP_EQUALSAS400	sdl2: K_KP_EQUALSAS400	
+K_ALTERASE	toshiko/thirdparty/sdl2.html#K_ALTERASE	sdl2: K_ALTERASE	
+K_SYSREQ	toshiko/thirdparty/sdl2.html#K_SYSREQ	sdl2: K_SYSREQ	
+K_CANCEL	toshiko/thirdparty/sdl2.html#K_CANCEL	sdl2: K_CANCEL	
+K_CLEAR	toshiko/thirdparty/sdl2.html#K_CLEAR	sdl2: K_CLEAR	
+K_PRIOR	toshiko/thirdparty/sdl2.html#K_PRIOR	sdl2: K_PRIOR	
+K_RETURN2	toshiko/thirdparty/sdl2.html#K_RETURN2	sdl2: K_RETURN2	
+K_SEPARATOR	toshiko/thirdparty/sdl2.html#K_SEPARATOR	sdl2: K_SEPARATOR	
+K_OUT	toshiko/thirdparty/sdl2.html#K_OUT	sdl2: K_OUT	
+K_OPER	toshiko/thirdparty/sdl2.html#K_OPER	sdl2: K_OPER	
+K_CLEARAGAIN	toshiko/thirdparty/sdl2.html#K_CLEARAGAIN	sdl2: K_CLEARAGAIN	
+K_CRSEL	toshiko/thirdparty/sdl2.html#K_CRSEL	sdl2: K_CRSEL	
+K_EXSEL	toshiko/thirdparty/sdl2.html#K_EXSEL	sdl2: K_EXSEL	
+K_KP_00	toshiko/thirdparty/sdl2.html#K_KP_00	sdl2: K_KP_00	
+K_KP_000	toshiko/thirdparty/sdl2.html#K_KP_000	sdl2: K_KP_000	
+K_THOUSANDSSEPARATOR	toshiko/thirdparty/sdl2.html#K_THOUSANDSSEPARATOR	sdl2: K_THOUSANDSSEPARATOR	
+K_DECIMALSEPARATOR	toshiko/thirdparty/sdl2.html#K_DECIMALSEPARATOR	sdl2: K_DECIMALSEPARATOR	
+K_CURRENCYUNIT	toshiko/thirdparty/sdl2.html#K_CURRENCYUNIT	sdl2: K_CURRENCYUNIT	
+K_CURRENCYSUBUNIT	toshiko/thirdparty/sdl2.html#K_CURRENCYSUBUNIT	sdl2: K_CURRENCYSUBUNIT	
+K_KP_LEFTPAREN	toshiko/thirdparty/sdl2.html#K_KP_LEFTPAREN	sdl2: K_KP_LEFTPAREN	
+K_KP_RIGHTPAREN	toshiko/thirdparty/sdl2.html#K_KP_RIGHTPAREN	sdl2: K_KP_RIGHTPAREN	
+K_KP_LEFTBRACE	toshiko/thirdparty/sdl2.html#K_KP_LEFTBRACE	sdl2: K_KP_LEFTBRACE	
+K_KP_RIGHTBRACE	toshiko/thirdparty/sdl2.html#K_KP_RIGHTBRACE	sdl2: K_KP_RIGHTBRACE	
+K_KP_TAB	toshiko/thirdparty/sdl2.html#K_KP_TAB	sdl2: K_KP_TAB	
+K_KP_BACKSPACE	toshiko/thirdparty/sdl2.html#K_KP_BACKSPACE	sdl2: K_KP_BACKSPACE	
+K_KP_A	toshiko/thirdparty/sdl2.html#K_KP_A	sdl2: K_KP_A	
+K_KP_B	toshiko/thirdparty/sdl2.html#K_KP_B	sdl2: K_KP_B	
+K_KP_C	toshiko/thirdparty/sdl2.html#K_KP_C	sdl2: K_KP_C	
+K_KP_D	toshiko/thirdparty/sdl2.html#K_KP_D	sdl2: K_KP_D	
+K_KP_E	toshiko/thirdparty/sdl2.html#K_KP_E	sdl2: K_KP_E	
+K_KP_F	toshiko/thirdparty/sdl2.html#K_KP_F	sdl2: K_KP_F	
+K_KP_XOR	toshiko/thirdparty/sdl2.html#K_KP_XOR	sdl2: K_KP_XOR	
+K_KP_POWER	toshiko/thirdparty/sdl2.html#K_KP_POWER	sdl2: K_KP_POWER	
+K_KP_PERCENT	toshiko/thirdparty/sdl2.html#K_KP_PERCENT	sdl2: K_KP_PERCENT	
+K_KP_LESS	toshiko/thirdparty/sdl2.html#K_KP_LESS	sdl2: K_KP_LESS	
+K_KP_GREATER	toshiko/thirdparty/sdl2.html#K_KP_GREATER	sdl2: K_KP_GREATER	
+K_KP_AMPERSAND	toshiko/thirdparty/sdl2.html#K_KP_AMPERSAND	sdl2: K_KP_AMPERSAND	
+K_KP_DBLAMPERSAND	toshiko/thirdparty/sdl2.html#K_KP_DBLAMPERSAND	sdl2: K_KP_DBLAMPERSAND	
+K_KP_VERTICALBAR	toshiko/thirdparty/sdl2.html#K_KP_VERTICALBAR	sdl2: K_KP_VERTICALBAR	
+K_KP_DBLVERTICALBAR	toshiko/thirdparty/sdl2.html#K_KP_DBLVERTICALBAR	sdl2: K_KP_DBLVERTICALBAR	
+K_KP_COLON	toshiko/thirdparty/sdl2.html#K_KP_COLON	sdl2: K_KP_COLON	
+K_KP_HASH	toshiko/thirdparty/sdl2.html#K_KP_HASH	sdl2: K_KP_HASH	
+K_KP_SPACE	toshiko/thirdparty/sdl2.html#K_KP_SPACE	sdl2: K_KP_SPACE	
+K_KP_AT	toshiko/thirdparty/sdl2.html#K_KP_AT	sdl2: K_KP_AT	
+K_KP_EXCLAM	toshiko/thirdparty/sdl2.html#K_KP_EXCLAM	sdl2: K_KP_EXCLAM	
+K_KP_MEMSTORE	toshiko/thirdparty/sdl2.html#K_KP_MEMSTORE	sdl2: K_KP_MEMSTORE	
+K_KP_MEMRECALL	toshiko/thirdparty/sdl2.html#K_KP_MEMRECALL	sdl2: K_KP_MEMRECALL	
+K_KP_MEMCLEAR	toshiko/thirdparty/sdl2.html#K_KP_MEMCLEAR	sdl2: K_KP_MEMCLEAR	
+K_KP_MEMADD	toshiko/thirdparty/sdl2.html#K_KP_MEMADD	sdl2: K_KP_MEMADD	
+K_KP_MEMSUBTRACT	toshiko/thirdparty/sdl2.html#K_KP_MEMSUBTRACT	sdl2: K_KP_MEMSUBTRACT	
+K_KP_MEMMULTIPLY	toshiko/thirdparty/sdl2.html#K_KP_MEMMULTIPLY	sdl2: K_KP_MEMMULTIPLY	
+K_KP_MEMDIVIDE	toshiko/thirdparty/sdl2.html#K_KP_MEMDIVIDE	sdl2: K_KP_MEMDIVIDE	
+K_KP_PLUSMINUS	toshiko/thirdparty/sdl2.html#K_KP_PLUSMINUS	sdl2: K_KP_PLUSMINUS	
+K_KP_CLEAR	toshiko/thirdparty/sdl2.html#K_KP_CLEAR	sdl2: K_KP_CLEAR	
+K_KP_CLEARENTRY	toshiko/thirdparty/sdl2.html#K_KP_CLEARENTRY	sdl2: K_KP_CLEARENTRY	
+K_KP_BINARY	toshiko/thirdparty/sdl2.html#K_KP_BINARY	sdl2: K_KP_BINARY	
+K_KP_OCTAL	toshiko/thirdparty/sdl2.html#K_KP_OCTAL	sdl2: K_KP_OCTAL	
+K_KP_DECIMAL	toshiko/thirdparty/sdl2.html#K_KP_DECIMAL	sdl2: K_KP_DECIMAL	
+K_KP_HEXADECIMAL	toshiko/thirdparty/sdl2.html#K_KP_HEXADECIMAL	sdl2: K_KP_HEXADECIMAL	
+K_LCTRL	toshiko/thirdparty/sdl2.html#K_LCTRL	sdl2: K_LCTRL	
+K_LSHIFT	toshiko/thirdparty/sdl2.html#K_LSHIFT	sdl2: K_LSHIFT	
+K_LALT	toshiko/thirdparty/sdl2.html#K_LALT	sdl2: K_LALT	
+K_LGUI	toshiko/thirdparty/sdl2.html#K_LGUI	sdl2: K_LGUI	
+K_RCTRL	toshiko/thirdparty/sdl2.html#K_RCTRL	sdl2: K_RCTRL	
+K_RSHIFT	toshiko/thirdparty/sdl2.html#K_RSHIFT	sdl2: K_RSHIFT	
+K_RALT	toshiko/thirdparty/sdl2.html#K_RALT	sdl2: K_RALT	
+K_RGUI	toshiko/thirdparty/sdl2.html#K_RGUI	sdl2: K_RGUI	
+K_MODE	toshiko/thirdparty/sdl2.html#K_MODE	sdl2: K_MODE	
+K_AUDIONEXT	toshiko/thirdparty/sdl2.html#K_AUDIONEXT	sdl2: K_AUDIONEXT	
+K_AUDIOPREV	toshiko/thirdparty/sdl2.html#K_AUDIOPREV	sdl2: K_AUDIOPREV	
+K_AUDIOSTOP	toshiko/thirdparty/sdl2.html#K_AUDIOSTOP	sdl2: K_AUDIOSTOP	
+K_AUDIOPLAY	toshiko/thirdparty/sdl2.html#K_AUDIOPLAY	sdl2: K_AUDIOPLAY	
+K_AUDIOMUTE	toshiko/thirdparty/sdl2.html#K_AUDIOMUTE	sdl2: K_AUDIOMUTE	
+K_MEDIASELECT	toshiko/thirdparty/sdl2.html#K_MEDIASELECT	sdl2: K_MEDIASELECT	
+K_WWW	toshiko/thirdparty/sdl2.html#K_WWW	sdl2: K_WWW	
+K_MAIL	toshiko/thirdparty/sdl2.html#K_MAIL	sdl2: K_MAIL	
+K_CALCULATOR	toshiko/thirdparty/sdl2.html#K_CALCULATOR	sdl2: K_CALCULATOR	
+K_COMPUTER	toshiko/thirdparty/sdl2.html#K_COMPUTER	sdl2: K_COMPUTER	
+K_AC_SEARCH	toshiko/thirdparty/sdl2.html#K_AC_SEARCH	sdl2: K_AC_SEARCH	
+K_AC_HOME	toshiko/thirdparty/sdl2.html#K_AC_HOME	sdl2: K_AC_HOME	
+K_AC_BACK	toshiko/thirdparty/sdl2.html#K_AC_BACK	sdl2: K_AC_BACK	
+K_AC_FORWARD	toshiko/thirdparty/sdl2.html#K_AC_FORWARD	sdl2: K_AC_FORWARD	
+K_AC_STOP	toshiko/thirdparty/sdl2.html#K_AC_STOP	sdl2: K_AC_STOP	
+K_AC_REFRESH	toshiko/thirdparty/sdl2.html#K_AC_REFRESH	sdl2: K_AC_REFRESH	
+K_AC_BOOKMARKS	toshiko/thirdparty/sdl2.html#K_AC_BOOKMARKS	sdl2: K_AC_BOOKMARKS	
+K_BRIGHTNESSDOWN	toshiko/thirdparty/sdl2.html#K_BRIGHTNESSDOWN	sdl2: K_BRIGHTNESSDOWN	
+K_BRIGHTNESSUP	toshiko/thirdparty/sdl2.html#K_BRIGHTNESSUP	sdl2: K_BRIGHTNESSUP	
+K_DISPLAYSWITCH	toshiko/thirdparty/sdl2.html#K_DISPLAYSWITCH	sdl2: K_DISPLAYSWITCH	
+K_KBDILLUMTOGGLE	toshiko/thirdparty/sdl2.html#K_KBDILLUMTOGGLE	sdl2: K_KBDILLUMTOGGLE	
+K_KBDILLUMDOWN	toshiko/thirdparty/sdl2.html#K_KBDILLUMDOWN	sdl2: K_KBDILLUMDOWN	
+K_KBDILLUMUP	toshiko/thirdparty/sdl2.html#K_KBDILLUMUP	sdl2: K_KBDILLUMUP	
+K_EJECT	toshiko/thirdparty/sdl2.html#K_EJECT	sdl2: K_EJECT	
+K_SLEEP	toshiko/thirdparty/sdl2.html#K_SLEEP	sdl2: K_SLEEP	
+Keymod	toshiko/thirdparty/sdl2.html#Keymod	sdl2: Keymod	
+toInt	toshiko/thirdparty/sdl2.html#toInt.c,Keymod	sdl2: toInt(some: Keymod): cint	
+KMOD_CTRL	toshiko/thirdparty/sdl2.html#KMOD_CTRL.t	sdl2: KMOD_CTRL(): untyped	
+KMOD_SHIFT	toshiko/thirdparty/sdl2.html#KMOD_SHIFT.t	sdl2: KMOD_SHIFT(): untyped	
+KMOD_ALT	toshiko/thirdparty/sdl2.html#KMOD_ALT.t	sdl2: KMOD_ALT(): untyped	
+KMOD_GUI	toshiko/thirdparty/sdl2.html#KMOD_GUI.t	sdl2: KMOD_GUI(): untyped	
+SDL_TEXTEDITINGEVENT_TEXT_SIZE	toshiko/thirdparty/sdl2.html#SDL_TEXTEDITINGEVENT_TEXT_SIZE	sdl2: SDL_TEXTEDITINGEVENT_TEXT_SIZE	
+SDL_TEXTINPUTEVENT_TEXT_SIZE	toshiko/thirdparty/sdl2.html#SDL_TEXTINPUTEVENT_TEXT_SIZE	sdl2: SDL_TEXTINPUTEVENT_TEXT_SIZE	
+WindowEventID	toshiko/thirdparty/sdl2.html#WindowEventID	sdl2: WindowEventID	
+EventType	toshiko/thirdparty/sdl2.html#EventType	sdl2: EventType	
+Event	toshiko/thirdparty/sdl2.html#Event	sdl2: Event	
+QuitEventPtr	toshiko/thirdparty/sdl2.html#QuitEventPtr	sdl2: QuitEventPtr	
+QuitEventObj	toshiko/thirdparty/sdl2.html#QuitEventObj	sdl2: QuitEventObj	
+WindowEventPtr	toshiko/thirdparty/sdl2.html#WindowEventPtr	sdl2: WindowEventPtr	
+WindowEventObj	toshiko/thirdparty/sdl2.html#WindowEventObj	sdl2: WindowEventObj	
+KeyboardEventPtr	toshiko/thirdparty/sdl2.html#KeyboardEventPtr	sdl2: KeyboardEventPtr	
+KeyboardEventObj	toshiko/thirdparty/sdl2.html#KeyboardEventObj	sdl2: KeyboardEventObj	
+TextEditingEventPtr	toshiko/thirdparty/sdl2.html#TextEditingEventPtr	sdl2: TextEditingEventPtr	
+TextEditingEventObj	toshiko/thirdparty/sdl2.html#TextEditingEventObj	sdl2: TextEditingEventObj	
+TextInputEventPtr	toshiko/thirdparty/sdl2.html#TextInputEventPtr	sdl2: TextInputEventPtr	
+TextInputEventObj	toshiko/thirdparty/sdl2.html#TextInputEventObj	sdl2: TextInputEventObj	
+MouseMotionEventPtr	toshiko/thirdparty/sdl2.html#MouseMotionEventPtr	sdl2: MouseMotionEventPtr	
+MouseMotionEventObj	toshiko/thirdparty/sdl2.html#MouseMotionEventObj	sdl2: MouseMotionEventObj	
+MouseButtonEventPtr	toshiko/thirdparty/sdl2.html#MouseButtonEventPtr	sdl2: MouseButtonEventPtr	
+MouseButtonEventObj	toshiko/thirdparty/sdl2.html#MouseButtonEventObj	sdl2: MouseButtonEventObj	
+MouseWheelEventPtr	toshiko/thirdparty/sdl2.html#MouseWheelEventPtr	sdl2: MouseWheelEventPtr	
+MouseWheelEventObj	toshiko/thirdparty/sdl2.html#MouseWheelEventObj	sdl2: MouseWheelEventObj	
+JoyAxisEventPtr	toshiko/thirdparty/sdl2.html#JoyAxisEventPtr	sdl2: JoyAxisEventPtr	
+JoyAxisEventObj	toshiko/thirdparty/sdl2.html#JoyAxisEventObj	sdl2: JoyAxisEventObj	
+JoyBallEventPtr	toshiko/thirdparty/sdl2.html#JoyBallEventPtr	sdl2: JoyBallEventPtr	
+JoyBallEventObj	toshiko/thirdparty/sdl2.html#JoyBallEventObj	sdl2: JoyBallEventObj	
+JoyHatEventPtr	toshiko/thirdparty/sdl2.html#JoyHatEventPtr	sdl2: JoyHatEventPtr	
+JoyHatEventObj	toshiko/thirdparty/sdl2.html#JoyHatEventObj	sdl2: JoyHatEventObj	
+JoyButtonEventPtr	toshiko/thirdparty/sdl2.html#JoyButtonEventPtr	sdl2: JoyButtonEventPtr	
+JoyButtonEventObj	toshiko/thirdparty/sdl2.html#JoyButtonEventObj	sdl2: JoyButtonEventObj	
+JoyDeviceEventPtr	toshiko/thirdparty/sdl2.html#JoyDeviceEventPtr	sdl2: JoyDeviceEventPtr	
+JoyDeviceEventObj	toshiko/thirdparty/sdl2.html#JoyDeviceEventObj	sdl2: JoyDeviceEventObj	
+ControllerAxisEventPtr	toshiko/thirdparty/sdl2.html#ControllerAxisEventPtr	sdl2: ControllerAxisEventPtr	
+ControllerAxisEventObj	toshiko/thirdparty/sdl2.html#ControllerAxisEventObj	sdl2: ControllerAxisEventObj	
+ControllerButtonEventPtr	toshiko/thirdparty/sdl2.html#ControllerButtonEventPtr	sdl2: ControllerButtonEventPtr	
+ControllerButtonEventObj	toshiko/thirdparty/sdl2.html#ControllerButtonEventObj	sdl2: ControllerButtonEventObj	
+ControllerDeviceEventPtr	toshiko/thirdparty/sdl2.html#ControllerDeviceEventPtr	sdl2: ControllerDeviceEventPtr	
+ControllerDeviceEventObj	toshiko/thirdparty/sdl2.html#ControllerDeviceEventObj	sdl2: ControllerDeviceEventObj	
+TouchID	toshiko/thirdparty/sdl2.html#TouchID	sdl2: TouchID	
+FingerID	toshiko/thirdparty/sdl2.html#FingerID	sdl2: FingerID	
+TouchFingerEventPtr	toshiko/thirdparty/sdl2.html#TouchFingerEventPtr	sdl2: TouchFingerEventPtr	
+TouchFingerEventObj	toshiko/thirdparty/sdl2.html#TouchFingerEventObj	sdl2: TouchFingerEventObj	
+MultiGestureEventPtr	toshiko/thirdparty/sdl2.html#MultiGestureEventPtr	sdl2: MultiGestureEventPtr	
+MultiGestureEventObj	toshiko/thirdparty/sdl2.html#MultiGestureEventObj	sdl2: MultiGestureEventObj	
+Finger	toshiko/thirdparty/sdl2.html#Finger	sdl2: Finger	
+DollarGestureEventPtr	toshiko/thirdparty/sdl2.html#DollarGestureEventPtr	sdl2: DollarGestureEventPtr	
+DollarGestureEventObj	toshiko/thirdparty/sdl2.html#DollarGestureEventObj	sdl2: DollarGestureEventObj	
+DropEventPtr	toshiko/thirdparty/sdl2.html#DropEventPtr	sdl2: DropEventPtr	
+DropEventObj	toshiko/thirdparty/sdl2.html#DropEventObj	sdl2: DropEventObj	
+UserEventPtr	toshiko/thirdparty/sdl2.html#UserEventPtr	sdl2: UserEventPtr	
+UserEventObj	toshiko/thirdparty/sdl2.html#UserEventObj	sdl2: UserEventObj	
+Eventaction	toshiko/thirdparty/sdl2.html#Eventaction	sdl2: Eventaction	
+EventFilter	toshiko/thirdparty/sdl2.html#EventFilter	sdl2: EventFilter	
+SDL_Return	toshiko/thirdparty/sdl2.html#SDL_Return	sdl2: SDL_Return	
+Bool32	toshiko/thirdparty/sdl2.html#Bool32	sdl2: Bool32	
+KeyState	toshiko/thirdparty/sdl2.html#KeyState	sdl2: KeyState	
+KeySym	toshiko/thirdparty/sdl2.html#KeySym	sdl2: KeySym	
+Point	toshiko/thirdparty/sdl2.html#Point	sdl2: Point	
+Rect	toshiko/thirdparty/sdl2.html#Rect	sdl2: Rect	
+GLattr	toshiko/thirdparty/sdl2.html#GLattr	sdl2: GLattr	
+MouseWheelDirection	toshiko/thirdparty/sdl2.html#MouseWheelDirection	sdl2: MouseWheelDirection	
+SDL_GL_CONTEXT_PROFILE_CORE	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_PROFILE_CORE	sdl2: SDL_GL_CONTEXT_PROFILE_CORE	
+SDL_GL_CONTEXT_PROFILE_COMPATIBILITY	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_PROFILE_COMPATIBILITY	sdl2: SDL_GL_CONTEXT_PROFILE_COMPATIBILITY	
+SDL_GL_CONTEXT_PROFILE_ES	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_PROFILE_ES	sdl2: SDL_GL_CONTEXT_PROFILE_ES	
+SDL_GL_CONTEXT_DEBUG_FLAG	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_DEBUG_FLAG	sdl2: SDL_GL_CONTEXT_DEBUG_FLAG	
+SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG	sdl2: SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG	
+SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG	sdl2: SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG	
+SDL_GL_CONTEXT_RESET_ISOLATION_FLAG	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_RESET_ISOLATION_FLAG	sdl2: SDL_GL_CONTEXT_RESET_ISOLATION_FLAG	
+SDL_GL_CONTEXT_RELEASE_BEHAVIOR_NONE	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_RELEASE_BEHAVIOR_NONE	sdl2: SDL_GL_CONTEXT_RELEASE_BEHAVIOR_NONE	
+SDL_GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH	toshiko/thirdparty/sdl2.html#SDL_GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH	sdl2: SDL_GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH	
+DisplayMode	toshiko/thirdparty/sdl2.html#DisplayMode	sdl2: DisplayMode	
+WindowPtr	toshiko/thirdparty/sdl2.html#WindowPtr	sdl2: WindowPtr	
+RendererPtr	toshiko/thirdparty/sdl2.html#RendererPtr	sdl2: RendererPtr	
+TexturePtr	toshiko/thirdparty/sdl2.html#TexturePtr	sdl2: TexturePtr	
+CursorPtr	toshiko/thirdparty/sdl2.html#CursorPtr	sdl2: CursorPtr	
+GlContextPtr	toshiko/thirdparty/sdl2.html#GlContextPtr	sdl2: GlContextPtr	
+SDL_Version	toshiko/thirdparty/sdl2.html#SDL_Version	sdl2: SDL_Version	
+RendererInfoPtr	toshiko/thirdparty/sdl2.html#RendererInfoPtr	sdl2: RendererInfoPtr	
+RendererInfo	toshiko/thirdparty/sdl2.html#RendererInfo	sdl2: RendererInfo	
+TextureAccess	toshiko/thirdparty/sdl2.html#TextureAccess	sdl2: TextureAccess	
+TextureModulate	toshiko/thirdparty/sdl2.html#TextureModulate	sdl2: TextureModulate	
+RendererFlip	toshiko/thirdparty/sdl2.html#RendererFlip	sdl2: RendererFlip	
+SysWMType	toshiko/thirdparty/sdl2.html#SysWMType	sdl2: SysWMType	
+WMinfo	toshiko/thirdparty/sdl2.html#WMinfo	sdl2: WMinfo	
+SDL_WINDOW_FULLSCREEN	toshiko/thirdparty/sdl2.html#SDL_WINDOW_FULLSCREEN	sdl2: SDL_WINDOW_FULLSCREEN	
+SDL_WINDOW_OPENGL	toshiko/thirdparty/sdl2.html#SDL_WINDOW_OPENGL	sdl2: SDL_WINDOW_OPENGL	
+SDL_WINDOW_SHOWN	toshiko/thirdparty/sdl2.html#SDL_WINDOW_SHOWN	sdl2: SDL_WINDOW_SHOWN	
+SDL_WINDOW_HIDDEN	toshiko/thirdparty/sdl2.html#SDL_WINDOW_HIDDEN	sdl2: SDL_WINDOW_HIDDEN	
+SDL_WINDOW_BORDERLESS	toshiko/thirdparty/sdl2.html#SDL_WINDOW_BORDERLESS	sdl2: SDL_WINDOW_BORDERLESS	
+SDL_WINDOW_RESIZABLE	toshiko/thirdparty/sdl2.html#SDL_WINDOW_RESIZABLE	sdl2: SDL_WINDOW_RESIZABLE	
+SDL_WINDOW_MINIMIZED	toshiko/thirdparty/sdl2.html#SDL_WINDOW_MINIMIZED	sdl2: SDL_WINDOW_MINIMIZED	
+SDL_WINDOW_MAXIMIZED	toshiko/thirdparty/sdl2.html#SDL_WINDOW_MAXIMIZED	sdl2: SDL_WINDOW_MAXIMIZED	
+SDL_WINDOW_INPUT_GRABBED	toshiko/thirdparty/sdl2.html#SDL_WINDOW_INPUT_GRABBED	sdl2: SDL_WINDOW_INPUT_GRABBED	
+SDL_WINDOW_INPUT_FOCUS	toshiko/thirdparty/sdl2.html#SDL_WINDOW_INPUT_FOCUS	sdl2: SDL_WINDOW_INPUT_FOCUS	
+SDL_WINDOW_MOUSE_FOCUS	toshiko/thirdparty/sdl2.html#SDL_WINDOW_MOUSE_FOCUS	sdl2: SDL_WINDOW_MOUSE_FOCUS	
+SDL_WINDOW_FULLSCREEN_DESKTOP	toshiko/thirdparty/sdl2.html#SDL_WINDOW_FULLSCREEN_DESKTOP	sdl2: SDL_WINDOW_FULLSCREEN_DESKTOP	
+SDL_WINDOW_FOREIGN	toshiko/thirdparty/sdl2.html#SDL_WINDOW_FOREIGN	sdl2: SDL_WINDOW_FOREIGN	
+SDL_WINDOW_ALLOW_HIGHDPI	toshiko/thirdparty/sdl2.html#SDL_WINDOW_ALLOW_HIGHDPI	sdl2: SDL_WINDOW_ALLOW_HIGHDPI	
+SDL_WINDOW_MOUSE_CAPTURE	toshiko/thirdparty/sdl2.html#SDL_WINDOW_MOUSE_CAPTURE	sdl2: SDL_WINDOW_MOUSE_CAPTURE	
+SDL_WINDOW_VULKAN	toshiko/thirdparty/sdl2.html#SDL_WINDOW_VULKAN	sdl2: SDL_WINDOW_VULKAN	
+SDL_FLIP_NONE	toshiko/thirdparty/sdl2.html#SDL_FLIP_NONE	sdl2: SDL_FLIP_NONE	
+SDL_FLIP_HORIZONTAL	toshiko/thirdparty/sdl2.html#SDL_FLIP_HORIZONTAL	sdl2: SDL_FLIP_HORIZONTAL	
+SDL_FLIP_VERTICAL	toshiko/thirdparty/sdl2.html#SDL_FLIP_VERTICAL	sdl2: SDL_FLIP_VERTICAL	
+toBool	toshiko/thirdparty/sdl2.html#toBool.c,Bool32	sdl2: toBool(some: Bool32): bool	
+toBool	toshiko/thirdparty/sdl2.html#toBool.c,SDL_Return	sdl2: toBool(some: SDL_Return): bool	
+toCint	toshiko/thirdparty/sdl2.html#toCint.c,TextureAccess	sdl2: toCint(some: TextureAccess): cint	
+SDL_ALPHA_OPAQUE	toshiko/thirdparty/sdl2.html#SDL_ALPHA_OPAQUE	sdl2: SDL_ALPHA_OPAQUE	
+SDL_ALPHA_TRANSPARENT	toshiko/thirdparty/sdl2.html#SDL_ALPHA_TRANSPARENT	sdl2: SDL_ALPHA_TRANSPARENT	
+SDL_PIXELTYPE_UNKNOWN	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_UNKNOWN	sdl2: SDL_PIXELTYPE_UNKNOWN	
+SDL_PIXELTYPE_INDEX1	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_INDEX1	sdl2: SDL_PIXELTYPE_INDEX1	
+SDL_PIXELTYPE_INDEX4	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_INDEX4	sdl2: SDL_PIXELTYPE_INDEX4	
+SDL_PIXELTYPE_INDEX8	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_INDEX8	sdl2: SDL_PIXELTYPE_INDEX8	
+SDL_PIXELTYPE_PACKED8	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_PACKED8	sdl2: SDL_PIXELTYPE_PACKED8	
+SDL_PIXELTYPE_PACKED16	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_PACKED16	sdl2: SDL_PIXELTYPE_PACKED16	
+SDL_PIXELTYPE_PACKED32	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_PACKED32	sdl2: SDL_PIXELTYPE_PACKED32	
+SDL_PIXELTYPE_ARRAYU8	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_ARRAYU8	sdl2: SDL_PIXELTYPE_ARRAYU8	
+SDL_PIXELTYPE_ARRAYU16	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_ARRAYU16	sdl2: SDL_PIXELTYPE_ARRAYU16	
+SDL_PIXELTYPE_ARRAYU32	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_ARRAYU32	sdl2: SDL_PIXELTYPE_ARRAYU32	
+SDL_PIXELTYPE_ARRAYF16	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_ARRAYF16	sdl2: SDL_PIXELTYPE_ARRAYF16	
+SDL_PIXELTYPE_ARRAYF32	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE_ARRAYF32	sdl2: SDL_PIXELTYPE_ARRAYF32	
+SDL_BITMAPORDER_NONE	toshiko/thirdparty/sdl2.html#SDL_BITMAPORDER_NONE	sdl2: SDL_BITMAPORDER_NONE	
+SDL_BITMAPORDER_4321	toshiko/thirdparty/sdl2.html#SDL_BITMAPORDER_4321	sdl2: SDL_BITMAPORDER_4321	
+SDL_BITMAPORDER_1234	toshiko/thirdparty/sdl2.html#SDL_BITMAPORDER_1234	sdl2: SDL_BITMAPORDER_1234	
+SDL_PACKEDORDER_NONE	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_NONE	sdl2: SDL_PACKEDORDER_NONE	
+SDL_PACKEDORDER_XRGB	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_XRGB	sdl2: SDL_PACKEDORDER_XRGB	
+SDL_PACKEDORDER_RGBX	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_RGBX	sdl2: SDL_PACKEDORDER_RGBX	
+SDL_PACKEDORDER_ARGB	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_ARGB	sdl2: SDL_PACKEDORDER_ARGB	
+SDL_PACKEDORDER_RGBA	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_RGBA	sdl2: SDL_PACKEDORDER_RGBA	
+SDL_PACKEDORDER_XBGR	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_XBGR	sdl2: SDL_PACKEDORDER_XBGR	
+SDL_PACKEDORDER_BGRX	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_BGRX	sdl2: SDL_PACKEDORDER_BGRX	
+SDL_PACKEDORDER_ABGR	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_ABGR	sdl2: SDL_PACKEDORDER_ABGR	
+SDL_PACKEDORDER_BGRA	toshiko/thirdparty/sdl2.html#SDL_PACKEDORDER_BGRA	sdl2: SDL_PACKEDORDER_BGRA	
+SDL_ARRAYORDER_NONE	toshiko/thirdparty/sdl2.html#SDL_ARRAYORDER_NONE	sdl2: SDL_ARRAYORDER_NONE	
+SDL_ARRAYORDER_RGB	toshiko/thirdparty/sdl2.html#SDL_ARRAYORDER_RGB	sdl2: SDL_ARRAYORDER_RGB	
+SDL_ARRAYORDER_RGBA	toshiko/thirdparty/sdl2.html#SDL_ARRAYORDER_RGBA	sdl2: SDL_ARRAYORDER_RGBA	
+SDL_ARRAYORDER_ARGB	toshiko/thirdparty/sdl2.html#SDL_ARRAYORDER_ARGB	sdl2: SDL_ARRAYORDER_ARGB	
+SDL_ARRAYORDER_BGR	toshiko/thirdparty/sdl2.html#SDL_ARRAYORDER_BGR	sdl2: SDL_ARRAYORDER_BGR	
+SDL_ARRAYORDER_BGRA	toshiko/thirdparty/sdl2.html#SDL_ARRAYORDER_BGRA	sdl2: SDL_ARRAYORDER_BGRA	
+SDL_ARRAYORDER_ABGR	toshiko/thirdparty/sdl2.html#SDL_ARRAYORDER_ABGR	sdl2: SDL_ARRAYORDER_ABGR	
+SDL_PACKEDLAYOUT_NONE	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_NONE	sdl2: SDL_PACKEDLAYOUT_NONE	
+SDL_PACKEDLAYOUT_332	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_332	sdl2: SDL_PACKEDLAYOUT_332	
+SDL_PACKEDLAYOUT_4444	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_4444	sdl2: SDL_PACKEDLAYOUT_4444	
+SDL_PACKEDLAYOUT_1555	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_1555	sdl2: SDL_PACKEDLAYOUT_1555	
+SDL_PACKEDLAYOUT_5551	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_5551	sdl2: SDL_PACKEDLAYOUT_5551	
+SDL_PACKEDLAYOUT_565	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_565	sdl2: SDL_PACKEDLAYOUT_565	
+SDL_PACKEDLAYOUT_8888	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_8888	sdl2: SDL_PACKEDLAYOUT_8888	
+SDL_PACKEDLAYOUT_2101010	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_2101010	sdl2: SDL_PACKEDLAYOUT_2101010	
+SDL_PACKEDLAYOUT_1010102	toshiko/thirdparty/sdl2.html#SDL_PACKEDLAYOUT_1010102	sdl2: SDL_PACKEDLAYOUT_1010102	
+SDL_DEFINE_PIXELFOURCC	toshiko/thirdparty/sdl2.html#SDL_DEFINE_PIXELFOURCC.t,char,char,char,char	sdl2: SDL_DEFINE_PIXELFOURCC(A, B, C, D: char): uint32	
+SDL_DEFINE_PIXELFORMAT	toshiko/thirdparty/sdl2.html#SDL_DEFINE_PIXELFORMAT.t,int,int,int,int,int	sdl2: SDL_DEFINE_PIXELFORMAT(`type`, order, layout, bits, bytes: int): uint32	
+SDL_PIXELFLAG	toshiko/thirdparty/sdl2.html#SDL_PIXELFLAG.t,uint32	sdl2: SDL_PIXELFLAG(X: uint32): int	
+SDL_PIXELTYPE	toshiko/thirdparty/sdl2.html#SDL_PIXELTYPE.t,uint32	sdl2: SDL_PIXELTYPE(X: uint32): int	
+SDL_PIXELORDER	toshiko/thirdparty/sdl2.html#SDL_PIXELORDER.t,uint32	sdl2: SDL_PIXELORDER(X: uint32): int	
+SDL_PIXELLAYOUT	toshiko/thirdparty/sdl2.html#SDL_PIXELLAYOUT.t,uint32	sdl2: SDL_PIXELLAYOUT(X: uint32): int	
+SDL_BITSPERPIXEL	toshiko/thirdparty/sdl2.html#SDL_BITSPERPIXEL.t,uint32	sdl2: SDL_BITSPERPIXEL(X: uint32): int	
+SDL_BYTESPERPIXEL	toshiko/thirdparty/sdl2.html#SDL_BYTESPERPIXEL.t,uint32	sdl2: SDL_BYTESPERPIXEL(X: uint32): int	
+SDL_ISPIXELFORMAT_INDEXED	toshiko/thirdparty/sdl2.html#SDL_ISPIXELFORMAT_INDEXED.t,uint32	sdl2: SDL_ISPIXELFORMAT_INDEXED(format: uint32): bool	
+SDL_ISPIXELFORMAT_ALPHA	toshiko/thirdparty/sdl2.html#SDL_ISPIXELFORMAT_ALPHA.t,uint32	sdl2: SDL_ISPIXELFORMAT_ALPHA(format: uint32): bool	
+SDL_ISPIXELFORMAT_FOURCC	toshiko/thirdparty/sdl2.html#SDL_ISPIXELFORMAT_FOURCC.t,uint32	sdl2: SDL_ISPIXELFORMAT_FOURCC(format: uint32): bool	
+SDL_PIXELFORMAT_UNKNOWN	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_UNKNOWN	sdl2: SDL_PIXELFORMAT_UNKNOWN	
+SDL_PIXELFORMAT_INDEX1LSB	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_INDEX1LSB	sdl2: SDL_PIXELFORMAT_INDEX1LSB	
+SDL_PIXELFORMAT_INDEX1MSB	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_INDEX1MSB	sdl2: SDL_PIXELFORMAT_INDEX1MSB	
+SDL_PIXELFORMAT_INDEX4LSB	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_INDEX4LSB	sdl2: SDL_PIXELFORMAT_INDEX4LSB	
+SDL_PIXELFORMAT_INDEX4MSB	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_INDEX4MSB	sdl2: SDL_PIXELFORMAT_INDEX4MSB	
+SDL_PIXELFORMAT_INDEX8	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_INDEX8	sdl2: SDL_PIXELFORMAT_INDEX8	
+SDL_PIXELFORMAT_RGB332	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGB332	sdl2: SDL_PIXELFORMAT_RGB332	
+SDL_PIXELFORMAT_RGB444	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGB444	sdl2: SDL_PIXELFORMAT_RGB444	
+SDL_PIXELFORMAT_RGB555	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGB555	sdl2: SDL_PIXELFORMAT_RGB555	
+SDL_PIXELFORMAT_BGR555	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_BGR555	sdl2: SDL_PIXELFORMAT_BGR555	
+SDL_PIXELFORMAT_ARGB4444	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_ARGB4444	sdl2: SDL_PIXELFORMAT_ARGB4444	
+SDL_PIXELFORMAT_RGBA4444	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGBA4444	sdl2: SDL_PIXELFORMAT_RGBA4444	
+SDL_PIXELFORMAT_ABGR4444	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_ABGR4444	sdl2: SDL_PIXELFORMAT_ABGR4444	
+SDL_PIXELFORMAT_BGRA4444	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_BGRA4444	sdl2: SDL_PIXELFORMAT_BGRA4444	
+SDL_PIXELFORMAT_ARGB1555	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_ARGB1555	sdl2: SDL_PIXELFORMAT_ARGB1555	
+SDL_PIXELFORMAT_RGBA5551	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGBA5551	sdl2: SDL_PIXELFORMAT_RGBA5551	
+SDL_PIXELFORMAT_ABGR1555	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_ABGR1555	sdl2: SDL_PIXELFORMAT_ABGR1555	
+SDL_PIXELFORMAT_BGRA5551	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_BGRA5551	sdl2: SDL_PIXELFORMAT_BGRA5551	
+SDL_PIXELFORMAT_RGB565	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGB565	sdl2: SDL_PIXELFORMAT_RGB565	
+SDL_PIXELFORMAT_BGR565	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_BGR565	sdl2: SDL_PIXELFORMAT_BGR565	
+SDL_PIXELFORMAT_RGB24	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGB24	sdl2: SDL_PIXELFORMAT_RGB24	
+SDL_PIXELFORMAT_BGR24	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_BGR24	sdl2: SDL_PIXELFORMAT_BGR24	
+SDL_PIXELFORMAT_RGB888	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGB888	sdl2: SDL_PIXELFORMAT_RGB888	
+SDL_PIXELFORMAT_RGBX8888	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGBX8888	sdl2: SDL_PIXELFORMAT_RGBX8888	
+SDL_PIXELFORMAT_BGR888	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_BGR888	sdl2: SDL_PIXELFORMAT_BGR888	
+SDL_PIXELFORMAT_BGRX8888	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_BGRX8888	sdl2: SDL_PIXELFORMAT_BGRX8888	
+SDL_PIXELFORMAT_ARGB8888	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_ARGB8888	sdl2: SDL_PIXELFORMAT_ARGB8888	
+SDL_PIXELFORMAT_RGBA8888	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_RGBA8888	sdl2: SDL_PIXELFORMAT_RGBA8888	
+SDL_PIXELFORMAT_ABGR8888	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_ABGR8888	sdl2: SDL_PIXELFORMAT_ABGR8888	
+SDL_PIXELFORMAT_BGRA8888	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_BGRA8888	sdl2: SDL_PIXELFORMAT_BGRA8888	
+SDL_PIXELFORMAT_ARGB2101010	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_ARGB2101010	sdl2: SDL_PIXELFORMAT_ARGB2101010	
+SDL_PIXELFORMAT_YV12	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_YV12	sdl2: SDL_PIXELFORMAT_YV12	
+SDL_PIXELFORMAT_IYUV	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_IYUV	sdl2: SDL_PIXELFORMAT_IYUV	
+SDL_PIXELFORMAT_YUY2	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_YUY2	sdl2: SDL_PIXELFORMAT_YUY2	
+SDL_PIXELFORMAT_UYVY	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_UYVY	sdl2: SDL_PIXELFORMAT_UYVY	
+SDL_PIXELFORMAT_YVYU	toshiko/thirdparty/sdl2.html#SDL_PIXELFORMAT_YVYU	sdl2: SDL_PIXELFORMAT_YVYU	
+Color	toshiko/thirdparty/sdl2.html#Color	sdl2: Color	
+Palette	toshiko/thirdparty/sdl2.html#Palette	sdl2: Palette	
+PixelFormat	toshiko/thirdparty/sdl2.html#PixelFormat	sdl2: PixelFormat	
+BlitMapPtr	toshiko/thirdparty/sdl2.html#BlitMapPtr	sdl2: BlitMapPtr	
+SurfacePtr	toshiko/thirdparty/sdl2.html#SurfacePtr	sdl2: SurfacePtr	
+Surface	toshiko/thirdparty/sdl2.html#Surface	sdl2: Surface	
+BlendMode	toshiko/thirdparty/sdl2.html#BlendMode	sdl2: BlendMode	
+BlitFunction	toshiko/thirdparty/sdl2.html#BlitFunction	sdl2: BlitFunction	
+TimerCallback	toshiko/thirdparty/sdl2.html#TimerCallback	sdl2: TimerCallback	
+TimerID	toshiko/thirdparty/sdl2.html#TimerID	sdl2: TimerID	
+Renderer_Software	toshiko/thirdparty/sdl2.html#Renderer_Software	sdl2: Renderer_Software	
+Renderer_Accelerated	toshiko/thirdparty/sdl2.html#Renderer_Accelerated	sdl2: Renderer_Accelerated	
+Renderer_PresentVsync	toshiko/thirdparty/sdl2.html#Renderer_PresentVsync	sdl2: Renderer_PresentVsync	
+Renderer_TargetTexture	toshiko/thirdparty/sdl2.html#Renderer_TargetTexture	sdl2: Renderer_TargetTexture	
+SDL_SWSURFACE	toshiko/thirdparty/sdl2.html#SDL_SWSURFACE	sdl2: SDL_SWSURFACE	
+SDL_PREALLOC	toshiko/thirdparty/sdl2.html#SDL_PREALLOC	sdl2: SDL_PREALLOC	
+SDL_RLEACCEL	toshiko/thirdparty/sdl2.html#SDL_RLEACCEL	sdl2: SDL_RLEACCEL	
+SDL_DONTFREE	toshiko/thirdparty/sdl2.html#SDL_DONTFREE	sdl2: SDL_DONTFREE	
+SDL_MUSTLOCK	toshiko/thirdparty/sdl2.html#SDL_MUSTLOCK.t,SurfacePtr	sdl2: SDL_MUSTLOCK(some: SurfacePtr): bool	
+INIT_TIMER	toshiko/thirdparty/sdl2.html#INIT_TIMER	sdl2: INIT_TIMER	
+INIT_AUDIO	toshiko/thirdparty/sdl2.html#INIT_AUDIO	sdl2: INIT_AUDIO	
+INIT_VIDEO	toshiko/thirdparty/sdl2.html#INIT_VIDEO	sdl2: INIT_VIDEO	
+INIT_JOYSTICK	toshiko/thirdparty/sdl2.html#INIT_JOYSTICK	sdl2: INIT_JOYSTICK	
+INIT_HAPTIC	toshiko/thirdparty/sdl2.html#INIT_HAPTIC	sdl2: INIT_HAPTIC	
+INIT_GAMECONTROLLER	toshiko/thirdparty/sdl2.html#INIT_GAMECONTROLLER	sdl2: INIT_GAMECONTROLLER	
+INIT_EVENTS	toshiko/thirdparty/sdl2.html#INIT_EVENTS	sdl2: INIT_EVENTS	
+INIT_NOPARACHUTE	toshiko/thirdparty/sdl2.html#INIT_NOPARACHUTE	sdl2: INIT_NOPARACHUTE	
+INIT_EVERYTHING	toshiko/thirdparty/sdl2.html#INIT_EVERYTHING	sdl2: INIT_EVERYTHING	
+SDL_WINDOWPOS_UNDEFINED_MASK	toshiko/thirdparty/sdl2.html#SDL_WINDOWPOS_UNDEFINED_MASK	sdl2: SDL_WINDOWPOS_UNDEFINED_MASK	
+SDL_WINDOWPOS_UNDEFINED_DISPLAY	toshiko/thirdparty/sdl2.html#SDL_WINDOWPOS_UNDEFINED_DISPLAY.t,cint	sdl2: SDL_WINDOWPOS_UNDEFINED_DISPLAY(X: cint): untyped	
+SDL_WINDOWPOS_UNDEFINED	toshiko/thirdparty/sdl2.html#SDL_WINDOWPOS_UNDEFINED	sdl2: SDL_WINDOWPOS_UNDEFINED	
+SDL_WINDOWPOS_ISUNDEFINED	toshiko/thirdparty/sdl2.html#SDL_WINDOWPOS_ISUNDEFINED.t,cint	sdl2: SDL_WINDOWPOS_ISUNDEFINED(X: cint): bool	
+SDL_WINDOWPOS_CENTERED_MASK	toshiko/thirdparty/sdl2.html#SDL_WINDOWPOS_CENTERED_MASK	sdl2: SDL_WINDOWPOS_CENTERED_MASK	
+SDL_WINDOWPOS_CENTERED_DISPLAY	toshiko/thirdparty/sdl2.html#SDL_WINDOWPOS_CENTERED_DISPLAY.t,cint	sdl2: SDL_WINDOWPOS_CENTERED_DISPLAY(X: cint): cint	
+SDL_WINDOWPOS_CENTERED	toshiko/thirdparty/sdl2.html#SDL_WINDOWPOS_CENTERED	sdl2: SDL_WINDOWPOS_CENTERED	
+SDL_WINDOWPOS_ISCENTERED	toshiko/thirdparty/sdl2.html#SDL_WINDOWPOS_ISCENTERED.t,cint	sdl2: SDL_WINDOWPOS_ISCENTERED(X: cint): bool	
+evWindow	toshiko/thirdparty/sdl2.html#evWindow,Event	sdl2: evWindow(event`gensym14635034: Event): WindowEventPtr	
+window	toshiko/thirdparty/sdl2.html#window,Event	sdl2: window(event`gensym14635035: Event): WindowEventPtr	
+evKeyboard	toshiko/thirdparty/sdl2.html#evKeyboard,Event	sdl2: evKeyboard(event`gensym14670217: Event): KeyboardEventPtr	
+key	toshiko/thirdparty/sdl2.html#key,Event	sdl2: key(event`gensym14670218: Event): KeyboardEventPtr	
+evTextEditing	toshiko/thirdparty/sdl2.html#evTextEditing,Event	sdl2: evTextEditing(event`gensym14705217: Event): TextEditingEventPtr	
+edit	toshiko/thirdparty/sdl2.html#edit,Event	sdl2: edit(event`gensym14705218: Event): TextEditingEventPtr	
+evTextInput	toshiko/thirdparty/sdl2.html#evTextInput,Event	sdl2: evTextInput(event`gensym14740217: Event): TextInputEventPtr	
+text	toshiko/thirdparty/sdl2.html#text,Event	sdl2: text(event`gensym14740218: Event): TextInputEventPtr	
+evMouseMotion	toshiko/thirdparty/sdl2.html#evMouseMotion,Event	sdl2: evMouseMotion(event`gensym14775217: Event): MouseMotionEventPtr	
+motion	toshiko/thirdparty/sdl2.html#motion,Event	sdl2: motion(event`gensym14775218: Event): MouseMotionEventPtr	
+evMouseButton	toshiko/thirdparty/sdl2.html#evMouseButton,Event	sdl2: evMouseButton(event`gensym14810217: Event): MouseButtonEventPtr	
+button	toshiko/thirdparty/sdl2.html#button,Event	sdl2: button(event`gensym14810218: Event): MouseButtonEventPtr	
+evMouseWheel	toshiko/thirdparty/sdl2.html#evMouseWheel,Event	sdl2: evMouseWheel(event`gensym14845217: Event): MouseWheelEventPtr	
+wheel	toshiko/thirdparty/sdl2.html#wheel,Event	sdl2: wheel(event`gensym14845218: Event): MouseWheelEventPtr	
+EvJoyAxis	toshiko/thirdparty/sdl2.html#EvJoyAxis,Event	sdl2: EvJoyAxis(event`gensym14880217: Event): JoyAxisEventPtr	
+jaxis	toshiko/thirdparty/sdl2.html#jaxis,Event	sdl2: jaxis(event`gensym14880218: Event): JoyAxisEventPtr	
+EvJoyBall	toshiko/thirdparty/sdl2.html#EvJoyBall,Event	sdl2: EvJoyBall(event`gensym14915217: Event): JoyBallEventPtr	
+jball	toshiko/thirdparty/sdl2.html#jball,Event	sdl2: jball(event`gensym14915218: Event): JoyBallEventPtr	
+EvJoyHat	toshiko/thirdparty/sdl2.html#EvJoyHat,Event	sdl2: EvJoyHat(event`gensym14950217: Event): JoyHatEventPtr	
+jhat	toshiko/thirdparty/sdl2.html#jhat,Event	sdl2: jhat(event`gensym14950218: Event): JoyHatEventPtr	
+EvJoyButton	toshiko/thirdparty/sdl2.html#EvJoyButton,Event	sdl2: EvJoyButton(event`gensym14985217: Event): JoyButtonEventPtr	
+jbutton	toshiko/thirdparty/sdl2.html#jbutton,Event	sdl2: jbutton(event`gensym14985218: Event): JoyButtonEventPtr	
+EvJoyDevice	toshiko/thirdparty/sdl2.html#EvJoyDevice,Event	sdl2: EvJoyDevice(event`gensym15020217: Event): JoyDeviceEventPtr	
+jdevice	toshiko/thirdparty/sdl2.html#jdevice,Event	sdl2: jdevice(event`gensym15020218: Event): JoyDeviceEventPtr	
+EvControllerAxis	toshiko/thirdparty/sdl2.html#EvControllerAxis,Event	sdl2: EvControllerAxis(event`gensym15055217: Event): ControllerAxisEventPtr	
+caxis	toshiko/thirdparty/sdl2.html#caxis,Event	sdl2: caxis(event`gensym15055218: Event): ControllerAxisEventPtr	
+EvControllerButton	toshiko/thirdparty/sdl2.html#EvControllerButton,Event	sdl2: EvControllerButton(event`gensym15090217: Event): ControllerButtonEventPtr	
+cbutton	toshiko/thirdparty/sdl2.html#cbutton,Event	sdl2: cbutton(event`gensym15090218: Event): ControllerButtonEventPtr	
+EvControllerDevice	toshiko/thirdparty/sdl2.html#EvControllerDevice,Event	sdl2: EvControllerDevice(event`gensym15125217: Event): ControllerDeviceEventPtr	
+cdevice	toshiko/thirdparty/sdl2.html#cdevice,Event	sdl2: cdevice(event`gensym15125218: Event): ControllerDeviceEventPtr	
+EvTouchFinger	toshiko/thirdparty/sdl2.html#EvTouchFinger,Event	sdl2: EvTouchFinger(event`gensym15160217: Event): TouchFingerEventPtr	
+tfinger	toshiko/thirdparty/sdl2.html#tfinger,Event	sdl2: tfinger(event`gensym15160218: Event): TouchFingerEventPtr	
+EvMultiGesture	toshiko/thirdparty/sdl2.html#EvMultiGesture,Event	sdl2: EvMultiGesture(event`gensym15195217: Event): MultiGestureEventPtr	
+mgesture	toshiko/thirdparty/sdl2.html#mgesture,Event	sdl2: mgesture(event`gensym15195218: Event): MultiGestureEventPtr	
+EvDollarGesture	toshiko/thirdparty/sdl2.html#EvDollarGesture,Event	sdl2: EvDollarGesture(event`gensym15230217: Event): DollarGestureEventPtr	
+dgesture	toshiko/thirdparty/sdl2.html#dgesture,Event	sdl2: dgesture(event`gensym15230218: Event): DollarGestureEventPtr	
+evDropFile	toshiko/thirdparty/sdl2.html#evDropFile,Event	sdl2: evDropFile(event`gensym15265217: Event): DropEventPtr	
+drop	toshiko/thirdparty/sdl2.html#drop,Event	sdl2: drop(event`gensym15265218: Event): DropEventPtr	
+evQuit	toshiko/thirdparty/sdl2.html#evQuit,Event	sdl2: evQuit(event`gensym15300217: Event): QuitEventPtr	
+quit	toshiko/thirdparty/sdl2.html#quit,Event	sdl2: quit(event`gensym15300218: Event): QuitEventPtr	
+evUser	toshiko/thirdparty/sdl2.html#evUser,Event	sdl2: evUser(event`gensym15335217: Event): UserEventPtr	
+user	toshiko/thirdparty/sdl2.html#user,Event	sdl2: user(event`gensym15335218: Event): UserEventPtr	
+SDL_MESSAGEBOX_ERROR	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_ERROR	sdl2: SDL_MESSAGEBOX_ERROR	
+SDL_MESSAGEBOX_WARNING	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_WARNING	sdl2: SDL_MESSAGEBOX_WARNING	
+SDL_MESSAGEBOX_INFORMATION	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_INFORMATION	sdl2: SDL_MESSAGEBOX_INFORMATION	
+SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT	sdl2: SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT	
+SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT	sdl2: SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT	
+MessageBoxColor	toshiko/thirdparty/sdl2.html#MessageBoxColor	sdl2: MessageBoxColor	
+SDL_MESSAGEBOX_COLOR_BACKGROUND	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_COLOR_BACKGROUND	MessageBoxColorType.SDL_MESSAGEBOX_COLOR_BACKGROUND	
+SDL_MESSAGEBOX_COLOR_TEXT	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_COLOR_TEXT	MessageBoxColorType.SDL_MESSAGEBOX_COLOR_TEXT	
+SDL_MESSAGEBOX_COLOR_BUTTON_BORDER	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_COLOR_BUTTON_BORDER	MessageBoxColorType.SDL_MESSAGEBOX_COLOR_BUTTON_BORDER	
+SDL_MESSAGEBOX_COLOR_BUTTON_BACKGROUND	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_COLOR_BUTTON_BACKGROUND	MessageBoxColorType.SDL_MESSAGEBOX_COLOR_BUTTON_BACKGROUND	
+SDL_MESSAGEBOX_COLOR_BUTTON_SELECTED	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_COLOR_BUTTON_SELECTED	MessageBoxColorType.SDL_MESSAGEBOX_COLOR_BUTTON_SELECTED	
+SDL_MESSAGEBOX_COLOR_MAX	toshiko/thirdparty/sdl2.html#SDL_MESSAGEBOX_COLOR_MAX	MessageBoxColorType.SDL_MESSAGEBOX_COLOR_MAX	
+MessageBoxColorType	toshiko/thirdparty/sdl2.html#MessageBoxColorType	sdl2: MessageBoxColorType	
+MessageBoxColorScheme	toshiko/thirdparty/sdl2.html#MessageBoxColorScheme	sdl2: MessageBoxColorScheme	
+MessageBoxButtonData	toshiko/thirdparty/sdl2.html#MessageBoxButtonData	sdl2: MessageBoxButtonData	
+MessageBoxData	toshiko/thirdparty/sdl2.html#MessageBoxData	sdl2: MessageBoxData	
+RWopsPtr	toshiko/thirdparty/sdl2.html#RWopsPtr	sdl2: RWopsPtr	
+RWops	toshiko/thirdparty/sdl2.html#RWops	sdl2: RWops	
+Mem	toshiko/thirdparty/sdl2.html#Mem	sdl2: Mem	
+VoidCallback	toshiko/thirdparty/sdl2.html#VoidCallback	sdl2: VoidCallback	
+SDL_ANDROID_EXTERNAL_STORAGE_READ	toshiko/thirdparty/sdl2.html#SDL_ANDROID_EXTERNAL_STORAGE_READ	sdl2: SDL_ANDROID_EXTERNAL_STORAGE_READ	
+SDL_ANDROID_EXTERNAL_STORAGE_WRITE	toshiko/thirdparty/sdl2.html#SDL_ANDROID_EXTERNAL_STORAGE_WRITE	sdl2: SDL_ANDROID_EXTERNAL_STORAGE_WRITE	
+getWMInfo	toshiko/thirdparty/sdl2.html#getWMInfo,WindowPtr,WMinfo	sdl2: getWMInfo(window: WindowPtr; info: var WMinfo): Bool32	
+setLogicalSize	toshiko/thirdparty/sdl2.html#setLogicalSize,RendererPtr,cint,cint	sdl2: setLogicalSize(renderer: RendererPtr; w, h: cint): cint	
+getLogicalSize	toshiko/thirdparty/sdl2.html#getLogicalSize,RendererPtr,cint,cint	sdl2: getLogicalSize(renderer: RendererPtr; w, h: var cint)	
+setDrawColor	toshiko/thirdparty/sdl2.html#setDrawColor,RendererPtr,uint8,uint8,uint8,uint8	sdl2: setDrawColor(renderer: RendererPtr; r, g, b: uint8; a = 255&apos;u8): SDL_Return	
+setDrawColor	toshiko/thirdparty/sdl2.html#setDrawColor,RendererPtr,Color	sdl2: setDrawColor(renderer: RendererPtr; c: Color)	
+getDrawColor	toshiko/thirdparty/sdl2.html#getDrawColor,RendererPtr,uint8,uint8,uint8,uint8	sdl2: getDrawColor(renderer: RendererPtr; r, g, b, a: var uint8): SDL_Return	
+setDrawBlendMode	toshiko/thirdparty/sdl2.html#setDrawBlendMode,RendererPtr,BlendMode	sdl2: setDrawBlendMode(renderer: RendererPtr; blendMode: BlendMode): SDL_Return	
+getDrawBlendMode	toshiko/thirdparty/sdl2.html#getDrawBlendMode,RendererPtr,BlendMode	sdl2: getDrawBlendMode(renderer: RendererPtr; blendMode: var BlendMode): SDL_Return	
+destroy	toshiko/thirdparty/sdl2.html#destroy,TexturePtr	sdl2: destroy(texture: TexturePtr)	
+destroy	toshiko/thirdparty/sdl2.html#destroy,RendererPtr	sdl2: destroy(renderer: RendererPtr)	
+getDisplayIndex	toshiko/thirdparty/sdl2.html#getDisplayIndex,WindowPtr	sdl2: getDisplayIndex(window: WindowPtr): cint	
+setDisplayMode	toshiko/thirdparty/sdl2.html#setDisplayMode,WindowPtr,ptr.DisplayMode	sdl2: setDisplayMode(window: WindowPtr; mode: ptr DisplayMode): SDL_Return	
+getDisplayMode	toshiko/thirdparty/sdl2.html#getDisplayMode,WindowPtr,DisplayMode	sdl2: getDisplayMode(window: WindowPtr; mode: var DisplayMode): cint	
+getPixelFormat	toshiko/thirdparty/sdl2.html#getPixelFormat,WindowPtr	sdl2: getPixelFormat(window: WindowPtr): uint32	
+getID	toshiko/thirdparty/sdl2.html#getID,WindowPtr	sdl2: getID(window: WindowPtr): uint32	
+getFlags	toshiko/thirdparty/sdl2.html#getFlags,WindowPtr	sdl2: getFlags(window: WindowPtr): uint32	
+setTitle	toshiko/thirdparty/sdl2.html#setTitle,WindowPtr,cstring	sdl2: setTitle(window: WindowPtr; title: cstring)	
+getTitle	toshiko/thirdparty/sdl2.html#getTitle,WindowPtr	sdl2: getTitle(window: WindowPtr): cstring	
+setIcon	toshiko/thirdparty/sdl2.html#setIcon,WindowPtr,SurfacePtr	sdl2: setIcon(window: WindowPtr; icon: SurfacePtr)	
+setData	toshiko/thirdparty/sdl2.html#setData,WindowPtr,cstring,pointer	sdl2: setData(window: WindowPtr; name: cstring; userdata: pointer): pointer	
+getData	toshiko/thirdparty/sdl2.html#getData,WindowPtr,cstring	sdl2: getData(window: WindowPtr; name: cstring): pointer	
+setPosition	toshiko/thirdparty/sdl2.html#setPosition,WindowPtr,cint,cint	sdl2: setPosition(window: WindowPtr; x, y: cint)	
+getPosition	toshiko/thirdparty/sdl2.html#getPosition,WindowPtr,cint,cint	sdl2: getPosition(window: WindowPtr; x, y: var cint)	
+setSize	toshiko/thirdparty/sdl2.html#setSize,WindowPtr,cint,cint	sdl2: setSize(window: WindowPtr; w, h: cint)	
+getSize	toshiko/thirdparty/sdl2.html#getSize,WindowPtr,cint,cint	sdl2: getSize(window: WindowPtr; w, h: var cint)	
+setBordered	toshiko/thirdparty/sdl2.html#setBordered,WindowPtr,Bool32	sdl2: setBordered(window: WindowPtr; bordered: Bool32)	
+setFullscreen	toshiko/thirdparty/sdl2.html#setFullscreen,WindowPtr,uint32	sdl2: setFullscreen(window: WindowPtr; fullscreen: uint32): SDL_Return	
+getSurface	toshiko/thirdparty/sdl2.html#getSurface,WindowPtr	sdl2: getSurface(window: WindowPtr): SurfacePtr	
+updateSurface	toshiko/thirdparty/sdl2.html#updateSurface,WindowPtr	sdl2: updateSurface(window: WindowPtr): SDL_Return	
+updateSurfaceRects	toshiko/thirdparty/sdl2.html#updateSurfaceRects,WindowPtr,ptr.Rect,cint	sdl2: updateSurfaceRects(window: WindowPtr; rects: ptr Rect; numrects: cint): SDL_Return	
+setGrab	toshiko/thirdparty/sdl2.html#setGrab,WindowPtr,Bool32	sdl2: setGrab(window: WindowPtr; grabbed: Bool32)	
+getGrab	toshiko/thirdparty/sdl2.html#getGrab,WindowPtr	sdl2: getGrab(window: WindowPtr): Bool32	
+setBrightness	toshiko/thirdparty/sdl2.html#setBrightness,WindowPtr,cfloat	sdl2: setBrightness(window: WindowPtr; brightness: cfloat): SDL_Return	
+getBrightness	toshiko/thirdparty/sdl2.html#getBrightness,WindowPtr	sdl2: getBrightness(window: WindowPtr): cfloat	
+setGammaRamp	toshiko/thirdparty/sdl2.html#setGammaRamp,WindowPtr,ptr.uint16,ptr.uint16,ptr.uint16	sdl2: setGammaRamp(window: WindowPtr; red, green, blue: ptr uint16): SDL_Return	
+getGammaRamp	toshiko/thirdparty/sdl2.html#getGammaRamp,WindowPtr,ptr.uint16,ptr.uint16,ptr.uint16	sdl2: getGammaRamp(window: WindowPtr; red: ptr uint16; green: ptr uint16; blue: ptr uint16): cint	
+init	toshiko/thirdparty/sdl2.html#init,cint	sdl2: init(flags: cint): SDL_Return	
+initSubSystem	toshiko/thirdparty/sdl2.html#initSubSystem,uint32	sdl2: initSubSystem(flags: uint32): cint	
+quitSubSystem	toshiko/thirdparty/sdl2.html#quitSubSystem,uint32	sdl2: quitSubSystem(flags: uint32)	
+wasInit	toshiko/thirdparty/sdl2.html#wasInit,uint32	sdl2: wasInit(flags: uint32): uint32	
+quit	toshiko/thirdparty/sdl2.html#quit	sdl2: quit()	
+getPlatform	toshiko/thirdparty/sdl2.html#getPlatform	sdl2: getPlatform(): cstring	
+getVersion	toshiko/thirdparty/sdl2.html#getVersion,SDL_Version	sdl2: getVersion(ver: var SDL_Version)	
+getRevision	toshiko/thirdparty/sdl2.html#getRevision	sdl2: getRevision(): cstring	
+getRevisionNumber	toshiko/thirdparty/sdl2.html#getRevisionNumber	sdl2: getRevisionNumber(): cint	
+getBasePath	toshiko/thirdparty/sdl2.html#getBasePath	sdl2: getBasePath(): cstring	
+getPrefPath	toshiko/thirdparty/sdl2.html#getPrefPath,cstring,cstring	sdl2: getPrefPath(org, app: cstring): cstring	
+getNumRenderDrivers	toshiko/thirdparty/sdl2.html#getNumRenderDrivers	sdl2: getNumRenderDrivers(): cint	
+getRenderDriverInfo	toshiko/thirdparty/sdl2.html#getRenderDriverInfo,cint,RendererInfo	sdl2: getRenderDriverInfo(index: cint; info: var RendererInfo): SDL_Return	
+createWindowAndRenderer	toshiko/thirdparty/sdl2.html#createWindowAndRenderer,cint,cint,uint32,WindowPtr,RendererPtr	sdl2: createWindowAndRenderer(width, height: cint; window_flags: uint32;\n                        window: var WindowPtr; renderer: var RendererPtr): SDL_Return	
+createRenderer	toshiko/thirdparty/sdl2.html#createRenderer,WindowPtr,cint,cint	sdl2: createRenderer(window: WindowPtr; index: cint; flags: cint): RendererPtr	
+createSoftwareRenderer	toshiko/thirdparty/sdl2.html#createSoftwareRenderer,SurfacePtr	sdl2: createSoftwareRenderer(surface: SurfacePtr): RendererPtr	
+getRenderer	toshiko/thirdparty/sdl2.html#getRenderer,WindowPtr	sdl2: getRenderer(window: WindowPtr): RendererPtr	
+getRendererInfo	toshiko/thirdparty/sdl2.html#getRendererInfo,RendererPtr,RendererInfoPtr	sdl2: getRendererInfo(renderer: RendererPtr; info: RendererInfoPtr): cint	
+getRendererOutputSize	toshiko/thirdparty/sdl2.html#getRendererOutputSize,RendererPtr,ptr.cint,ptr.cint	sdl2: getRendererOutputSize(renderer: RendererPtr; w: ptr cint; h: ptr cint): cint	
+createTexture	toshiko/thirdparty/sdl2.html#createTexture,RendererPtr,uint32,cint,cint,cint	sdl2: createTexture(renderer: RendererPtr; format: uint32; access, w, h: cint): TexturePtr	
+createTextureFromSurface	toshiko/thirdparty/sdl2.html#createTextureFromSurface,RendererPtr,SurfacePtr	sdl2: createTextureFromSurface(renderer: RendererPtr; surface: SurfacePtr): TexturePtr	
+createTexture	toshiko/thirdparty/sdl2.html#createTexture,RendererPtr,SurfacePtr	sdl2: createTexture(renderer: RendererPtr; surface: SurfacePtr): TexturePtr	
+queryTexture	toshiko/thirdparty/sdl2.html#queryTexture,TexturePtr,ptr.uint32,ptr.cint,ptr.cint,ptr.cint	sdl2: queryTexture(texture: TexturePtr; format: ptr uint32; access, w, h: ptr cint): SDL_Return	
+setTextureColorMod	toshiko/thirdparty/sdl2.html#setTextureColorMod,TexturePtr,uint8,uint8,uint8	sdl2: setTextureColorMod(texture: TexturePtr; r, g, b: uint8): SDL_Return	
+getTextureColorMod	toshiko/thirdparty/sdl2.html#getTextureColorMod,TexturePtr,uint8,uint8,uint8	sdl2: getTextureColorMod(texture: TexturePtr; r, g, b: var uint8): SDL_Return	
+setTextureAlphaMod	toshiko/thirdparty/sdl2.html#setTextureAlphaMod,TexturePtr,uint8	sdl2: setTextureAlphaMod(texture: TexturePtr; alpha: uint8): SDL_Return	
+getTextureAlphaMod	toshiko/thirdparty/sdl2.html#getTextureAlphaMod,TexturePtr,uint8	sdl2: getTextureAlphaMod(texture: TexturePtr; alpha: var uint8): SDL_Return	
+setTextureBlendMode	toshiko/thirdparty/sdl2.html#setTextureBlendMode,TexturePtr,BlendMode	sdl2: setTextureBlendMode(texture: TexturePtr; blendMode: BlendMode): SDL_Return	
+getTextureBlendMode	toshiko/thirdparty/sdl2.html#getTextureBlendMode,TexturePtr,BlendMode	sdl2: getTextureBlendMode(texture: TexturePtr; blendMode: var BlendMode): SDL_Return	
+updateTexture	toshiko/thirdparty/sdl2.html#updateTexture,TexturePtr,ptr.Rect,pointer,cint	sdl2: updateTexture(texture: TexturePtr; rect: ptr Rect; pixels: pointer; pitch: cint): SDL_Return	
+lockTexture	toshiko/thirdparty/sdl2.html#lockTexture,TexturePtr,ptr.Rect,ptr.pointer,ptr.cint	sdl2: lockTexture(texture: TexturePtr; rect: ptr Rect; pixels: ptr pointer; pitch: ptr cint): SDL_Return	
+unlockTexture	toshiko/thirdparty/sdl2.html#unlockTexture,TexturePtr	sdl2: unlockTexture(texture: TexturePtr)	
+renderTargetSupported	toshiko/thirdparty/sdl2.html#renderTargetSupported,RendererPtr	sdl2: renderTargetSupported(renderer: RendererPtr): Bool32	
+setRenderTarget	toshiko/thirdparty/sdl2.html#setRenderTarget,RendererPtr,TexturePtr	sdl2: setRenderTarget(renderer: RendererPtr; texture: TexturePtr): SDL_Return	
+getRenderTarget	toshiko/thirdparty/sdl2.html#getRenderTarget,RendererPtr	sdl2: getRenderTarget(renderer: RendererPtr): TexturePtr	
+setViewport	toshiko/thirdparty/sdl2.html#setViewport,RendererPtr,ptr.Rect	sdl2: setViewport(renderer: RendererPtr; rect: ptr Rect): SDL_Return	
+getViewport	toshiko/thirdparty/sdl2.html#getViewport,RendererPtr,Rect	sdl2: getViewport(renderer: RendererPtr; rect: var Rect)	
+setScale	toshiko/thirdparty/sdl2.html#setScale,RendererPtr,cfloat,cfloat	sdl2: setScale(renderer: RendererPtr; scaleX, scaleY: cfloat): SDL_Return	
+getScale	toshiko/thirdparty/sdl2.html#getScale,RendererPtr,cfloat,cfloat	sdl2: getScale(renderer: RendererPtr; scaleX, scaleY: var cfloat)	
+drawPoint	toshiko/thirdparty/sdl2.html#drawPoint,RendererPtr,cint,cint	sdl2: drawPoint(renderer: RendererPtr; x, y: cint): SDL_Return	
+drawPoints	toshiko/thirdparty/sdl2.html#drawPoints,RendererPtr,ptr.Point,cint	sdl2: drawPoints(renderer: RendererPtr; points: ptr Point; count: cint): SDL_Return	
+drawLine	toshiko/thirdparty/sdl2.html#drawLine,RendererPtr,cint,cint,cint,cint	sdl2: drawLine(renderer: RendererPtr; x1, y1, x2, y2: cint): SDL_Return	
+drawLines	toshiko/thirdparty/sdl2.html#drawLines,RendererPtr,ptr.Point,cint	sdl2: drawLines(renderer: RendererPtr; points: ptr Point; count: cint): SDL_Return	
+drawRect	toshiko/thirdparty/sdl2.html#drawRect,RendererPtr,Rect	sdl2: drawRect(renderer: RendererPtr; rect: var Rect): SDL_Return	
+drawRect	toshiko/thirdparty/sdl2.html#drawRect,RendererPtr,ptr.Rect	sdl2: drawRect(renderer: RendererPtr; rect: ptr Rect = nil): SDL_Return	
+drawRects	toshiko/thirdparty/sdl2.html#drawRects,RendererPtr,ptr.Rect,cint	sdl2: drawRects(renderer: RendererPtr; rects: ptr Rect; count: cint): SDL_Return	
+fillRect	toshiko/thirdparty/sdl2.html#fillRect,RendererPtr,Rect	sdl2: fillRect(renderer: RendererPtr; rect: var Rect): SDL_Return	
+fillRect	toshiko/thirdparty/sdl2.html#fillRect,RendererPtr,ptr.Rect	sdl2: fillRect(renderer: RendererPtr; rect: ptr Rect = nil): SDL_Return	
+fillRects	toshiko/thirdparty/sdl2.html#fillRects,RendererPtr,ptr.Rect,cint	sdl2: fillRects(renderer: RendererPtr; rects: ptr Rect; count: cint): SDL_Return	
+copy	toshiko/thirdparty/sdl2.html#copy,RendererPtr,TexturePtr,ptr.Rect,ptr.Rect	sdl2: copy(renderer: RendererPtr; texture: TexturePtr; srcrect, dstrect: ptr Rect): SDL_Return	
+copyEx	toshiko/thirdparty/sdl2.html#copyEx,RendererPtr,TexturePtr,Rect,Rect,cdouble,ptr.Point,RendererFlip	sdl2: copyEx(renderer: RendererPtr; texture: TexturePtr; srcrect, dstrect: var Rect;\n       angle: cdouble; center: ptr Point; flip: RendererFlip = SDL_FLIP_NONE): SDL_Return	
+copyEx	toshiko/thirdparty/sdl2.html#copyEx,RendererPtr,TexturePtr,ptr.Rect,ptr.Rect,cdouble,ptr.Point,RendererFlip	sdl2: copyEx(renderer: RendererPtr; texture: TexturePtr; srcrect, dstrect: ptr Rect;\n       angle: cdouble; center: ptr Point; flip: RendererFlip = SDL_FLIP_NONE): SDL_Return	
+clear	toshiko/thirdparty/sdl2.html#clear,RendererPtr	sdl2: clear(renderer: RendererPtr): cint	
+readPixels	toshiko/thirdparty/sdl2.html#readPixels,RendererPtr,Rect,cint,pointer,cint	sdl2: readPixels(renderer: RendererPtr; rect: var Rect; format: cint; pixels: pointer;\n           pitch: cint): cint	
+readPixels	toshiko/thirdparty/sdl2.html#readPixels,RendererPtr,ptr.Rect,cint,pointer,cint	sdl2: readPixels(renderer: RendererPtr; rect: ptr Rect; format: cint; pixels: pointer;\n           pitch: cint): cint	
+present	toshiko/thirdparty/sdl2.html#present,RendererPtr	sdl2: present(renderer: RendererPtr)	
+glBindTexture	toshiko/thirdparty/sdl2.html#glBindTexture,TexturePtr,cfloat,cfloat	sdl2: glBindTexture(texture: TexturePtr; texw, texh: var cfloat): cint	
+glUnbindTexture	toshiko/thirdparty/sdl2.html#glUnbindTexture,TexturePtr	sdl2: glUnbindTexture(texture: TexturePtr)	
+createRGBSurface	toshiko/thirdparty/sdl2.html#createRGBSurface,cint,cint,cint,cint,uint32,uint32,uint32,uint32	sdl2: createRGBSurface(flags: cint; width, height, depth: cint;\n                 Rmask, Gmask, BMask, Amask: uint32): SurfacePtr	
+createRGBSurfaceFrom	toshiko/thirdparty/sdl2.html#createRGBSurfaceFrom,pointer,cint,cint,cint,cint,uint32,uint32,uint32,uint32	sdl2: createRGBSurfaceFrom(pixels: pointer; width, height, depth, pitch: cint;\n                     Rmask, Gmask, Bmask, Amask: uint32): SurfacePtr	
+freeSurface	toshiko/thirdparty/sdl2.html#freeSurface,SurfacePtr	sdl2: freeSurface(surface: SurfacePtr)	
+setSurfacePalette	toshiko/thirdparty/sdl2.html#setSurfacePalette,SurfacePtr,ptr.Palette	sdl2: setSurfacePalette(surface: SurfacePtr; palette: ptr Palette): cint	
+lockSurface	toshiko/thirdparty/sdl2.html#lockSurface,SurfacePtr	sdl2: lockSurface(surface: SurfacePtr): cint	
+unlockSurface	toshiko/thirdparty/sdl2.html#unlockSurface,SurfacePtr	sdl2: unlockSurface(surface: SurfacePtr)	
+loadBMP_RW	toshiko/thirdparty/sdl2.html#loadBMP_RW,RWopsPtr,cint	sdl2: loadBMP_RW(src: RWopsPtr; freesrc: cint): SurfacePtr	
+rwFromFile	toshiko/thirdparty/sdl2.html#rwFromFile,cstring,cstring	sdl2: rwFromFile(file: cstring; mode: cstring): RWopsPtr	
+rwFromFP	toshiko/thirdparty/sdl2.html#rwFromFP,File,Bool32	sdl2: rwFromFP(fp: File; autoclose: Bool32): RWopsPtr	
+rwFromMem	toshiko/thirdparty/sdl2.html#rwFromMem,pointer,cint	sdl2: rwFromMem(mem: pointer; size: cint): RWopsPtr	
+rwFromConstMem	toshiko/thirdparty/sdl2.html#rwFromConstMem,pointer,cint	sdl2: rwFromConstMem(mem: pointer; size: cint): RWopsPtr	
+allocRW	toshiko/thirdparty/sdl2.html#allocRW	sdl2: allocRW(): RWopsPtr	
+freeRW	toshiko/thirdparty/sdl2.html#freeRW,RWopsPtr	sdl2: freeRW(area: RWopsPtr)	
+saveBMP_RW	toshiko/thirdparty/sdl2.html#saveBMP_RW,SurfacePtr,RWopsPtr,cint	sdl2: saveBMP_RW(surface: SurfacePtr; dst: RWopsPtr; freedst: cint): SDL_Return	
+setSurfaceRLE	toshiko/thirdparty/sdl2.html#setSurfaceRLE,SurfacePtr,cint	sdl2: setSurfaceRLE(surface: SurfacePtr; flag: cint): cint	
+setColorKey	toshiko/thirdparty/sdl2.html#setColorKey,SurfacePtr,cint,uint32	sdl2: setColorKey(surface: SurfacePtr; flag: cint; key: uint32): cint	
+getColorKey	toshiko/thirdparty/sdl2.html#getColorKey,SurfacePtr,uint32	sdl2: getColorKey(surface: SurfacePtr; key: var uint32): cint	
+setSurfaceColorMod	toshiko/thirdparty/sdl2.html#setSurfaceColorMod,SurfacePtr,uint8,uint8,uint8	sdl2: setSurfaceColorMod(surface: SurfacePtr; r, g, b: uint8): cint	
+getSurfaceColorMod	toshiko/thirdparty/sdl2.html#getSurfaceColorMod,SurfacePtr,uint8,uint8,uint8	sdl2: getSurfaceColorMod(surface: SurfacePtr; r, g, b: var uint8): cint	
+setSurfaceAlphaMod	toshiko/thirdparty/sdl2.html#setSurfaceAlphaMod,SurfacePtr,uint8	sdl2: setSurfaceAlphaMod(surface: SurfacePtr; alpha: uint8): cint	
+getSurfaceAlphaMod	toshiko/thirdparty/sdl2.html#getSurfaceAlphaMod,SurfacePtr,uint8	sdl2: getSurfaceAlphaMod(surface: SurfacePtr; alpha: var uint8): cint	
+setSurfaceBlendMode	toshiko/thirdparty/sdl2.html#setSurfaceBlendMode,SurfacePtr,BlendMode	sdl2: setSurfaceBlendMode(surface: SurfacePtr; blendMode: BlendMode): cint	
+getSurfaceBlendMode	toshiko/thirdparty/sdl2.html#getSurfaceBlendMode,SurfacePtr,ptr.BlendMode	sdl2: getSurfaceBlendMode(surface: SurfacePtr; blendMode: ptr BlendMode): cint	
+setClipRect	toshiko/thirdparty/sdl2.html#setClipRect,SurfacePtr,ptr.Rect	sdl2: setClipRect(surface: SurfacePtr; rect: ptr Rect): Bool32	
+getClipRect	toshiko/thirdparty/sdl2.html#getClipRect,SurfacePtr,ptr.Rect	sdl2: getClipRect(surface: SurfacePtr; rect: ptr Rect)	
+setClipRect	toshiko/thirdparty/sdl2.html#setClipRect,RendererPtr,ptr.Rect	sdl2: setClipRect(renderer: RendererPtr; rect: ptr Rect): cint	
+getClipRect	toshiko/thirdparty/sdl2.html#getClipRect,RendererPtr,ptr.Rect	sdl2: getClipRect(renderer: RendererPtr; rect: ptr Rect): cint	
+isClipEnabled	toshiko/thirdparty/sdl2.html#isClipEnabled,RendererPtr	sdl2: isClipEnabled(renderer: RendererPtr): cint	
+convertSurface	toshiko/thirdparty/sdl2.html#convertSurface,SurfacePtr,ptr.PixelFormat,cint	sdl2: convertSurface(src: SurfacePtr; fmt: ptr PixelFormat; flags: cint): SurfacePtr	
+convertSurfaceFormat	toshiko/thirdparty/sdl2.html#convertSurfaceFormat,SurfacePtr,uint32,uint32	sdl2: convertSurfaceFormat(src: SurfacePtr; pixel_format, flags: uint32): SurfacePtr	
+convertPixels	toshiko/thirdparty/sdl2.html#convertPixels,cint,cint,uint32,pointer,cint,uint32,pointer,cint	sdl2: convertPixels(width, height: cint; src_format: uint32; src: pointer; src_pitch: cint;\n              dst_format: uint32; dst: pointer; dst_pitch: cint): cint	
+fillRect	toshiko/thirdparty/sdl2.html#fillRect,SurfacePtr,ptr.Rect,uint32	sdl2: fillRect(dst: SurfacePtr; rect: ptr Rect; color: uint32): SDL_Return	
+fillRects	toshiko/thirdparty/sdl2.html#fillRects,SurfacePtr,ptr.Rect,cint,uint32	sdl2: fillRects(dst: SurfacePtr; rects: ptr Rect; count: cint; color: uint32): cint	
+upperBlit	toshiko/thirdparty/sdl2.html#upperBlit,SurfacePtr,ptr.Rect,SurfacePtr,ptr.Rect	sdl2: upperBlit(src: SurfacePtr; srcrect: ptr Rect; dst: SurfacePtr; dstrect: ptr Rect): SDL_Return	
+lowerBlit	toshiko/thirdparty/sdl2.html#lowerBlit,SurfacePtr,ptr.Rect,SurfacePtr,ptr.Rect	sdl2: lowerBlit(src: SurfacePtr; srcrect: ptr Rect; dst: SurfacePtr; dstrect: ptr Rect): SDL_Return	
+softStretch	toshiko/thirdparty/sdl2.html#softStretch,SurfacePtr,ptr.Rect,SurfacePtr,ptr.Rect	sdl2: softStretch(src: SurfacePtr; srcrect: ptr Rect; dst: SurfacePtr; dstrect: ptr Rect): SDL_Return	
+upperBlitScaled	toshiko/thirdparty/sdl2.html#upperBlitScaled,SurfacePtr,ptr.Rect,SurfacePtr,ptr.Rect	sdl2: upperBlitScaled(src: SurfacePtr; srcrect: ptr Rect; dst: SurfacePtr; dstrect: ptr Rect): SDL_Return	
+lowerBlitScaled	toshiko/thirdparty/sdl2.html#lowerBlitScaled,SurfacePtr,ptr.Rect,SurfacePtr,ptr.Rect	sdl2: lowerBlitScaled(src: SurfacePtr; srcrect: ptr Rect; dst: SurfacePtr; dstrect: ptr Rect): SDL_Return	
+readU8	toshiko/thirdparty/sdl2.html#readU8,RWopsPtr	sdl2: readU8(src: RWopsPtr): uint8	
+readLE16	toshiko/thirdparty/sdl2.html#readLE16,RWopsPtr	sdl2: readLE16(src: RWopsPtr): uint16	
+readBE16	toshiko/thirdparty/sdl2.html#readBE16,RWopsPtr	sdl2: readBE16(src: RWopsPtr): uint16	
+readLE32	toshiko/thirdparty/sdl2.html#readLE32,RWopsPtr	sdl2: readLE32(src: RWopsPtr): uint32	
+readBE32	toshiko/thirdparty/sdl2.html#readBE32,RWopsPtr	sdl2: readBE32(src: RWopsPtr): uint32	
+readLE64	toshiko/thirdparty/sdl2.html#readLE64,RWopsPtr	sdl2: readLE64(src: RWopsPtr): uint64	
+readBE64	toshiko/thirdparty/sdl2.html#readBE64,RWopsPtr	sdl2: readBE64(src: RWopsPtr): uint64	
+writeU8	toshiko/thirdparty/sdl2.html#writeU8,RWopsPtr,uint8	sdl2: writeU8(dst: RWopsPtr; value: uint8): csize_t_const	
+writeLE16	toshiko/thirdparty/sdl2.html#writeLE16,RWopsPtr,uint16	sdl2: writeLE16(dst: RWopsPtr; value: uint16): csize_t_const	
+writeBE16	toshiko/thirdparty/sdl2.html#writeBE16,RWopsPtr,uint16	sdl2: writeBE16(dst: RWopsPtr; value: uint16): csize_t_const	
+writeLE32	toshiko/thirdparty/sdl2.html#writeLE32,RWopsPtr,uint32	sdl2: writeLE32(dst: RWopsPtr; value: uint32): csize_t_const	
+writeBE32	toshiko/thirdparty/sdl2.html#writeBE32,RWopsPtr,uint32	sdl2: writeBE32(dst: RWopsPtr; value: uint32): csize_t_const	
+writeLE64	toshiko/thirdparty/sdl2.html#writeLE64,RWopsPtr,uint64	sdl2: writeLE64(dst: RWopsPtr; value: uint64): csize_t_const	
+writeBE64	toshiko/thirdparty/sdl2.html#writeBE64,RWopsPtr,uint64	sdl2: writeBE64(dst: RWopsPtr; value: uint64): csize_t_const	
+showMessageBox	toshiko/thirdparty/sdl2.html#showMessageBox,ptr.MessageBoxData,cint	sdl2: showMessageBox(messageboxdata: ptr MessageBoxData; buttonid: var cint): cint	
+showSimpleMessageBox	toshiko/thirdparty/sdl2.html#showSimpleMessageBox,uint32,cstring,cstring,WindowPtr	sdl2: showSimpleMessageBox(flags: uint32; title, message: cstring; window: WindowPtr): cint	
+getNumVideoDrivers	toshiko/thirdparty/sdl2.html#getNumVideoDrivers	sdl2: getNumVideoDrivers(): cint	
+getVideoDriver	toshiko/thirdparty/sdl2.html#getVideoDriver,cint	sdl2: getVideoDriver(index: cint): cstring	
+videoInit	toshiko/thirdparty/sdl2.html#videoInit,cstring	sdl2: videoInit(driver_name: cstring): SDL_Return	
+videoQuit	toshiko/thirdparty/sdl2.html#videoQuit	sdl2: videoQuit()	
+getCurrentVideoDriver	toshiko/thirdparty/sdl2.html#getCurrentVideoDriver	sdl2: getCurrentVideoDriver(): cstring	
+getNumVideoDisplays	toshiko/thirdparty/sdl2.html#getNumVideoDisplays	sdl2: getNumVideoDisplays(): cint	
+getDisplayBounds	toshiko/thirdparty/sdl2.html#getDisplayBounds,cint,Rect	sdl2: getDisplayBounds(displayIndex: cint; rect: var Rect): SDL_Return	
+getNumDisplayModes	toshiko/thirdparty/sdl2.html#getNumDisplayModes,cint	sdl2: getNumDisplayModes(displayIndex: cint): cint	
+getDisplayMode	toshiko/thirdparty/sdl2.html#getDisplayMode,cint,cint,DisplayMode	sdl2: getDisplayMode(displayIndex: cint; modeIndex: cint; mode: var DisplayMode): SDL_Return	
+getDesktopDisplayMode	toshiko/thirdparty/sdl2.html#getDesktopDisplayMode,cint,DisplayMode	sdl2: getDesktopDisplayMode(displayIndex: cint; mode: var DisplayMode): SDL_Return	
+getCurrentDisplayMode	toshiko/thirdparty/sdl2.html#getCurrentDisplayMode,cint,DisplayMode	sdl2: getCurrentDisplayMode(displayIndex: cint; mode: var DisplayMode): SDL_Return	
+getClosestDisplayMode	toshiko/thirdparty/sdl2.html#getClosestDisplayMode,cint,ptr.DisplayMode,ptr.DisplayMode	sdl2: getClosestDisplayMode(displayIndex: cint; mode: ptr DisplayMode;\n                      closest: ptr DisplayMode): ptr DisplayMode	
+getDisplayDPI	toshiko/thirdparty/sdl2.html#getDisplayDPI,cint,ptr.cfloat,ptr.cfloat,ptr.cfloat	sdl2: getDisplayDPI(displayIndex: cint; ddpi, hdpi, vdpi: ptr cfloat): SDL_Return	
+createWindow	toshiko/thirdparty/sdl2.html#createWindow,cstring,cint,cint,cint,cint,uint32	sdl2: createWindow(title: cstring; x, y, w, h: cint; flags: uint32): WindowPtr	
+createWindowFrom	toshiko/thirdparty/sdl2.html#createWindowFrom,pointer	sdl2: createWindowFrom(data: pointer): WindowPtr	
+getWindowFromID	toshiko/thirdparty/sdl2.html#getWindowFromID,uint32	sdl2: getWindowFromID(id: uint32): WindowPtr	
+showWindow	toshiko/thirdparty/sdl2.html#showWindow,WindowPtr	sdl2: showWindow(window: WindowPtr)	
+hideWindow	toshiko/thirdparty/sdl2.html#hideWindow,WindowPtr	sdl2: hideWindow(window: WindowPtr)	
+raiseWindow	toshiko/thirdparty/sdl2.html#raiseWindow,WindowPtr	sdl2: raiseWindow(window: WindowPtr)	
+maximizeWindow	toshiko/thirdparty/sdl2.html#maximizeWindow,WindowPtr	sdl2: maximizeWindow(window: WindowPtr)	
+minimizeWindow	toshiko/thirdparty/sdl2.html#minimizeWindow,WindowPtr	sdl2: minimizeWindow(window: WindowPtr)	
+restoreWindow	toshiko/thirdparty/sdl2.html#restoreWindow,WindowPtr	sdl2: restoreWindow(window: WindowPtr)	
+destroyWindow	toshiko/thirdparty/sdl2.html#destroyWindow,WindowPtr	sdl2: destroyWindow(window: WindowPtr)	
+isScreenSaverEnabled	toshiko/thirdparty/sdl2.html#isScreenSaverEnabled	sdl2: isScreenSaverEnabled(): Bool32	
+enableScreenSaver	toshiko/thirdparty/sdl2.html#enableScreenSaver	sdl2: enableScreenSaver()	
+disableScreenSaver	toshiko/thirdparty/sdl2.html#disableScreenSaver	sdl2: disableScreenSaver()	
+getTicks	toshiko/thirdparty/sdl2.html#getTicks	sdl2: getTicks(): uint32	
+getPerformanceCounter	toshiko/thirdparty/sdl2.html#getPerformanceCounter	sdl2: getPerformanceCounter(): uint64	
+getPerformanceFrequency	toshiko/thirdparty/sdl2.html#getPerformanceFrequency	sdl2: getPerformanceFrequency(): uint64	
+delay	toshiko/thirdparty/sdl2.html#delay,uint32	sdl2: delay(ms: uint32)	
+addTimer	toshiko/thirdparty/sdl2.html#addTimer,uint32,TimerCallback,pointer	sdl2: addTimer(interval: uint32; callback: TimerCallback; param: pointer): TimerID	
+removeTimer	toshiko/thirdparty/sdl2.html#removeTimer,TimerID	sdl2: removeTimer(id: TimerID): Bool32	
+glLoadLibrary	toshiko/thirdparty/sdl2.html#glLoadLibrary,cstring	sdl2: glLoadLibrary(path: cstring): SDL_Return	
+glGetProcAddress	toshiko/thirdparty/sdl2.html#glGetProcAddress,cstring	sdl2: glGetProcAddress(procedure: cstring): pointer	
+glUnloadLibrary	toshiko/thirdparty/sdl2.html#glUnloadLibrary	sdl2: glUnloadLibrary()	
+glExtensionSupported	toshiko/thirdparty/sdl2.html#glExtensionSupported,cstring	sdl2: glExtensionSupported(extension: cstring): bool	
+glSetAttribute	toshiko/thirdparty/sdl2.html#glSetAttribute,GLattr,cint	sdl2: glSetAttribute(attr: GLattr; value: cint): cint	
+glGetAttribute	toshiko/thirdparty/sdl2.html#glGetAttribute,GLattr,cint	sdl2: glGetAttribute(attr: GLattr; value: var cint): cint	
+glCreateContext	toshiko/thirdparty/sdl2.html#glCreateContext,WindowPtr	sdl2: glCreateContext(window: WindowPtr): GlContextPtr	
+glMakeCurrent	toshiko/thirdparty/sdl2.html#glMakeCurrent,WindowPtr,GlContextPtr	sdl2: glMakeCurrent(window: WindowPtr; context: GlContextPtr): cint	
+glGetCurrentWindow	toshiko/thirdparty/sdl2.html#glGetCurrentWindow	sdl2: glGetCurrentWindow(): WindowPtr	
+glGetCurrentContext	toshiko/thirdparty/sdl2.html#glGetCurrentContext	sdl2: glGetCurrentContext(): GlContextPtr	
+glGetDrawableSize	toshiko/thirdparty/sdl2.html#glGetDrawableSize,WindowPtr,cint,cint	sdl2: glGetDrawableSize(window: WindowPtr; w, h: var cint)	
+glSetSwapInterval	toshiko/thirdparty/sdl2.html#glSetSwapInterval,cint	sdl2: glSetSwapInterval(interval: cint): cint	
+glGetSwapInterval	toshiko/thirdparty/sdl2.html#glGetSwapInterval	sdl2: glGetSwapInterval(): cint	
+glSwapWindow	toshiko/thirdparty/sdl2.html#glSwapWindow,WindowPtr	sdl2: glSwapWindow(window: WindowPtr)	
+glDeleteContext	toshiko/thirdparty/sdl2.html#glDeleteContext,GlContextPtr	sdl2: glDeleteContext(context: GlContextPtr)	
+VulkanInstance	toshiko/thirdparty/sdl2.html#VulkanInstance	sdl2: VulkanInstance	
+VulkanSurface	toshiko/thirdparty/sdl2.html#VulkanSurface	sdl2: VulkanSurface	
+vulkanLoadLibrary	toshiko/thirdparty/sdl2.html#vulkanLoadLibrary,cstring	sdl2: vulkanLoadLibrary(path: cstring): cint	
+vulkanGetVkGetInstanceProcAddr	toshiko/thirdparty/sdl2.html#vulkanGetVkGetInstanceProcAddr	sdl2: vulkanGetVkGetInstanceProcAddr(): pointer	
+vulkanUnloadLibrary	toshiko/thirdparty/sdl2.html#vulkanUnloadLibrary	sdl2: vulkanUnloadLibrary()	
+vulkanGetInstanceExtensions	toshiko/thirdparty/sdl2.html#vulkanGetInstanceExtensions,WindowPtr,ptr.cuint,cstringArray	sdl2: vulkanGetInstanceExtensions(window: WindowPtr; pCount: ptr cuint;\n                            pNames: cstringArray): Bool32	
+vulkanCreateSurface	toshiko/thirdparty/sdl2.html#vulkanCreateSurface,WindowPtr,VulkanInstance,ptr.VulkanSurface	sdl2: vulkanCreateSurface(window: WindowPtr; instance: VulkanInstance;\n                    surface: ptr VulkanSurface): Bool32	
+vulkanGetDrawableSize	toshiko/thirdparty/sdl2.html#vulkanGetDrawableSize,WindowPtr,ptr.cint,ptr.cint	sdl2: vulkanGetDrawableSize(window: WindowPtr; w, h: ptr cint)	
+getKeyboardFocus	toshiko/thirdparty/sdl2.html#getKeyboardFocus	sdl2: getKeyboardFocus(): WindowPtr	
+getKeyboardState	toshiko/thirdparty/sdl2.html#getKeyboardState,ptr.int	sdl2: getKeyboardState(numkeys: ptr int = nil): ptr array[0 .. SDL_NUM_SCANCODES.int, uint8]	
+getModState	toshiko/thirdparty/sdl2.html#getModState	sdl2: getModState(): Keymod	
+setModState	toshiko/thirdparty/sdl2.html#setModState,Keymod	sdl2: setModState(state: Keymod)	
+getKeyFromScancode	toshiko/thirdparty/sdl2.html#getKeyFromScancode,Scancode	sdl2: getKeyFromScancode(scancode: Scancode): cint	
+getScancodeFromKey	toshiko/thirdparty/sdl2.html#getScancodeFromKey,cint	sdl2: getScancodeFromKey(key: cint): Scancode	
+getScancodeName	toshiko/thirdparty/sdl2.html#getScancodeName,Scancode	sdl2: getScancodeName(scancode: Scancode): cstring	
+getScancodeFromName	toshiko/thirdparty/sdl2.html#getScancodeFromName,cstring	sdl2: getScancodeFromName(name: cstring): Scancode	
+getKeyName	toshiko/thirdparty/sdl2.html#getKeyName,cint	sdl2: getKeyName(key: cint): cstring	
+getKeyFromName	toshiko/thirdparty/sdl2.html#getKeyFromName,cstring	sdl2: getKeyFromName(name: cstring): cint	
+startTextInput	toshiko/thirdparty/sdl2.html#startTextInput	sdl2: startTextInput()	
+isTextInputActive	toshiko/thirdparty/sdl2.html#isTextInputActive	sdl2: isTextInputActive(): bool	
+stopTextInput	toshiko/thirdparty/sdl2.html#stopTextInput	sdl2: stopTextInput()	
+setTextInputRect	toshiko/thirdparty/sdl2.html#setTextInputRect,ptr.Rect	sdl2: setTextInputRect(rect: ptr Rect)	
+hasScreenKeyboardSupport	toshiko/thirdparty/sdl2.html#hasScreenKeyboardSupport	sdl2: hasScreenKeyboardSupport(): bool	
+isScreenKeyboardShown	toshiko/thirdparty/sdl2.html#isScreenKeyboardShown,WindowPtr	sdl2: isScreenKeyboardShown(window: WindowPtr): bool	
+getMouseFocus	toshiko/thirdparty/sdl2.html#getMouseFocus	sdl2: getMouseFocus(): WindowPtr	
+getMouseState	toshiko/thirdparty/sdl2.html#getMouseState,cint,cint	sdl2: getMouseState(x, y: var cint): uint8	
+getMouseState	toshiko/thirdparty/sdl2.html#getMouseState,ptr.cint,ptr.cint	sdl2: getMouseState(x, y: ptr cint): uint8	
+getRelativeMouseState	toshiko/thirdparty/sdl2.html#getRelativeMouseState,cint,cint	sdl2: getRelativeMouseState(x, y: var cint): uint8	
+warpMouseInWindow	toshiko/thirdparty/sdl2.html#warpMouseInWindow,WindowPtr,cint,cint	sdl2: warpMouseInWindow(window: WindowPtr; x, y: cint)	
+setRelativeMouseMode	toshiko/thirdparty/sdl2.html#setRelativeMouseMode,Bool32	sdl2: setRelativeMouseMode(enabled: Bool32): SDL_Return	
+captureMouse	toshiko/thirdparty/sdl2.html#captureMouse,Bool32	sdl2: captureMouse(enabled: Bool32): SDL_Return	
+getRelativeMouseMode	toshiko/thirdparty/sdl2.html#getRelativeMouseMode	sdl2: getRelativeMouseMode(): Bool32	
+createCursor	toshiko/thirdparty/sdl2.html#createCursor,ptr.uint8,ptr.uint8,cint,cint,cint,cint	sdl2: createCursor(data, mask: ptr uint8; w, h, hot_x, hot_y: cint): CursorPtr	
+createColorCursor	toshiko/thirdparty/sdl2.html#createColorCursor,SurfacePtr,cint,cint	sdl2: createColorCursor(surface: SurfacePtr; hot_x, hot_y: cint): CursorPtr	
+SDL_SYSTEM_CURSOR_ARROW	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_ARROW	SystemCursor.SDL_SYSTEM_CURSOR_ARROW	
+SDL_SYSTEM_CURSOR_IBEAM	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_IBEAM	SystemCursor.SDL_SYSTEM_CURSOR_IBEAM	
+SDL_SYSTEM_CURSOR_WAIT	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_WAIT	SystemCursor.SDL_SYSTEM_CURSOR_WAIT	
+SDL_SYSTEM_CURSOR_CROSSHAIR	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_CROSSHAIR	SystemCursor.SDL_SYSTEM_CURSOR_CROSSHAIR	
+SDL_SYSTEM_CURSOR_WAITARROW	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_WAITARROW	SystemCursor.SDL_SYSTEM_CURSOR_WAITARROW	
+SDL_SYSTEM_CURSOR_SIZENWSE	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_SIZENWSE	SystemCursor.SDL_SYSTEM_CURSOR_SIZENWSE	
+SDL_SYSTEM_CURSOR_SIZENESW	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_SIZENESW	SystemCursor.SDL_SYSTEM_CURSOR_SIZENESW	
+SDL_SYSTEM_CURSOR_SIZEWE	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_SIZEWE	SystemCursor.SDL_SYSTEM_CURSOR_SIZEWE	
+SDL_SYSTEM_CURSOR_SIZENS	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_SIZENS	SystemCursor.SDL_SYSTEM_CURSOR_SIZENS	
+SDL_SYSTEM_CURSOR_SIZEALL	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_SIZEALL	SystemCursor.SDL_SYSTEM_CURSOR_SIZEALL	
+SDL_SYSTEM_CURSOR_NO	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_NO	SystemCursor.SDL_SYSTEM_CURSOR_NO	
+SDL_SYSTEM_CURSOR_HAND	toshiko/thirdparty/sdl2.html#SDL_SYSTEM_CURSOR_HAND	SystemCursor.SDL_SYSTEM_CURSOR_HAND	
+SystemCursor	toshiko/thirdparty/sdl2.html#SystemCursor	sdl2: SystemCursor	
+createSystemCursor	toshiko/thirdparty/sdl2.html#createSystemCursor,SystemCursor	sdl2: createSystemCursor(c: SystemCursor): CursorPtr	
+setCursor	toshiko/thirdparty/sdl2.html#setCursor,CursorPtr	sdl2: setCursor(cursor: CursorPtr)	
+getCursor	toshiko/thirdparty/sdl2.html#getCursor	sdl2: getCursor(): CursorPtr	
+freeCursor	toshiko/thirdparty/sdl2.html#freeCursor,CursorPtr	sdl2: freeCursor(cursor: CursorPtr)	
+showCursor	toshiko/thirdparty/sdl2.html#showCursor,bool	sdl2: showCursor(toggle: bool): Bool32	
+pumpEvents	toshiko/thirdparty/sdl2.html#pumpEvents	sdl2: pumpEvents()	
+peepEvents	toshiko/thirdparty/sdl2.html#peepEvents,ptr.Event,cint,Eventaction,uint32,uint32	sdl2: peepEvents(events: ptr Event; numevents: cint; action: Eventaction; minType: uint32;\n           maxType: uint32): cint	
+hasEvent	toshiko/thirdparty/sdl2.html#hasEvent,uint32	sdl2: hasEvent(kind: uint32): Bool32	
+hasEvents	toshiko/thirdparty/sdl2.html#hasEvents,uint32,uint32	sdl2: hasEvents(minType: uint32; maxType: uint32): Bool32	
+flushEvent	toshiko/thirdparty/sdl2.html#flushEvent,uint32	sdl2: flushEvent(kind: uint32)	
+flushEvents	toshiko/thirdparty/sdl2.html#flushEvents,uint32,uint32	sdl2: flushEvents(minType: uint32; maxType: uint32)	
+pollEvent	toshiko/thirdparty/sdl2.html#pollEvent,Event	sdl2: pollEvent(event: var Event): Bool32	
+waitEvent	toshiko/thirdparty/sdl2.html#waitEvent,Event	sdl2: waitEvent(event: var Event): Bool32	
+waitEventTimeout	toshiko/thirdparty/sdl2.html#waitEventTimeout,Event,cint	sdl2: waitEventTimeout(event: var Event; timeout: cint): Bool32	
+pushEvent	toshiko/thirdparty/sdl2.html#pushEvent,ptr.Event	sdl2: pushEvent(event: ptr Event): cint	
+setEventFilter	toshiko/thirdparty/sdl2.html#setEventFilter,EventFilter,pointer	sdl2: setEventFilter(filter: EventFilter; userdata: pointer)	
+getEventFilter	toshiko/thirdparty/sdl2.html#getEventFilter,EventFilter,pointer	sdl2: getEventFilter(filter: var EventFilter; userdata: var pointer): Bool32	
+addEventWatch	toshiko/thirdparty/sdl2.html#addEventWatch,EventFilter,pointer	sdl2: addEventWatch(filter: EventFilter; userdata: pointer)	
+delEventWatch	toshiko/thirdparty/sdl2.html#delEventWatch,EventFilter,pointer	sdl2: delEventWatch(filter: EventFilter; userdata: pointer)	
+filterEvents	toshiko/thirdparty/sdl2.html#filterEvents,EventFilter,pointer	sdl2: filterEvents(filter: EventFilter; userdata: pointer)	
+eventState	toshiko/thirdparty/sdl2.html#eventState,EventType,cint	sdl2: eventState(kind: EventType; state: cint): uint8	
+registerEvents	toshiko/thirdparty/sdl2.html#registerEvents,cint	sdl2: registerEvents(numevents: cint): uint32	
+setError	toshiko/thirdparty/sdl2.html#setError,cstring	sdl2: setError(fmt: cstring)	
+getError	toshiko/thirdparty/sdl2.html#getError	sdl2: getError(): cstring	
+clearError	toshiko/thirdparty/sdl2.html#clearError	sdl2: clearError()	
+getPixelFormatName	toshiko/thirdparty/sdl2.html#getPixelFormatName,uint32	sdl2: getPixelFormatName(format: uint32): cstring	
+pixelFormatEnumToMasks	toshiko/thirdparty/sdl2.html#pixelFormatEnumToMasks,uint32,cint,uint32,uint32,uint32,uint32	sdl2: pixelFormatEnumToMasks(format: uint32; bpp: var cint;\n                       Rmask, Gmask, Bmask, Amask: var uint32): bool	
+masksToPixelFormatEnum	toshiko/thirdparty/sdl2.html#masksToPixelFormatEnum,cint,uint32,uint32,uint32,uint32	sdl2: masksToPixelFormatEnum(bpp: cint; Rmask, Gmask, Bmask, Amask: uint32): uint32	
+allocFormat	toshiko/thirdparty/sdl2.html#allocFormat,uint32	sdl2: allocFormat(pixelFormat: uint32): ptr PixelFormat	
+freeFormat	toshiko/thirdparty/sdl2.html#freeFormat,ptr.PixelFormat	sdl2: freeFormat(format: ptr PixelFormat)	
+allocPalette	toshiko/thirdparty/sdl2.html#allocPalette,cint	sdl2: allocPalette(numColors: cint): ptr Palette	
+setPixelFormatPalette	toshiko/thirdparty/sdl2.html#setPixelFormatPalette,ptr.PixelFormat,ptr.Palette	sdl2: setPixelFormatPalette(format: ptr PixelFormat; palette: ptr Palette): cint	
+setPaletteColors	toshiko/thirdparty/sdl2.html#setPaletteColors,ptr.Palette,ptr.Color,cint,cint	sdl2: setPaletteColors(palette: ptr Palette; colors: ptr Color; first, numColors: cint): SDL_Return	
+freePalette	toshiko/thirdparty/sdl2.html#freePalette,ptr.Palette	sdl2: freePalette(palette: ptr Palette)	
+mapRGB	toshiko/thirdparty/sdl2.html#mapRGB,ptr.PixelFormat,uint8,uint8,uint8	sdl2: mapRGB(format: ptr PixelFormat; r, g, b: uint8): uint32	
+mapRGBA	toshiko/thirdparty/sdl2.html#mapRGBA,ptr.PixelFormat,uint8,uint8,uint8,uint8	sdl2: mapRGBA(format: ptr PixelFormat; r, g, b, a: uint8): uint32	
+getRGB	toshiko/thirdparty/sdl2.html#getRGB,uint32,ptr.PixelFormat,uint8,uint8,uint8	sdl2: getRGB(pixel: uint32; format: ptr PixelFormat; r, g, b: var uint8)	
+getRGBA	toshiko/thirdparty/sdl2.html#getRGBA,uint32,ptr.PixelFormat,uint8,uint8,uint8,uint8	sdl2: getRGBA(pixel: uint32; format: ptr PixelFormat; r, g, b, a: var uint8)	
+calculateGammaRamp	toshiko/thirdparty/sdl2.html#calculateGammaRamp,cfloat,ptr.uint16	sdl2: calculateGammaRamp(gamma: cfloat; ramp: ptr uint16)	
+setClipboardText	toshiko/thirdparty/sdl2.html#setClipboardText,cstring	sdl2: setClipboardText(text: cstring): cint	
+getClipboardText	toshiko/thirdparty/sdl2.html#getClipboardText	sdl2: getClipboardText(): cstring	
+hasClipboardText	toshiko/thirdparty/sdl2.html#hasClipboardText	sdl2: hasClipboardText(): Bool32	
+freeClipboardText	toshiko/thirdparty/sdl2.html#freeClipboardText,cstring	sdl2: freeClipboardText(text: cstring)	
+getNumTouchFingers	toshiko/thirdparty/sdl2.html#getNumTouchFingers,TouchID	sdl2: getNumTouchFingers(id: TouchID): cint	
+getTouchFinger	toshiko/thirdparty/sdl2.html#getTouchFinger,TouchID,cint	sdl2: getTouchFinger(id: TouchID; index: cint): ptr Finger	
+SDL_QUERY	toshiko/thirdparty/sdl2.html#SDL_QUERY	sdl2: SDL_QUERY	
+SDL_IGNORE	toshiko/thirdparty/sdl2.html#SDL_IGNORE	sdl2: SDL_IGNORE	
+SDL_DISABLE	toshiko/thirdparty/sdl2.html#SDL_DISABLE	sdl2: SDL_DISABLE	
+SDL_ENABLE	toshiko/thirdparty/sdl2.html#SDL_ENABLE	sdl2: SDL_ENABLE	
+getEventState	toshiko/thirdparty/sdl2.html#getEventState,EventType	sdl2: getEventState(kind: EventType): uint8	
+SDL_BUTTON	toshiko/thirdparty/sdl2.html#SDL_BUTTON.t,uint8	sdl2: SDL_BUTTON(x: uint8): uint8	
+BUTTON_LEFT	toshiko/thirdparty/sdl2.html#BUTTON_LEFT	sdl2: BUTTON_LEFT	
+BUTTON_MIDDLE	toshiko/thirdparty/sdl2.html#BUTTON_MIDDLE	sdl2: BUTTON_MIDDLE	
+BUTTON_RIGHT	toshiko/thirdparty/sdl2.html#BUTTON_RIGHT	sdl2: BUTTON_RIGHT	
+BUTTON_X1	toshiko/thirdparty/sdl2.html#BUTTON_X1	sdl2: BUTTON_X1	
+BUTTON_X2	toshiko/thirdparty/sdl2.html#BUTTON_X2	sdl2: BUTTON_X2	
+BUTTON_LMASK	toshiko/thirdparty/sdl2.html#BUTTON_LMASK	sdl2: BUTTON_LMASK	
+BUTTON_MMASK	toshiko/thirdparty/sdl2.html#BUTTON_MMASK	sdl2: BUTTON_MMASK	
+BUTTON_RMASK	toshiko/thirdparty/sdl2.html#BUTTON_RMASK	sdl2: BUTTON_RMASK	
+BUTTON_X1MASK	toshiko/thirdparty/sdl2.html#BUTTON_X1MASK	sdl2: BUTTON_X1MASK	
+BUTTON_X2MASK	toshiko/thirdparty/sdl2.html#BUTTON_X2MASK	sdl2: BUTTON_X2MASK	
+SDL_TOUCH_MOUSEID	toshiko/thirdparty/sdl2.html#SDL_TOUCH_MOUSEID	sdl2: SDL_TOUCH_MOUSEID	
+createRGBSurface	toshiko/thirdparty/sdl2.html#createRGBSurface,int32,int32,int32	sdl2: createRGBSurface(width, height, depth: int32): SurfacePtr	
+getSize	toshiko/thirdparty/sdl2.html#getSize,WindowPtr	sdl2: getSize(window: WindowPtr): Point	
+destroyTexture	toshiko/thirdparty/sdl2.html#destroyTexture,TexturePtr	sdl2: destroyTexture(texture: TexturePtr)	
+destroyRenderer	toshiko/thirdparty/sdl2.html#destroyRenderer,RendererPtr	sdl2: destroyRenderer(renderer: RendererPtr)	
+destroy	toshiko/thirdparty/sdl2.html#destroy,WindowPtr	sdl2: destroy(window: WindowPtr)	
+destroy	toshiko/thirdparty/sdl2.html#destroy,CursorPtr	sdl2: destroy(cursor: CursorPtr)	
+destroy	toshiko/thirdparty/sdl2.html#destroy,SurfacePtr	sdl2: destroy(surface: SurfacePtr)	
+destroy	toshiko/thirdparty/sdl2.html#destroy,ptr.PixelFormat	sdl2: destroy(format: ptr PixelFormat)	
+destroy	toshiko/thirdparty/sdl2.html#destroy,ptr.Palette	sdl2: destroy(palette: ptr Palette)	
+blitSurface	toshiko/thirdparty/sdl2.html#blitSurface,SurfacePtr,ptr.Rect,SurfacePtr,ptr.Rect	sdl2: blitSurface(src: SurfacePtr; srcrect: ptr Rect; dst: SurfacePtr; dstrect: ptr Rect): SDL_Return	
+blitScaled	toshiko/thirdparty/sdl2.html#blitScaled,SurfacePtr,ptr.Rect,SurfacePtr,ptr.Rect	sdl2: blitScaled(src: SurfacePtr; srcrect: ptr Rect; dst: SurfacePtr; dstrect: ptr Rect): SDL_Return	
+loadBMP	toshiko/thirdparty/sdl2.html#loadBMP,string	sdl2: loadBMP(file: string): SurfacePtr	
+saveBMP	toshiko/thirdparty/sdl2.html#saveBMP,SurfacePtr,string	sdl2: saveBMP(surface: SurfacePtr; file: string): SDL_Return	
+color	toshiko/thirdparty/sdl2.html#color,range[],range[],range[],range[]	sdl2: color(r, g, b, a: range[0 .. 255]): Color	
+rect	toshiko/thirdparty/sdl2.html#rect,cint,cint	sdl2: rect(x, y: cint; w = cint(0); h = cint(0)): Rect	
+point	toshiko/thirdparty/sdl2.html#point,T,T	sdl2: point[T: SomeNumber](x, y: T): Point	
+contains	toshiko/thirdparty/sdl2.html#contains,Rect,Point	sdl2: contains(some: Rect; point: Point): bool	
+HINT_RENDER_SCALE_QUALITY	toshiko/thirdparty/sdl2.html#HINT_RENDER_SCALE_QUALITY	sdl2: HINT_RENDER_SCALE_QUALITY	
+setHint	toshiko/thirdparty/sdl2.html#setHint,cstring,cstring	sdl2: setHint(name: cstring; value: cstring): bool	
+setHintWithPriority	toshiko/thirdparty/sdl2.html#setHintWithPriority,cstring,cstring,cint	sdl2: setHintWithPriority(name: cstring; value: cstring; priority: cint): bool	
+getHint	toshiko/thirdparty/sdl2.html#getHint,cstring	sdl2: getHint(name: cstring): cstring	
+size	toshiko/thirdparty/sdl2.html#size,RWopsPtr	sdl2: size(ctx: RWopsPtr): int64	
+seek	toshiko/thirdparty/sdl2.html#seek,RWopsPtr,int64,cint	sdl2: seek(ctx: RWopsPtr; offset: int64; whence: cint): int64	
+read	toshiko/thirdparty/sdl2.html#read,RWopsPtr,pointer,csize_t_const,csize_t_const	sdl2: read(ctx: RWopsPtr; `ptr`: pointer; size, maxnum: csize_t_const): csize_t_const	
+write	toshiko/thirdparty/sdl2.html#write,RWopsPtr,pointer,csize_t_const,csize_t_const	sdl2: write(ctx: RWopsPtr; `ptr`: pointer; size, num: csize_t_const): csize_t_const	
+close	toshiko/thirdparty/sdl2.html#close,RWopsPtr	sdl2: close(ctx: RWopsPtr): cint	
+defaultEvent	toshiko/thirdparty/sdl2.html#defaultEvent	sdl2: defaultEvent	

@@ -108,7 +108,6 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#DrawableObj"
     title="DrawableObj = object
-  texture_id: GLuint
   border_width: float
   border_detail_lefttop: int
   border_detail_righttop: int
@@ -119,7 +118,8 @@ function main() {
   border_radius_leftbottom: float
   border_radius_rightbottom: float
   border_color: ColorRef
-  background_color: ColorRef"><wbr />Drawable<wbr />Obj<span class="attachedType"></span></a></li>
+  background_color: ColorRef
+  texture*: GlTextureObj"><wbr />Drawable<wbr />Obj<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#DrawableRef"
     title="DrawableRef = ref DrawableObj"><wbr />Drawable<wbr />Ref<span class="attachedType"></span></a></li>
 
@@ -132,6 +132,8 @@ function main() {
     title="Drawable(): DrawableRef"><wbr />Drawable<span class="attachedType">DrawableRef</span></a></li>
   <li><a class="reference" href="#draw%2CDrawableRef%2Cfloat%2Cfloat%2Cfloat%2Cfloat"
     title="draw(self: DrawableRef; x, y, width, height: float)"><wbr />draw<span class="attachedType">DrawableRef</span></a></li>
+  <li><a class="reference" href="#getColor%2CDrawableRef"
+    title="getColor(self: DrawableRef): ColorRef"><wbr />get<wbr />Color<span class="attachedType">DrawableRef</span></a></li>
   <li><a class="reference" href="#setBorderColor%2CDrawableRef%2CColorRef"
     title="setBorderColor(self: DrawableRef; color: ColorRef)"><wbr />set<wbr />Border<wbr />Color<span class="attachedType">DrawableRef</span></a></li>
   <li><a class="reference" href="#setBorderWidth%2CDrawableRef%2Cfloat"
@@ -146,6 +148,8 @@ function main() {
     title="setCornerDetail(self: DrawableRef; detail: int)"><wbr />set<wbr />Corner<wbr />Detail<span class="attachedType">DrawableRef</span></a></li>
   <li><a class="reference" href="#setCornerDetail%2CDrawableRef%2Cint%2Cint%2Cint%2Cint"
     title="setCornerDetail(self: DrawableRef; d1, d2, d3, d4: int)"><wbr />set<wbr />Corner<wbr />Detail<span class="attachedType">DrawableRef</span></a></li>
+  <li><a class="reference" href="#setTexture%2CDrawableRef%2CGlTextureObj"
+    title="setTexture(self: DrawableRef; texture: GlTextureObj)"><wbr />set<wbr />Texture<span class="attachedType">DrawableRef</span></a></li>
   <li><a class="reference" href="#setStyle%2CDrawableRef%2CStyleSheetRef"
     title="setStyle(self: DrawableRef; s: StyleSheetRef)"><wbr />set<wbr />Style<span class="attachedType">DrawableRef</span></a></li>
 
@@ -162,14 +166,13 @@ function main() {
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="../thirdparty/opengl.html">../thirdparty/opengl</a>, <a class="reference external" href="../core/color.html">../core/color</a>, <a class="reference external" href="../core/stylesheet.html">../core/stylesheet</a>
+<a class="reference external" href="../thirdparty/opengl.html">../thirdparty/opengl</a>, <a class="reference external" href="../core/color.html">../core/color</a>, <a class="reference external" href="../core/stylesheet.html">../core/stylesheet</a>, <a class="reference external" href="../core/image.html">../core/image</a>, <a class="reference external" href="../core/vector2.html">../core/vector2</a>
 </dl></div>
 <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
 <a id="DrawableObj"></a>
 <dt><pre><a href="drawable.html#DrawableObj"><span class="Identifier">DrawableObj</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">texture_id</span><span class="Other">:</span> <a href="../thirdparty/opengl.html#GLuint"><span class="Identifier">GLuint</span></a>
   <span class="Identifier">border_width</span><span class="Other">:</span> <span class="Identifier">float</span>
   <span class="Identifier">border_detail_lefttop</span><span class="Other">:</span> <span class="Identifier">int</span>
   <span class="Identifier">border_detail_righttop</span><span class="Other">:</span> <span class="Identifier">int</span>
@@ -181,6 +184,7 @@ function main() {
   <span class="Identifier">border_radius_rightbottom</span><span class="Other">:</span> <span class="Identifier">float</span>
   <span class="Identifier">border_color</span><span class="Other">:</span> <a href="../core/color.html#ColorRef"><span class="Identifier">ColorRef</span></a>
   <span class="Identifier">background_color</span><span class="Other">:</span> <a href="../core/color.html#ColorRef"><span class="Identifier">ColorRef</span></a>
+  <span class="Identifier">texture</span><span class="Operator">*</span><span class="Other">:</span> <a href="../core/image.html#GlTextureObj"><span class="Identifier">GlTextureObj</span></a>
 </pre></dt>
 <dd>
 
@@ -208,6 +212,13 @@ function main() {
 </dd>
 <a id="draw,DrawableRef,float,float,float,float"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#draw%2CDrawableRef%2Cfloat%2Cfloat%2Cfloat%2Cfloat"><span class="Identifier">draw</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a><span class="Other">;</span> <span class="Identifier">x</span><span class="Other">,</span> <span class="Identifier">y</span><span class="Other">,</span> <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">GLerror</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="getColor,DrawableRef"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#getColor%2CDrawableRef"><span class="Identifier">getColor</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a><span class="Other">)</span><span class="Other">:</span> <a href="../core/color.html#ColorRef"><span class="Identifier">ColorRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -262,6 +273,13 @@ function main() {
 
 
 </dd>
+<a id="setTexture,DrawableRef,GlTextureObj"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#setTexture%2CDrawableRef%2CGlTextureObj"><span class="Identifier">setTexture</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a><span class="Other">;</span> <span class="Identifier">texture</span><span class="Other">:</span> <a href="../core/image.html#GlTextureObj"><span class="Identifier">GlTextureObj</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="setStyle,DrawableRef,StyleSheetRef"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#setStyle%2CDrawableRef%2CStyleSheetRef"><span class="Identifier">setStyle</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <a href="../core/stylesheet.html#StyleSheetRef"><span class="Identifier">StyleSheetRef</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">RegexError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
@@ -280,7 +298,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-15 16:35:01 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-16 01:29:16 UTC</small>
       </div>
     </div>
   </div>

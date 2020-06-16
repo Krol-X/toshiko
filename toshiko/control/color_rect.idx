@@ -1,0 +1,4 @@
+ColorRectObj	toshiko/control/color_rect.html#ColorRectObj	color_rect: ColorRectObj	
+ColorRectRef	toshiko/control/color_rect.html#ColorRectRef	color_rect: ColorRectRef	
+ColorRect	toshiko/control/color_rect.html#ColorRect,string	color_rect: ColorRect(name: string = &quot;ColorRect&quot;): ColorRectRef	
+draw	toshiko/control/color_rect.html#draw.e,ColorRectRef,float,float	color_rect: draw(self: ColorRectRef; w, h: float)	
