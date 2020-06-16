@@ -4,6 +4,8 @@ import
 
   ../core/color,
   ../core/stylesheet,
+  ../core/image,
+  ../core/vector2,
 
   math,
   strutils
@@ -12,7 +14,6 @@ import
 
 type
   DrawableObj* = object
-    texture_id: Gluint
     border_width: float
     border_detail_lefttop: int
     border_detail_righttop: int
@@ -24,12 +25,13 @@ type
     border_radius_rightbottom: float
     border_color: ColorRef
     background_color: ColorRef
+    texture*: GlTextureObj
   DrawableRef* = ref DrawableObj
 
 
 proc Drawable*: DrawableRef =
   DrawableRef(
-    texture_id: 0, border_width: 0,
+    texture: GlTextureObj(), border_width: 0,
     border_detail_lefttop: 50,
     border_detail_righttop: 50,
     border_detail_leftbottom: 50,
@@ -42,54 +44,86 @@ proc Drawable*: DrawableRef =
     background_color: Color(0, 0, 0, 0)
   )
 
+
+proc norm(v: float): float =
+  if v > 1f: 1f elif v < 0f: 0f else: v
+
 template vd = discard
+
+template recalc =
+  # left top
+  vertex.add(Vector2(x, y - self.border_radius_lefttop))
+  for i in 0..self.border_detail_lefttop:
+    let angle = TAU*(i/self.border_detail_lefttop)
+    if angle >= PI and angle <= PI+PI/2:
+      vertex.add(Vector2(x + self.border_radius_lefttop + self.border_radius_lefttop*cos(angle), y - self.border_radius_lefttop - self.border_radius_lefttop*sin(angle)))
+  vertex.add(Vector2(x + self.border_radius_lefttop, y))
+
+  # right top
+  vertex.add(Vector2(x + width - self.border_radius_righttop, y))
+  for i in 0..self.border_detail_righttop:
+    let angle = TAU*(i/self.border_detail_righttop)
+    if angle >= PI+PI/2 and angle <= TAU:
+      vertex.add(Vector2(x + width - self.border_radius_righttop + self.border_radius_righttop*cos(angle), y - self.border_radius_righttop - self.border_radius_righttop*sin(angle)))
+  vertex.add(Vector2(x + width, y - self.border_radius_righttop))
+
+  # right bottom
+  vertex.add(Vector2(x + width, y - height + self.border_radius_rightbottom))
+  for i in 0..self.border_detail_rightbottom:
+    let angle = TAU*(i/self.border_detail_rightbottom)
+    if angle >= 0 and angle <= PI/2:
+      vertex.add(Vector2(x + width - self.border_radius_rightbottom + self.border_radius_rightbottom*cos(angle), y - height + self.border_radius_rightbottom - self.border_radius_rightbottom*sin(angle)))
+  vertex.add(Vector2(x + width - self.border_radius_rightbottom, y - height))
+
+  # left bottom
+  vertex.add(Vector2(x + self.border_radius_leftbottom, y - height))
+  for i in 0..self.border_detail_leftbottom:
+    let angle = TAU*(i/self.border_detail_leftbottom)
+    if angle >= PI/2 and angle <= PI:
+      vertex.add(Vector2(x + self.border_radius_leftbottom + self.border_radius_leftbottom*cos(angle), y - height + self.border_radius_leftbottom - self.border_radius_leftbottom*sin(angle)))
+  vertex.add(Vector2(x, y - height + self.border_radius_leftbottom))
+
 
 template draw_template(drawtype, color, function, secondfunc: untyped): untyped =
   glColor4f(self.`color`.r, self.`color`.g, self.`color`.b, self.`color`.a)
   `function`
   glBegin(`drawtype`)
 
-  # left top
-  glVertex2f(x, y - self.border_radius_lefttop)
-  for i in 0..self.border_detail_lefttop:
-    let angle = TAU*(i/self.border_detail_lefttop)
-    if angle >= PI and angle <= PI+PI/2:
-      glVertex2f(x + self.border_radius_lefttop + self.border_radius_lefttop*cos(angle), y - self.border_radius_lefttop - self.border_radius_lefttop*sin(angle))
-  glVertex2f(x + self.border_radius_lefttop, y)
-
-  # right top
-  glVertex2f(x + width - self.border_radius_righttop, y)
-  for i in 0..self.border_detail_righttop:
-    let angle = TAU*(i/self.border_detail_righttop)
-    if angle >= PI+PI/2 and angle <= TAU:
-      glVertex2f(x + width - self.border_radius_righttop + self.border_radius_righttop*cos(angle), y - self.border_radius_righttop - self.border_radius_righttop*sin(angle))
-  glVertex2f(x + width, y - self.border_radius_righttop)
-
-  # right bottom
-  glVertex2f(x + width, y - height + self.border_radius_rightbottom)
-  for i in 0..self.border_detail_rightbottom:
-    let angle = TAU*(i/self.border_detail_rightbottom)
-    if angle >= 0 and angle <= PI/2:
-      glVertex2f(x + width - self.border_radius_rightbottom + self.border_radius_rightbottom*cos(angle), y - height + self.border_radius_rightbottom - self.border_radius_rightbottom*sin(angle))
-  glVertex2f(x + width - self.border_radius_rightbottom, y - height)
-
-  # left bottom
-  glVertex2f(x + self.border_radius_leftbottom, y - height)
-  for i in 0..self.border_detail_leftbottom:
-    let angle = TAU*(i/self.border_detail_leftbottom)
-    if angle >= PI/2 and angle <= PI:
-      glVertex2f(x + self.border_radius_leftbottom + self.border_radius_leftbottom*cos(angle), y - height + self.border_radius_leftbottom - self.border_radius_leftbottom*sin(angle))
-  glVertex2f(x, y - height + self.border_radius_leftbottom)
+  for i in vertex:
+    glVertex2f(i.x, i.y)
 
   glEnd()
   `secondfunc`
 
+template draw_texture_template(drawtype, color, function, secondfunc: untyped): untyped =
+  glEnable(GL_TEXTURE_2D)
+  glBindTexture(GL_TEXTURE_2D, self.texture.texture)
+  glColor4f(self.`color`.r, self.`color`.g, self.`color`.b, self.`color`.a)
+  `function`
+  glBegin(`drawtype`)
+
+  for i in vertex:
+    glTexCoord2f((x + width - i.x) / width, 1f - ((-y + height - -i.y) / height))
+    glVertex2f(i.x, i.y)
+
+  glEnd()
+  `secondfunc`
+  glDisable(GL_TEXTURE_2D)
+
 
 proc draw*(self: DrawableRef, x, y, width, height: float) =
-  draw_template(GL_POLYGON, background_color, vd(), vd())
+  var vertex: seq[Vector2Ref] = @[]
+  recalc()
+  if self.texture.texture > 0:
+    draw_texture_template(GL_POLYGON, background_color, vd(), vd())
+  else:
+    draw_template(GL_POLYGON, background_color, vd(), vd())
   if self.border_width > 0f:
     draw_template(GL_LINE_LOOP, border_color, glLineWidth(self.border_width), glLineWidth(1))
 
+
+proc getColor*(self: DrawableRef): ColorRef =
+  self.background_color
 
 proc setBorderColor*(self: DrawableRef, color: ColorRef) =
   self.border_color = color
@@ -123,6 +157,10 @@ proc setCornerDetail*(self: DrawableRef, d1, d2, d3, d4: int) =
   self.border_detail_righttop = d2
   self.border_detail_leftbottom = d4
   self.border_detail_rightbottom = d3
+
+proc setTexture*(self: DrawableRef, texture: GlTextureObj) =
+  self.texture = texture
+  self.background_color = Color(1f, 1f, 1f, 1f)
 
 proc setStyle*(self: DrawableRef, s: StyleSheetRef) =
   for i in s.dict:

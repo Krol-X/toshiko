@@ -1,5 +1,6 @@
 import
-  control/control
+  control/control,
+  control/color_rect
 
 export
-  control
+  control, color_rect

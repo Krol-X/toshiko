@@ -8,6 +8,9 @@
 [![time tracker](https://wakatime.com/badge/github/Ethosa/toshiko.svg)](https://wakatime.com/badge/github/Ethosa/toshiko)
 [![test](https://github.com/Ethosa/toshiko/workflows/test/badge.svg)](https://github.com/Ethosa/toshiko/actions)
 
+Latest version - 0.0.1
+Stable version - ?.?.?
+
 </div>
 
 
@@ -17,7 +20,7 @@
 2. Install dependencies
    -  Linux (tested on Ubuntu and Mint):
       - `sudo apt install -y freeglut3 freeglut3-dev`
-      - `sudo apt install --fix-missing -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev`
+      - `sudo apt install --fix-missing -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev`
    -  Windows / MacOS:
       -  [SDL2](https://www.libsdl.org/download-2.0.php)
       -  [SDL2_image](https://www.libsdl.org/projects/SDL_image/)

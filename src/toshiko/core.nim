@@ -6,8 +6,9 @@ import
   core/stylesheet,
   core/input,
   core/rect2,
-  core/anchor
+  core/anchor,
+  core/image
 
 export
   enums, nim_object, color, vector2, stylesheet,
-  input, rect2, anchor
+  input, rect2, anchor, image
