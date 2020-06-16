@@ -8,7 +8,8 @@ type
     CANVAS_NODE,
     # Control nodes
     CONTROL_NODE,
-    COLOR_RECT_NODE
+    COLOR_RECT_NODE,
+    TEXTURE_RECT_NODE
   NodeType* {.pure.} = enum
     NODETYPE_DEFAULT,
     NODETYPE_CONTROL
@@ -19,3 +20,7 @@ type
   MouseMode* {.pure.} = enum
     MOUSEMODE_HANDLE,
     MOUSEMODE_IGNORE
+  TextureMode* {.pure.} = enum
+    TEXTUREMODE_FILL_XY,
+    TEXTUREMODE_CROP,
+    TEXTUREMODE_KEEP_ASPECT_RATIO

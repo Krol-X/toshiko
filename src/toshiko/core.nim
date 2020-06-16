@@ -7,8 +7,9 @@ import
   core/input,
   core/rect2,
   core/anchor,
-  core/image
+  core/image,
+  core/mathcore
 
 export
   enums, nim_object, color, vector2, stylesheet,
-  input, rect2, anchor, image
+  input, rect2, anchor, image, mathcore

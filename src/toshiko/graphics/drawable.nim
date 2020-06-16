@@ -47,7 +47,6 @@ proc Drawable*: DrawableRef =
 
 
 
-
 template vd = discard
 
 template recalc =
