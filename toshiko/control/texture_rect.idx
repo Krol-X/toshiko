@@ -1,0 +1,10 @@
+TextureRectObj	toshiko/control/texture_rect.html#TextureRectObj	texture_rect: TextureRectObj	
+TextureRectRef	toshiko/control/texture_rect.html#TextureRectRef	texture_rect: TextureRectRef	
+TextureRect	toshiko/control/texture_rect.html#TextureRect,string	texture_rect: TextureRect(name: string = &quot;TextureRect&quot;): TextureRectRef	
+draw	toshiko/control/texture_rect.html#draw.e,TextureRectRef,float,float	texture_rect: draw(self: TextureRectRef; w, h: float)	
+loadTexture	toshiko/control/texture_rect.html#loadTexture.e,TextureRectRef,cstring,GLenum	texture_rect: loadTexture(self: TextureRectRef; file: cstring; mode: GLenum = GL_RGB)	
+setTexture	toshiko/control/texture_rect.html#setTexture.e,TextureRectRef,GlTextureObj	texture_rect: setTexture(self: TextureRectRef; gltexture: GlTextureObj)	
+setTextureAnchor	toshiko/control/texture_rect.html#setTextureAnchor.e,TextureRectRef,AnchorRef	texture_rect: setTextureAnchor(self: TextureRectRef; anchor: AnchorRef)	
+setTextureAnchor	toshiko/control/texture_rect.html#setTextureAnchor.e,TextureRectRef,float,float,float,float	texture_rect: setTextureAnchor(self: TextureRectRef; x1, y1, x2, y2: float)	
+setTextureMode	toshiko/control/texture_rect.html#setTextureMode.e,TextureRectRef,TextureMode	texture_rect: setTextureMode(self: TextureRectRef; mode: TextureMode)	
+setTextureFilter	toshiko/control/texture_rect.html#setTextureFilter.e,TextureRectRef,ColorRef	texture_rect: setTextureFilter(self: TextureRectRef; color: ColorRef)	

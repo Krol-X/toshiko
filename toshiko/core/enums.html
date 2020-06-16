@@ -102,7 +102,8 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#NodeKind"
     title="NodeKind {.pure.} = enum
-  NODE_NODE, SCENE_NODE, CANVAS_NODE, CONTROL_NODE, COLOR_RECT_NODE"><wbr />Node<wbr />Kind<span class="attachedType"></span></a></li>
+  NODE_NODE, SCENE_NODE, CANVAS_NODE, CONTROL_NODE, COLOR_RECT_NODE,
+  TEXTURE_RECT_NODE"><wbr />Node<wbr />Kind<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#NodeType"
     title="NodeType {.pure.} = enum
   NODETYPE_DEFAULT, NODETYPE_CONTROL"><wbr />Node<wbr />Type<span class="attachedType"></span></a></li>
@@ -112,6 +113,9 @@ function main() {
   <li><a class="reference" href="#MouseMode"
     title="MouseMode {.pure.} = enum
   MOUSEMODE_HANDLE, MOUSEMODE_IGNORE"><wbr />Mouse<wbr />Mode<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#TextureMode"
+    title="TextureMode {.pure.} = enum
+  TEXTUREMODE_FILL_XY, TEXTUREMODE_CROP, TEXTUREMODE_KEEP_ASPECT_RATIO"><wbr />Texture<wbr />Mode<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -128,7 +132,8 @@ function main() {
 <dl class="item">
 <a id="NodeKind"></a>
 <dt><pre><a href="enums.html#NodeKind"><span class="Identifier">NodeKind</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">pure</span></span><span class="Other">.}</span></span> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">NODE_NODE</span><span class="Other">,</span> <span class="Identifier">SCENE_NODE</span><span class="Other">,</span> <span class="Identifier">CANVAS_NODE</span><span class="Other">,</span> <span class="Identifier">CONTROL_NODE</span><span class="Other">,</span> <span class="Identifier">COLOR_RECT_NODE</span></pre></dt>
+  <span class="Identifier">NODE_NODE</span><span class="Other">,</span> <span class="Identifier">SCENE_NODE</span><span class="Other">,</span> <span class="Identifier">CANVAS_NODE</span><span class="Other">,</span> <span class="Identifier">CONTROL_NODE</span><span class="Other">,</span> <span class="Identifier">COLOR_RECT_NODE</span><span class="Other">,</span>
+  <span class="Identifier">TEXTURE_RECT_NODE</span></pre></dt>
 <dd>
 
 
@@ -158,6 +163,14 @@ function main() {
 
 
 </dd>
+<a id="TextureMode"></a>
+<dt><pre><a href="enums.html#TextureMode"><span class="Identifier">TextureMode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">pure</span></span><span class="Other">.}</span></span> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">TEXTUREMODE_FILL_XY</span><span class="Other">,</span> <span class="Identifier">TEXTUREMODE_CROP</span><span class="Other">,</span> <span class="Identifier">TEXTUREMODE_KEEP_ASPECT_RATIO</span></pre></dt>
+<dd>
+
+
+
+</dd>
 
 </dl></div>
 
@@ -168,7 +181,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-16 09:58:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-16 12:54:02 UTC</small>
       </div>
     </div>
   </div>
