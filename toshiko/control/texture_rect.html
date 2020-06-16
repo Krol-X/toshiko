@@ -130,8 +130,8 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#draw.e%2CTextureRectRef%2Cfloat%2Cfloat"
     title="draw(self: TextureRectRef; w, h: float)"><wbr />draw<span class="attachedType">TextureRectRef</span></a></li>
-  <li><a class="reference" href="#loadTexture.e%2CTextureRectRef%2Ccstring%2CGLenum"
-    title="loadTexture(self: TextureRectRef; file: cstring; mode: GLenum = GL_RGB)"><wbr />load<wbr />Texture<span class="attachedType">TextureRectRef</span></a></li>
+  <li><a class="reference" href="#loadTexture.e%2CTextureRectRef%2Ccstring"
+    title="loadTexture(self: TextureRectRef; file: cstring)"><wbr />load<wbr />Texture<span class="attachedType">TextureRectRef</span></a></li>
   <li><a class="reference" href="#setTexture.e%2CTextureRectRef%2CGlTextureObj"
     title="setTexture(self: TextureRectRef; gltexture: GlTextureObj)"><wbr />set<wbr />Texture<span class="attachedType">TextureRectRef</span></a></li>
   <li><a class="reference" href="#setTextureAnchor.e%2CTextureRectRef%2CAnchorRef"
@@ -211,9 +211,9 @@ function main() {
 This uses in the <tt class="docutils literal"><span class="pre">window.nim</span></tt>.
 
 </dd>
-<a id="loadTexture.e,TextureRectRef,cstring,GLenum"></a>
-<dt><pre><span class="Keyword">method</span> <a href="#loadTexture.e%2CTextureRectRef%2Ccstring%2CGLenum"><span class="Identifier">loadTexture</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="texture_rect.html#TextureRectRef"><span class="Identifier">TextureRectRef</span></a><span class="Other">;</span> <span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <a href="../thirdparty/opengl.html#GLenum"><span class="Identifier">GLenum</span></a> <span class="Other">=</span> <span class="Identifier">GL_RGB</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span>
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">GLerror</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="loadTexture.e,TextureRectRef,cstring"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#loadTexture.e%2CTextureRectRef%2Ccstring"><span class="Identifier">loadTexture</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="texture_rect.html#TextureRectRef"><span class="Identifier">TextureRectRef</span></a><span class="Other">;</span> <span class="Identifier">file</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">GLerror</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 <p>Loads texture from file.</p>
@@ -282,7 +282,7 @@ Changes texture filter color.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-16 12:54:06 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-16 13:04:06 UTC</small>
       </div>
     </div>
   </div>

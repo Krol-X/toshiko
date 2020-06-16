@@ -1,3 +1,3 @@
 GlTextureObj	toshiko/core/image.html#GlTextureObj	image: GlTextureObj	
-load	toshiko/core/image.html#load,cstring,float,float,GLenum	image: load(file: cstring; x, y: var float; mode: GLenum = GL_RGB): GLuint	
-load	toshiko/core/image.html#load,cstring,GLenum	image: load(file: cstring; mode: GLenum = GL_RGB): GlTextureObj	
+load	toshiko/core/image.html#load,cstring,float,float	image: load(file: cstring; x, y: var float): GLuint	
+load	toshiko/core/image.html#load,cstring	image: load(file: cstring): GlTextureObj	
