@@ -10,3 +10,4 @@
 8. [Use Drawable and Control.](https://github.com/Ethosa/toshiko/blob/master/tests/test8.nim)
 9. [Handle Control events.](https://github.com/Ethosa/toshiko/blob/master/tests/test9.nim)
 10. [Anchor setting](https://github.com/Ethosa/toshiko/blob/master/tests/test10.nim)
+11. [Use Image in Drawable.](https://github.com/Ethosa/toshiko/blob/master/tests/test11.nim)

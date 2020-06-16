@@ -16,8 +16,7 @@ rect.resize(256, 128)
 rect.move(64, 64)
 rect.setStyle(style(
   {
-    border-radius: 64,
-    background-image: "assets/2.jpg"
+    border-radius: 64
   }
 ))
 

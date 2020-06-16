@@ -8,7 +8,8 @@ import
   ../core/vector2,
 
   math,
-  strutils
+  strutils,
+  re
 
 
 
@@ -122,65 +123,116 @@ proc draw*(self: DrawableRef, x, y, width, height: float) =
 
 
 proc getColor*(self: DrawableRef): ColorRef =
+  ## Returns background color.
   self.background_color
 
 proc loadTexture*(self: DrawableRef, path: string, mode: Glenum = GL_RGB) =
+  ## Loads texture from the file.
+  ##
+  ## Arguments:
+  ## - `path` is an image path.
+  ## - `mode` is an image mode.
   self.texture = load(path, mode)
   self.background_color = Color(1f, 1f, 1f, 1f)
 
 proc setBorderColor*(self: DrawableRef, color: ColorRef) =
+  ## Changes border color.
   self.border_color = color
 
 proc setBorderWidth*(self: DrawableRef, width: float) =
+  ## Changes border width.
   self.border_width = width
 
 proc setColor*(self: DrawableRef, color: ColorRef) =
+  ## Changes background color.
   self.background_color = color
 
 proc setCornerRadius*(self: DrawableRef, radius: float) =
+  ## Changes corner radius.
+  ##
+  ## Arguments:
+  ## - `radius` is a new corner radius.
   self.border_radius_lefttop = radius
   self.border_radius_righttop = radius
   self.border_radius_leftbottom = radius
   self.border_radius_rightbottom = radius
 
 proc setCornerRadius*(self: DrawableRef, r1, r2, r3, r4: float) =
+  ## Changes corner radius.
+  ##
+  ## Arguments:
+  ## - `r1` is a new left-top radius.
+  ## - `r2` is a new right-top radius.
+  ## - `r3` is a new right-bottm radius.
+  ## - `r4` is a new left-bottm radius.
   self.border_radius_lefttop = r1
   self.border_radius_righttop = r2
   self.border_radius_rightbottom = r3
   self.border_radius_leftbottom = r4
 
 proc setCornerDetail*(self: DrawableRef, detail: int) =
+  ## Changes corner detail.
+  ##
+  ## Arguments:
+  ## - `detail` is a new corner detail.
   self.border_detail_lefttop = detail
   self.border_detail_righttop = detail
   self.border_detail_leftbottom = detail
   self.border_detail_rightbottom = detail
 
 proc setCornerDetail*(self: DrawableRef, d1, d2, d3, d4: int) =
+  ## Changes corner detail.
+  ##
+  ## Arguments:
+  ## - `d1` is a new left-top detail.
+  ## - `d2` is a new right-top detail.
+  ## - `d3` is a new right-bottm detail.
+  ## - `d4` is a new left-bottm detail.
   self.border_detail_lefttop = d1
   self.border_detail_righttop = d2
   self.border_detail_leftbottom = d4
   self.border_detail_rightbottom = d3
 
 proc setTexture*(self: DrawableRef, texture: GlTextureObj) =
+  ## Changes drawable texture.
   self.texture = texture
   self.background_color = Color(1f, 1f, 1f, 1f)
 
 proc setStyle*(self: DrawableRef, s: StyleSheetRef) =
+  ## Sets a new stylesheet.
   for i in s.dict:
+    var matches: array[20, string]
     case i.key
     # background-color: rgb(51, 100, 255)
     of "background-color":
       var clr = Color(i.value)
       if not clr.isNil():
         self.setColor(clr)
+    # background-image: "assets/img.jpg"
     of "background-image":
       self.loadTexture(i.value)
+    # background: "path/to/img.jpg"
+    # background: rgb(125, 82, 196)
+    # background: "img.jpg" #f6f
+    of "background":
+      if i.value.match(re"\A\s*(rgba?\([^\)]+\)\s*|#[a-f0-9]{3,8})\s*\Z", matches):
+        let tmpclr = Color(matches[0])
+        if not tmpclr.isNil():
+          self.setColor(tmpclr)
+      elif i.value.match(re"\A\s*url\(([^\)]+)\)\s*\Z", matches):
+        self.loadTexture(matches[0])
+      elif i.value.match(re"\A\s*url\(([^\)]+)\)\s+(rgba?\([^\)]+\)\s*|#[a-f0-9]{3,8})\s*\Z", matches):
+        self.loadTexture(matches[0])
+        let tmpclr = Color(matches[1])
+        if not tmpclr.isNil():
+          self.setColor(tmpclr)
     # border-color: rgba(55, 255, 177, 0.1)
     of "border-color":
       var clr = Color(i.value)
       if not clr.isNil():
         self.setBorderColor(clr)
     # border-radius: 5
+    # border-radius: 2 4 8 16
     of "border-radius":
       let tmp = i.value.split(" ")
       if tmp.len() == 1:
@@ -188,6 +240,7 @@ proc setStyle*(self: DrawableRef, s: StyleSheetRef) =
       elif tmp.len() == 4:
         self.setCornerRadius(parseFloat(tmp[0]), parseFloat(tmp[1]), parseFloat(tmp[2]), parseFloat(tmp[3]))
     # border-detail: 5
+    # border-detail: 5 50 64 128
     of "border-detail":
       let tmp = i.value.split(" ")
       if tmp.len() == 1:
