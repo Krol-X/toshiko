@@ -24,9 +24,10 @@ proc load*(file: cstring, x, y: var float, mode: Glenum = GL_RGB): Gluint =
   var
     surface = image.load(file)  # load image from file
     textureid: Gluint
-  when defined(debug):
-    if surface.isNil():
+  if surface.isNil():
+    when defined(debug):
       echo("image \"", file, "\" not loaded!")
+    return
   x = surface.w.float
   y = surface.h.float
 

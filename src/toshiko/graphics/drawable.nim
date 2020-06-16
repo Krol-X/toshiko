@@ -45,8 +45,7 @@ proc Drawable*: DrawableRef =
   )
 
 
-proc norm(v: float): float =
-  if v > 1f: 1f elif v < 0f: 0f else: v
+
 
 template vd = discard
 
@@ -125,6 +124,10 @@ proc draw*(self: DrawableRef, x, y, width, height: float) =
 proc getColor*(self: DrawableRef): ColorRef =
   self.background_color
 
+proc loadTexture*(self: DrawableRef, path: string, mode: Glenum = GL_RGB) =
+  self.texture = load(path, mode)
+  self.background_color = Color(1f, 1f, 1f, 1f)
+
 proc setBorderColor*(self: DrawableRef, color: ColorRef) =
   self.border_color = color
 
@@ -170,6 +173,8 @@ proc setStyle*(self: DrawableRef, s: StyleSheetRef) =
       var clr = Color(i.value)
       if not clr.isNil():
         self.setColor(clr)
+    of "background-image":
+      self.loadTexture(i.value)
     # border-color: rgba(55, 255, 177, 0.1)
     of "border-color":
       var clr = Color(i.value)
@@ -177,16 +182,24 @@ proc setStyle*(self: DrawableRef, s: StyleSheetRef) =
         self.setBorderColor(clr)
     # border-radius: 5
     of "border-radius":
-      self.setCornerRadius(parseFloat(i.value))
+      let tmp = i.value.split(" ")
+      if tmp.len() == 1:
+        self.setCornerRadius(parseFloat(tmp[0]))
+      elif tmp.len() == 4:
+        self.setCornerRadius(parseFloat(tmp[0]), parseFloat(tmp[1]), parseFloat(tmp[2]), parseFloat(tmp[3]))
     # border-detail: 5
     of "border-detail":
-      self.setCornerDetail(parseInt(i.value))
+      let tmp = i.value.split(" ")
+      if tmp.len() == 1:
+        self.setCornerDetail(parseInt(tmp[0]))
+      elif tmp.len() == 4:
+        self.setCornerDetail(parseInt(tmp[0]), parseInt(tmp[1]), parseInt(tmp[2]), parseInt(tmp[3]))
     # border-width: 5
     of "border-width":
       self.setBorderWidth(parseFloat(i.value))
     # border: 2 turquoise
     of "border":
-      var tmp = i.value.rsplit(Whitespace, 1)
+      let tmp = i.value.rsplit(Whitespace, 1)
       self.setCornerRadius(parseFloat(tmp[0]))
       self.setBorderColor(Color(tmp[1]))
     else:
