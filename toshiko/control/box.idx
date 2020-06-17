@@ -1,0 +1,7 @@
+BoxObj	toshiko/control/box.html#BoxObj	box: BoxObj	
+BoxRef	toshiko/control/box.html#BoxRef	box: BoxRef	
+Box	toshiko/control/box.html#Box,string	box: Box(name: string = &quot;Box&quot;): BoxRef	
+getChildsSize	toshiko/control/box.html#getChildsSize.e,BoxRef	box: getChildsSize(self: BoxRef): Vector2Ref	
+addChild	toshiko/control/box.html#addChild.e,BoxRef,NodeRef	box: addChild(self: BoxRef; other: NodeRef)	
+draw	toshiko/control/box.html#draw.e,BoxRef,float,float	box: draw(self: BoxRef; w, h: float)	
+setChildAnchor	toshiko/control/box.html#setChildAnchor.e,BoxRef,AnchorRef	box: setChildAnchor(self: BoxRef; anchor: AnchorRef)	
