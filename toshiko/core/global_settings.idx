@@ -1,0 +1,5 @@
+user_dir	toshiko/core/global_settings.html#user_dir	global_settings: user_dir	
+toshiko_dir	toshiko/core/global_settings.html#toshiko_dir	global_settings: toshiko_dir	
+save_dir	toshiko/core/global_settings.html#save_dir	global_settings: save_dir	
+standard_font	toshiko/core/global_settings.html#standard_font	global_settings: standard_font	
+setStandardFont	toshiko/core/global_settings.html#setStandardFont,cstring,cint	global_settings: setStandardFont(path: cstring; size: cint)	
