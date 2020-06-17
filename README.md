@@ -41,13 +41,12 @@ Stable version - ?.?.?
 import toshiko
 
 Window(title="Test window", w=720, h=480)
+setStandardFont("assets/unifont.ttf", 16)
 
 var
   scene = Scene("Main")
   label = Label()
-  font = loadFont("assets/unifont.ttf", 16)
 
-label.setTextFont(font)
 label.setText("Hello, world!")
 scene.addChild(label)
 

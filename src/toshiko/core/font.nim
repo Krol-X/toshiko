@@ -9,6 +9,7 @@ import
   vector2,
   anchor,
   color,
+  global_settings,
   unicode
 
 discard ttfInit()
@@ -34,6 +35,7 @@ proc stext*(text: string, color: ColorRef = Color(1f, 1f, 1f), underline: bool =
   result = StyleText(texture: GlTextureObj(size: Vector2()), spacing: 2, max_lines: -1)
   for i in text.utf8():
     result.chars.add(schar(i, color, underline))
+  result.font = standard_font
 
 
 proc setColor*(c: StyleUnicode, color: ColorRef) =

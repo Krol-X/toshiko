@@ -3,14 +3,13 @@ import toshiko
 
 
 Window("Test 13")
+setStandardFont("assets/unifont.ttf", 16)  # global setting
 
 var
   scene = Scene()
   label = Label()
-  unifont = loadFont("assets/unifont.ttf", 16)
 
 scene.addChild(label)
-label.setTextFont(unifont)
 label.setText("Hello, world!")
 label.resize(256, 128)
 label.setStyle(style(
@@ -21,6 +20,5 @@ label.setStyle(style(
     text-align: center
   }
 ))
-
 addMainScene(scene)
 showWindow()

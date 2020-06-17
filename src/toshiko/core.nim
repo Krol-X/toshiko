@@ -9,8 +9,10 @@ import
   core/anchor,
   core/image,
   core/mathcore,
-  core/font
+  core/font,
+  core/global_settings
 
 export
   enums, nim_object, color, vector2, stylesheet,
-  input, rect2, anchor, image, mathcore, font
+  input, rect2, anchor, image, mathcore, font,
+  global_settings

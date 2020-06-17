@@ -2,7 +2,8 @@
 import
   ../core,
   ../nodes/node,
-  control
+  control,
+  strutils
 
 
 type
@@ -44,9 +45,6 @@ method addChild*(self: BoxRef, other: NodeRef) =
 method draw*(self: BoxRef, w, h: float) =
   ## This method uses for redraw Box object.
   procCall self.ControlRef.draw(w, h)
-  let
-    x = -w/2 + self.rect_global_position.x
-    y = h/2 - self.rect_global_position.y
 
   for child in self.children:
     if child.nodetype == NODETYPE_CONTROL:
@@ -56,3 +54,20 @@ method draw*(self: BoxRef, w, h: float) =
 
 method setChildAnchor*(self: BoxRef, anchor: AnchorRef) {.base.} =
   self.child_anchor = anchor
+
+method setStyle*(self: BoxRef, s: StyleSheetRef) =
+  procCall self.ControlRef.setStyle(s)
+  for i in s.dict:
+    case i.key
+    of "child-anchor":
+      let tmp = i.value.split(Whitespace)
+      if tmp.len() == 1:
+        let tmp2 = parseFloat(tmp[0])
+        self.setChildAnchor(Anchor(tmp2, tmp2, tmp2, tmp2))
+      elif tmp.len() == 4:
+        self.setChildAnchor(Anchor(
+          parseFloat(tmp[0]), parseFloat(tmp[1]),
+          parseFloat(tmp[2]), parseFloat(tmp[3]))
+        )
+    else:
+      discard
