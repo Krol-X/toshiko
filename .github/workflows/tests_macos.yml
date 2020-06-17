@@ -1,4 +1,4 @@
-name: tests
+name: tests_macos
 
 on:
   push:
@@ -21,9 +21,9 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-latest
+          #- ubuntu-latest
           #- windows-latest
-          #- macOS-latest
+          - macOS-latest
         nim_version:
           - '1.2.0'
           - 'stable'
@@ -42,20 +42,16 @@ jobs:
         with:
           nim-version: ${{ matrix.nim_version }}
 
-      - name: Fix apt packages
-        run: |
-          # see. https://github.com/actions/virtual-environments/issues/675
-          sudo sed -i 's/azure\.//' /etc/apt/sources.list
-          sudo apt update -yqq
-
-      - name: Install xvfb
-        run: sudo apt install -y xvfb
-
-      - name: Install freeglut
-        run: sudo apt install -y freeglut3 freeglut3-dev
-
       - name: Install sdl2
-        run: sudo apt install --fix-missing -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+        run: |
+          git clone https://github.com/nickgravelyn/sdl2-mac-build
+          cd sdl2-mac-build
+          download
+          build
+      - name: Install freeGLUT
+        run: |
+          ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+          brew install freeglut
 
       - name: Build tests
         run: |
