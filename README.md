@@ -36,6 +36,26 @@ Stable version - ?.?.?
 - Little dynamic type.
 
 
+## Simple usage
+```nim
+import toshiko
+
+Window(title="Test window", w=720, h=480)
+
+var
+  scene = Scene("Main")
+  label = Label()
+  font = loadFont("assets/unifont.ttf", 16)
+
+label.setTextFont(font)
+label.setText("Hello, world!")
+scene.addChild(label)
+
+addMainScene(scene)
+showWindow()
+```
+
+
 ## Export
 Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html#dynliboverride) for export to the other OS.
 

@@ -153,9 +153,13 @@ method resize*(self: ControlRef, w, h: float) {.base.} =
   if w > self.rect_min_size.x:
     self.rect_size.x = w
     self.size_anchor = nil
+  else:
+    self.rect_size.x = self.rect_min_size.x
   if w > self.rect_min_size.y:
     self.rect_size.y = h
     self.size_anchor = nil
+  else:
+    self.rect_size.y = self.rect_min_size.y
 
 method setBackground*(self: ControlRef, back: DrawableRef) {.base.} =
   ## Changes background drawable.

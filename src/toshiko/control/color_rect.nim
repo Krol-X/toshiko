@@ -36,3 +36,6 @@ method draw*(self: ColorRectRef, w, h: float) =
     glVertex2f(x + self.rect_size.x, y - self.rect_size.y)
     glVertex2f(x, y - self.rect_size.y)
     glEnd()
+
+method setColor*(self: ColorRectRef, color: ColorRef) {.base.} =
+  self.color = color

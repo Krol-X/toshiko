@@ -75,6 +75,14 @@ method setStyle*(self: LabelRef, s: StyleSheetRef) =
       if tmp.len() == 1:
         if tmp[0] == "center":
           self.setTextAlign(0.5, 0.5, 0.5, 0.5)
+        elif tmp[0] == "left":
+          self.setTextAlign(0, 0.5, 0, 0.5)
+        elif tmp[0] == "right":
+          self.setTextAlign(1, 0.5, 1, 0.5)
+        elif tmp[0] == "top":
+          self.setTextAlign(0.5, 0, 0.5, 0)
+        elif tmp[0] == "bottom":
+          self.setTextAlign(0.5, 1, 0.5, 1)
         else:
           let tmp2 = parseFloat(tmp[0])
           self.setTextAlign(Anchor(tmp2, tmp2, tmp2, tmp2))
