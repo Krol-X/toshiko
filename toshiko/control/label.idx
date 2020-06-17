@@ -1,0 +1,11 @@
+LabelObj	toshiko/control/label.html#LabelObj	label: LabelObj	
+LabelRef	toshiko/control/label.html#LabelRef	label: LabelRef	
+Label	toshiko/control/label.html#Label,string,string	label: Label(name: string = &quot;Label&quot;; text: string = &quot;&quot;): LabelRef	
+draw	toshiko/control/label.html#draw.e,LabelRef,float,float	label: draw(self: LabelRef; w, h: float)	
+getText	toshiko/control/label.html#getText.e,LabelRef	label: getText(self: LabelRef): string	
+setText	toshiko/control/label.html#setText.e,LabelRef,string,bool	label: setText(self: LabelRef; text: string; save_properties: bool = false)	
+setTextAlign	toshiko/control/label.html#setTextAlign.e,LabelRef,float,float,float,float	label: setTextAlign(self: LabelRef; x1, y1, x2, y2: float)	
+setTextAlign	toshiko/control/label.html#setTextAlign.e,LabelRef,AnchorRef	label: setTextAlign(self: LabelRef; align: AnchorRef)	
+setTextColor	toshiko/control/label.html#setTextColor.e,LabelRef,ColorRef	label: setTextColor(self: LabelRef; color: ColorRef)	
+setTextFont	toshiko/control/label.html#setTextFont.e,LabelRef,FontPtr	label: setTextFont(self: LabelRef; font: FontPtr)	
+setStyle	toshiko/control/label.html#setStyle.e,LabelRef,StyleSheetRef	label: setStyle(self: LabelRef; s: StyleSheetRef)	

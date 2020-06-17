@@ -1,0 +1,21 @@
+StyleUnicode	toshiko/core/font.html#StyleUnicode	font: StyleUnicode	
+StyleText	toshiko/core/font.html#StyleText	font: StyleText	
+schar	toshiko/core/font.html#schar,string,ColorRef,bool	font: schar(c: string; color: ColorRef = Color(1.0&apos;f32, 1.0&apos;f32, 1.0&apos;f32);\n      underline: bool = false): StyleUnicode	
+stext	toshiko/core/font.html#stext,string,ColorRef,bool	font: stext(text: string; color: ColorRef = Color(1.0&apos;f32, 1.0&apos;f32, 1.0&apos;f32);\n      underline: bool = false): StyleText	
+setColor	toshiko/core/font.html#setColor,StyleUnicode,ColorRef	font: setColor(c: StyleUnicode; color: ColorRef)	
+setColor	toshiko/core/font.html#setColor,StyleText,ColorRef	font: setColor(text: StyleText; color: ColorRef)	
+setColor	toshiko/core/font.html#setColor,StyleText,int,ColorRef	font: setColor(text: StyleText; index: int; color: ColorRef)	
+setColor	toshiko/core/font.html#setColor,StyleText,int,int,ColorRef	font: setColor(text: StyleText; s, e: int; color: ColorRef)	
+setUnderline	toshiko/core/font.html#setUnderline,StyleUnicode,bool	font: setUnderline(c: StyleUnicode; val: bool)	
+setUnderline	toshiko/core/font.html#setUnderline,StyleText,bool	font: setUnderline(text: StyleText; val: bool)	
+setUnderline	toshiko/core/font.html#setUnderline,StyleText,int,bool	font: setUnderline(text: StyleText; index: int; val: bool)	
+setUnderline	toshiko/core/font.html#setUnderline,StyleText,int,int,bool	font: setUnderline(text: StyleText; s, e: int; val: bool)	
+setFont	toshiko/core/font.html#setFont,StyleText,cstring,cint	font: setFont(text: StyleText; font: cstring; size: cint)	
+setFont	toshiko/core/font.html#setFont,StyleText,FontPtr	font: setFont(text: StyleText; font: FontPtr)	
+loadFont	toshiko/core/font.html#loadFont,cstring,cint	font: loadFont(font: cstring; size: cint): FontPtr	
+len	toshiko/core/font.html#len,StyleText	font: len(text: StyleText): int	
+`$`	toshiko/core/font.html#$,StyleUnicode	font: `$`(c: StyleUnicode): string	
+`$`	toshiko/core/font.html#$,StyleText	font: `$`(text: StyleText): string	
+splitLines	toshiko/core/font.html#splitLines,StyleText	font: splitLines(text: StyleText): seq[StyleText]	
+getTextSize	toshiko/core/font.html#getTextSize,StyleText	font: getTextSize(text: StyleText): Vector2Ref	
+render	toshiko/core/font.html#render,StyleText,Vector2Ref,Vector2Ref,AnchorRef	font: render(text: StyleText; pos, size: Vector2Ref; anchor: AnchorRef)	

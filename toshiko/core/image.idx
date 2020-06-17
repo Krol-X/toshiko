@@ -1,3 +1,4 @@
 GlTextureObj	toshiko/core/image.html#GlTextureObj	image: GlTextureObj	
+toGlTexture	toshiko/core/image.html#toGlTexture,SurfacePtr,float,float	image: toGlTexture(surface: SurfacePtr; x, y: var float): GLuint	
 load	toshiko/core/image.html#load,cstring,float,float	image: load(file: cstring; x, y: var float): GLuint	
 load	toshiko/core/image.html#load,cstring	image: load(file: cstring): GlTextureObj	
