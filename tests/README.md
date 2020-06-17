@@ -12,3 +12,4 @@
 10. [Anchor setting](https://github.com/Ethosa/toshiko/blob/master/tests/test10.nim)
 11. [Use Image in Drawable.](https://github.com/Ethosa/toshiko/blob/master/tests/test11.nim)
 12. [Use TextureRect object.](https://github.com/Ethosa/toshiko/blob/master/tests/test12.nim)
+13. [Use Label object.](https://github.com/Ethosa/toshiko/blob/master/tests/test13.nim)

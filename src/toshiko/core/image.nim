@@ -16,18 +16,12 @@ type
     size*: Vector2Ref
 
 
-proc load*(file: cstring, x, y: var float): Gluint =
-  ## Loads image from file and returns texture ID.
-  ##
-  ## Arguments:
-  ## - `file` - image path.
-  var
-    surface = image.load(file)  # load image from file
-    textureid: Gluint
+proc toGlTexture*(surface: SurfacePtr, x, y: var float): Gluint =
+  var textureid: Gluint
   if surface.isNil():
     when defined(debug):
-      echo("image \"", file, "\" not loaded!")
-    return
+      echo "Could not load texture: surface is nil!"
+    return 0'u32
   x = surface.w.float
   y = surface.h.float
   var mode =
@@ -35,7 +29,6 @@ proc load*(file: cstring, x, y: var float): Gluint =
       GL_RGBA
     else:
       GL_RGB
-
 
   # OpenGL:
   glGenTextures(1, textureid.addr)
@@ -50,9 +43,17 @@ proc load*(file: cstring, x, y: var float): Gluint =
 
   # free memory
   surface.freeSurface()
-  surface = nil
 
   textureid
+
+
+proc load*(file: cstring, x, y: var float): Gluint =
+  ## Loads image from file and returns texture ID.
+  ##
+  ## Arguments:
+  ## - `file` - image path.
+  var surface = image.load(file)  # load image from file
+  return toGlTexture(surface, x, y)
 
 
 proc load*(file: cstring): GlTextureObj =

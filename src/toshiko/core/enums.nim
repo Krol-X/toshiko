@@ -9,7 +9,8 @@ type
     # Control nodes
     CONTROL_NODE,
     COLOR_RECT_NODE,
-    TEXTURE_RECT_NODE
+    TEXTURE_RECT_NODE,
+    LABEL_NODE
   NodeType* {.pure.} = enum
     NODETYPE_DEFAULT,
     NODETYPE_CONTROL
