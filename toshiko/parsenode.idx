@@ -1,0 +1,3 @@
+json2node	toshiko/parsenode.html#json2node,string	parsenode: json2node(src: string): SceneRef	
+xml2node	toshiko/parsenode.html#xml2node,string	parsenode: xml2node(src: string): SceneRef	
+loadScene	toshiko/parsenode.html#loadScene,string	parsenode: loadScene(file: string): SceneRef	
