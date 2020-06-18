@@ -6,7 +6,8 @@
 [![Nim language-plastic](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)
 [![License](https://img.shields.io/github/license/Ethosa/toshiko)](https://github.com/Ethosa/toshiko/blob/master/LICENSE)
 [![time tracker](https://wakatime.com/badge/github/Ethosa/toshiko.svg)](https://wakatime.com/badge/github/Ethosa/toshiko)
-[![test](https://github.com/Ethosa/toshiko/workflows/test/badge.svg)](https://github.com/Ethosa/toshiko/actions)
+[![Linux test](https://github.com/Ethosa/toshiko/workflows/tests_linux/badge.svg?branch=master)](https://github.com/Ethosa/toshiko/actions)
+[![Github pages](https://github.com/Ethosa/toshiko/workflows/gh-pages/badge.svg)](https://github.com/Ethosa/toshiko/actions)
 
 Latest version - 0.0.1  
 Stable version - ?.?.?
@@ -58,7 +59,7 @@ showWindow()
 
 
 ## Export
-Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html#dynliboverride) for export to the other OS.
+Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html) for export to the other OS.
 
 -   CrossPlatform export for Windows (tested on Windows 7 x64 and Windows 10 x64)
     -   `nim c -d:mingw -d:release --opt:speed --noNimblePath file.nim`
