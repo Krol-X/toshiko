@@ -29,3 +29,4 @@ remove	toshiko/nodes/node.html#remove.e,NodeRef,NodeRef	node: remove(self, other
 contains	toshiko/nodes/node.html#contains,NodeRef,NodeRef	node: contains(self, other: NodeRef): bool	
 Example	node.html#example	  Example	
 `@`	toshiko/nodes/node.html#@.m,NodeRef,untyped,untyped	node: `@`(node: NodeRef; callable, code: untyped): untyped	
+build	toshiko/nodes/node.html#build.m,untyped	node: build(code: untyped): untyped	
