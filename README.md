@@ -69,5 +69,8 @@ Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html#dynlibov
 *Q*: Where can I see examples?  
 *A*: You can see this in the [`tests`](https://github.com/Ethosa/toshiko/blob/master/tests) folder
 
+*Q*: Where can I read the docs?   
+*A*: You can read docs [here](https://ethosa.github.io/toshiko/toshiko.html)
+
 
 <div align="center">Copyright Ethosa 2020</div>
