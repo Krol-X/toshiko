@@ -35,7 +35,7 @@ Stable version - ?.?.?
 - CSS-like stylesheets support.
 - Little dynamic type.
 - Build nodes with YML-like syntax.
-- Convert the JSON files to the Scenes.
+- Convert the JSON/XML files to the Scenes.
 
 
 ## Simple usage

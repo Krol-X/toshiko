@@ -1,4 +1,4 @@
-# --- Test 16. Convert JSON to Node. --- #
+# --- Test 16. Convert JSON string to the Scene. --- #
 import toshiko
 
 

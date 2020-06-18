@@ -15,4 +15,5 @@
 13. [Use Label object.](https://github.com/Ethosa/toshiko/blob/master/tests/test13.nim)
 14. [Use Box object.](https://github.com/Ethosa/toshiko/blob/master/tests/test14.nim)
 15. [Build nodes with YML-like syntax.](https://github.com/Ethosa/toshiko/blob/master/tests/test15.nim)
-16. [Convert JSON to Node.](https://github.com/Ethosa/toshiko/blob/master/tests/test16.nim)
+16. [Convert JSON string to the Scene.](https://github.com/Ethosa/toshiko/blob/master/tests/test16.nim)
+17. [Convert XML string to the Scene.](https://github.com/Ethosa/toshiko/blob/master/tests/test17.nim)
