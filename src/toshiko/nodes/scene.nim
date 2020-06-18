@@ -24,6 +24,9 @@ method draw*(self: SceneRef, w, h: float) =
   for child in self.getAllChilds():
     if self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE:
       continue
+    if not child.is_ready:
+      child.is_ready = true
+      child.on_ready(child)
     child.on_process(child)
     child.draw(w, h)
 
@@ -33,16 +36,21 @@ method draw*(self: SceneRef, w, h: float, paused: bool) {.base.} =
   for child in self.getAllChilds():
     if self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE:
       continue
+    if not child.is_ready:
+      child.is_ready = true
+      child.on_ready(child)
     child.on_process(child)
     child.draw(w, h)
 
 method enter*(self: SceneRef) {.base.} =
   for child in self.getAllChilds():
     child.on_enter(child)
+    child.is_ready = false
 
 method exit*(self: SceneRef) {.base.} =
   for child in self.getAllChilds():
     child.on_exit(child)
+    child.is_ready = false
 
 method handle*(self: SceneRef, event: InputEvent, mouse_on: var NodeRef) =
   {.warning[LockLevel]: off.}

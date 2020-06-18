@@ -34,6 +34,7 @@ Stable version - ?.?.?
 - Godot-like node system.
 - CSS-like stylesheets support.
 - Little dynamic type.
+- Build nodes with YML-like syntax.
 
 
 ## Simple usage
