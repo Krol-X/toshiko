@@ -5,8 +5,9 @@ import
   toshiko/core,
   toshiko/nodes,
   toshiko/graphics,
-  toshiko/control
+  toshiko/control,
+  toshiko/parsenode
 
 export
   window, environment, core, nodes, thirdparty,
-  graphics, control
+  graphics, control, parsenode
