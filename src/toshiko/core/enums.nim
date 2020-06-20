@@ -11,7 +11,9 @@ type
     COLOR_RECT_NODE,
     TEXTURE_RECT_NODE,
     LABEL_NODE,
-    BOX_NODE
+    BOX_NODE,
+    HBOX_NODE,
+    VBOX_NODE
   NodeType* {.pure.} = enum
     NODETYPE_DEFAULT,
     NODETYPE_CONTROL

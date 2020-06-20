@@ -50,6 +50,10 @@ proc addJsonNode(level: var seq[NodeRef], jobj: JsonNode) =
       loadjsonnode(Label)
     of "Box":
       loadjsonnode(Box)
+    of "HBox":
+      loadjsonnode(HBox)
+    of "VBox":
+      loadjsonnode(VBox)
 
     # properties
     of "name":
@@ -105,6 +109,10 @@ proc addXmlNode(level: var seq[NodeRef], jobj: XmlNode) =
       loadxmlnode(Label)
     of "Box":
       loadxmlnode(Box)
+    of "HBox":
+      loadxmlnode(HBox)
+    of "VBox":
+      loadxmlnode(VBox)
     else:
       discard
 
@@ -168,7 +176,7 @@ proc loadScene*(file: string): SceneRef =
   ## Loads a new Scene object from JSON or XML file.
   ##
   ## Arguments:
-  ## - `file` is a JSON file path.
+  ## - `file` is a JSON/XML file path.
   var
     f = open(file, fmRead)
     readed = f.readAll()

@@ -3,8 +3,10 @@ import
   control/color_rect,
   control/texture_rect,
   control/label,
-  control/box
+  control/box,
+  control/hbox,
+  control/vbox
 
 export
   control, color_rect, texture_rect, label,
-  box
+  box, hbox, vbox
