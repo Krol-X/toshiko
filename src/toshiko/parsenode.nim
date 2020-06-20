@@ -54,6 +54,8 @@ proc addJsonNode(level: var seq[NodeRef], jobj: JsonNode) =
       loadjsonnode(HBox)
     of "VBox":
       loadjsonnode(VBox)
+    of "Button":
+      loadjsonnode(Button)
 
     # properties
     of "name":
@@ -113,6 +115,8 @@ proc addXmlNode(level: var seq[NodeRef], jobj: XmlNode) =
       loadxmlnode(HBox)
     of "VBox":
       loadxmlnode(VBox)
+    of "Button":
+      loadxmlnode(Button)
     else:
       discard
 

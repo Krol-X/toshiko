@@ -3,7 +3,8 @@ import
   ../core,
   ../nodes/node,
   control,
-  box
+  box,
+  strutils
 
 
 type
@@ -43,3 +44,12 @@ method draw*(self: HBoxRef, w, h: float) =
       c.rect_position.x = x
       c.rect_position.y = self.rect_size.y*self.child_anchor.y1 - c.rect_size.y*self.child_anchor.y2
       x += c.rect_size.x + self.separator
+
+method setStyle*(self: HBoxRef, s: StyleSheetRef) =
+  procCall self.ControlRef.setStyle(s)
+  for i in s.dict:
+    case i.key
+    of "separator":
+      self.separator = parseFloat(i.value)
+    else:
+      discard

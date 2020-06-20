@@ -253,6 +253,16 @@ macro `@`*(node: NodeRef, callable, code: untyped): untyped =
         `node`.`name` =
           proc(`self`: ControlRef, `x`, `y`: float): void =
             `code`
+    of "on_touch":
+      var
+        name = callable[0]
+        self = callable[1]
+        x = callable[2]
+        y = callable[3]
+      result = quote do:
+        `node`.`name` =
+          proc(`self`: ButtonRef, `x`, `y`: float): void =
+            `code`
     else:
       discard
 

@@ -13,7 +13,8 @@ type
     LABEL_NODE,
     BOX_NODE,
     HBOX_NODE,
-    VBOX_NODE
+    VBOX_NODE,
+    BUTTON_NODE
   NodeType* {.pure.} = enum
     NODETYPE_DEFAULT,
     NODETYPE_CONTROL
@@ -22,8 +23,8 @@ type
     PAUSE_MODE_RUN,
     PAUSE_MODE_INHERIT
   MouseMode* {.pure.} = enum
-    MOUSEMODE_HANDLE,
-    MOUSEMODE_IGNORE
+    MOUSEMODE_HANDLE = 1,
+    MOUSEMODE_IGNORE = 2
   TextureMode* {.pure.} = enum
     TEXTUREMODE_FILL_XY,
     TEXTUREMODE_CROP,

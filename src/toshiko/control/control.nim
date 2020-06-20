@@ -108,33 +108,34 @@ method handle(self: ControlRef, event: InputEvent, mouse_on: var NodeRef) =
   ## This method uses for handle user input.
   if self.mousemode == MOUSEMODE_IGNORE:
     return
-  if mouse_on.isNil():
-    let hasmouse = Rect2(self.rect_global_position, self.rect_size).contains(event.x, event.y)
-    if hasmouse:
-      mouse_on = self
-      if not self.hovered:
-        self.on_hover(self, event.x, event.y)
-        self.hovered = true
-      if event.kind == MOUSE:
-        if event.pressed:
-          if not self.pressed:
-            self.on_click(self, event.x, event.y)
-            self.pressed = true
-          if not self.focused:
-            self.on_focus(self, event.x, event.y)
-            self.focused = true
-        else:
-          self.pressed = false
-          self.on_release(self, event.x, event.y)
-  if mouse_on != self:
-    if self.hovered:
+  let
+    hasmouse = Rect2(self.rect_global_position, self.rect_size).contains(event.x, event.y)
+    click = mouse_pressed and event.kind == MOUSE
+  if mouse_on.isNil() and hasmouse:
+    mouse_on = self
+    # Hover
+    if not self.hovered:
+      self.on_hover(self, event.x, event.y)
+      self.hovered = true
+    # Focus
+    if not self.focused and click:
+      self.focused = true
+      self.on_focus(self, event.x, event.y)
+    # Click
+    if mouse_pressed and not self.pressed:
+      self.pressed = true
+      self.on_click(self, event.x, event.y)
+  elif not hasmouse or mouse_on != self:
+    if not mouse_pressed and self.hovered:
       self.on_out(self, event.x, event.y)
       self.hovered = false
-      if not event.pressed:
-        self.pressed = false
-        self.on_release(self, event.x, event.y)
-      elif self.focused:
-        self.on_unfocus(self, event.x, event.y)
+    # Unfocus
+    if self.focused and click:
+      self.on_unfocus(self, event.x, event.y)
+      self.focused = false
+  if not mouse_pressed and self.pressed:
+    self.pressed = false
+    self.on_release(self, event.x, event.y)
 
 method move*(self: ControlRef, x, y: float) {.base.} =
   ## Moves Control node by `x` and `y`.

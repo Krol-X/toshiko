@@ -38,6 +38,15 @@ proc stext*(text: string, color: ColorRef = Color(1f, 1f, 1f), underline: bool =
   result.font = standard_font
 
 
+proc toUpper*(text: StyleText): StyleText =
+  result = text.deepCopy()
+  for i in result.chars:
+    i.c = i.c.toUpper()
+
+proc toLower*(text: StyleText): StyleText =
+  for i in text.chars:
+    i.c = i.c.toLower()
+
 proc setColor*(c: StyleUnicode, color: ColorRef) =
   c.color = color
 

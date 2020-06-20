@@ -17,4 +17,5 @@
 15. [Build nodes with YML-like syntax.](https://github.com/Ethosa/toshiko/blob/master/tests/test15.nim)
 16. [Convert JSON string to the Scene.](https://github.com/Ethosa/toshiko/blob/master/tests/test16.nim)
 17. [Convert XML string to the Scene.](https://github.com/Ethosa/toshiko/blob/master/tests/test17.nim)
-18. [Convert XML string to the Scene.](https://github.com/Ethosa/toshiko/blob/master/tests/test18.nim)
+18. [Use VBox and HBox objects.](https://github.com/Ethosa/toshiko/blob/master/tests/test18.nim)
+19. [Use Button objects.](https://github.com/Ethosa/toshiko/blob/master/tests/test19.nim)

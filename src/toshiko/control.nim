@@ -5,8 +5,9 @@ import
   control/label,
   control/box,
   control/hbox,
-  control/vbox
+  control/vbox,
+  control/button
 
 export
   control, color_rect, texture_rect, label,
-  box, hbox, vbox
+  box, hbox, vbox, button
