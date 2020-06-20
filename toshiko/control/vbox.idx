@@ -1,0 +1,5 @@
+VBoxObj	toshiko/control/vbox.html#VBoxObj	vbox: VBoxObj	
+VBoxRef	toshiko/control/vbox.html#VBoxRef	vbox: VBoxRef	
+VBox	toshiko/control/vbox.html#VBox,string	vbox: VBox(name: string = &quot;VBox&quot;): VBoxRef	
+getChildsSize	toshiko/control/vbox.html#getChildsSize.e,VBoxRef	vbox: getChildsSize(self: VBoxRef): Vector2Ref	
+draw	toshiko/control/vbox.html#draw.e,VBoxRef,float,float	vbox: draw(self: VBoxRef; w, h: float)	

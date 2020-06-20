@@ -1,0 +1,5 @@
+HBoxObj	toshiko/control/hbox.html#HBoxObj	hbox: HBoxObj	
+HBoxRef	toshiko/control/hbox.html#HBoxRef	hbox: HBoxRef	
+HBox	toshiko/control/hbox.html#HBox,string	hbox: HBox(name: string = &quot;HBox&quot;): HBoxRef	
+getChildsSize	toshiko/control/hbox.html#getChildsSize.e,HBoxRef	hbox: getChildsSize(self: HBoxRef): Vector2Ref	
+draw	toshiko/control/hbox.html#draw.e,HBoxRef,float,float	hbox: draw(self: HBoxRef; w, h: float)	
