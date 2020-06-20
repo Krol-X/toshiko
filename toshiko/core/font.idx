@@ -2,6 +2,8 @@ StyleUnicode	toshiko/core/font.html#StyleUnicode	font: StyleUnicode
 StyleText	toshiko/core/font.html#StyleText	font: StyleText	
 schar	toshiko/core/font.html#schar,string,ColorRef,bool	font: schar(c: string; color: ColorRef = Color(1.0&apos;f32, 1.0&apos;f32, 1.0&apos;f32);\n      underline: bool = false): StyleUnicode	
 stext	toshiko/core/font.html#stext,string,ColorRef,bool	font: stext(text: string; color: ColorRef = Color(1.0&apos;f32, 1.0&apos;f32, 1.0&apos;f32);\n      underline: bool = false): StyleText	
+toUpper	toshiko/core/font.html#toUpper,StyleText	font: toUpper(text: StyleText): StyleText	
+toLower	toshiko/core/font.html#toLower,StyleText	font: toLower(text: StyleText): StyleText	
 setColor	toshiko/core/font.html#setColor,StyleUnicode,ColorRef	font: setColor(c: StyleUnicode; color: ColorRef)	
 setColor	toshiko/core/font.html#setColor,StyleText,ColorRef	font: setColor(text: StyleText; color: ColorRef)	
 setColor	toshiko/core/font.html#setColor,StyleText,int,ColorRef	font: setColor(text: StyleText; index: int; color: ColorRef)	
