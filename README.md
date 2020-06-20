@@ -5,8 +5,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![Nim language-plastic](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)
 [![License](https://img.shields.io/github/license/Ethosa/toshiko)](https://github.com/Ethosa/toshiko/blob/master/LICENSE)
-[![time tracker](https://wakatime.com/badge/github/Ethosa/toshiko.svg)](https://wakatime.com/badge/github/Ethosa/toshiko)
-
+[![time tracker](https://wakatime.com/badge/github/Ethosa/toshiko.svg)](https://wakatime.com/badge/github/Ethosa/toshiko)  
 [![Linux test](https://github.com/Ethosa/toshiko/workflows/tests_linux/badge.svg?branch=master)](https://github.com/Ethosa/toshiko/actions)
 [![Github pages](https://github.com/Ethosa/toshiko/workflows/gh-pages/badge.svg)](https://github.com/Ethosa/toshiko/actions)
 
