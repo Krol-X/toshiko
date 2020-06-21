@@ -36,29 +36,38 @@ type
 
 
 proc nimobj*: NimRef =
+  ## Creates a new void Nim object.
   NimRef(kind: NIMOBJECT_VOID)
 
 proc nimobj*(val: bool): NimRef =
+  ## Creates a new boolean Nim object.
   NimRef(kind: NIMOBJECT_BOOLEAN, boolean: val)
 
 proc nimobj*(val: int | float): NimRef =
+  ## Creates a new number Nim object.
   NimRef(kind: NIMOBJECT_NUMBER, integer: val.int, floating: val.float)
 
 proc nimobj*(val: string): NimRef =
+  ## Creates a new string Nim object.
   NimRef(kind: NIMOBJECT_STRING, str: val)
 
 proc nimobj*(val: seq[NimRef]): NimRef =
+  ## Creates a new array of Nim objects.
   NimRef(kind: NIMOBJECT_ARRAY, arr: val)
 
 proc nimobj*(val: seq[tuple[key, value: NimRef]]): NimRef =
+  ## Creates a new dictionary of Nim objects.
+  ## Note: keys is a Nim objects.
   NimRef(kind: NIMOBJECT_OBJECT, dict: val)
 
 proc nimtype*(name: string = "NimType"): NimRef =
+  ## Creates a new Nim type.
   NimRef(kind: NIMOBJECT_TYPE, name: name)
 
 
 # --- Operators --- #
 proc `$`*(a: NimRef): string =
+  ## Converts the Nim object to its string representation.
   case a.kind
   of NIMOBJECT_BOOLEAN:
     return $a.boolean
@@ -101,6 +110,7 @@ proc `$`*(a: NimRef): string =
     return ""
 
 proc repr*(a: NimRef): string =
+  ## Converts the Nim object to its string representation.
   case a.kind
   of NIMOBJECT_VOID:
     return "<VoidObject>"
@@ -118,6 +128,7 @@ proc repr*(a: NimRef): string =
     return "<Type " & $a & ">"
 
 proc `==`*(a, b: NimRef): bool =
+  ## Compares two Nim objects.
   if a.kind == b.kind:
     case a.kind
     of NIMOBJECT_BOOLEAN:
@@ -135,6 +146,18 @@ proc `==`*(a, b: NimRef): bool =
   return false
 
 proc `+`*(a, b: NimRef): NimRef =
+  ## Adds two Nim objects.
+  runnableExamples:
+    var
+      anum = nimobj(5)
+      bnum = nimobj(5)
+      astr = nimobj("5")
+      bstr = nimobj("5")
+      aarr = nimobj(@[nimobj(5)])
+      barr = nimobj(@[nimobj(5)])
+    assert anum + bnum == nimobj(10)
+    assert astr + bstr == nimobj("55")
+    assert aarr + barr == nimobj(@[nimobj(5), nimobj(5)])
   if a.kind == b.kind:
     case a.kind
     of NIMOBJECT_NUMBER:
