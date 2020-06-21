@@ -4,4 +4,7 @@ Rect2	toshiko/core/rect2.html#Rect2,Rect2Ref	rect2: Rect2(other: Rect2Ref): Rect
 Rect2	toshiko/core/rect2.html#Rect2,Vector2Ref,Vector2Ref	rect2: Rect2(a, b: Vector2Ref): Rect2Ref	
 contains	toshiko/core/rect2.html#contains,Rect2Ref,float,float	rect2: contains(a: Rect2Ref; x, y: float): bool	
 contains	toshiko/core/rect2.html#contains,Rect2Ref,Vector2Ref	rect2: contains(a: Rect2Ref; b: Vector2Ref): bool	
+contains	toshiko/core/rect2.html#contains,Rect2Ref,Rect2Ref	rect2: contains(a, b: Rect2Ref): bool	
+intersects	toshiko/core/rect2.html#intersects,Rect2Ref,Rect2Ref	rect2: intersects(a, b: Rect2Ref): bool	
+intersectsCircle	toshiko/core/rect2.html#intersectsCircle,Rect2Ref,float,float,float	rect2: intersectsCircle(a: Rect2Ref; cx, cy, r: float): bool	
 `$`	toshiko/core/rect2.html#$,Rect2Ref	rect2: `$`(a: Rect2Ref): string	

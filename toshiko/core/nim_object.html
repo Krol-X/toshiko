@@ -293,77 +293,88 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#nimobj_2"><span class="Identifier">nimobj</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Creates a new void Nim object.
 
 </dd>
 <a id="nimobj,bool"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#nimobj%2Cbool"><span class="Identifier">nimobj</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Creates a new boolean Nim object.
 
 </dd>
 <a id="nimobj_3"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#nimobj_3"><span class="Identifier">nimobj</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Operator">|</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a></pre></dt>
 <dd>
 
-
+Creates a new number Nim object.
 
 </dd>
 <a id="nimobj,string"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#nimobj%2Cstring"><span class="Identifier">nimobj</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Creates a new string Nim object.
 
 </dd>
 <a id="nimobj,seq[NimRef]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#nimobj%2Cseq%5BNimRef%5D"><span class="Identifier">nimobj</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Creates a new array of Nim objects.
 
 </dd>
 <a id="nimobj,seq[tuple[NimRef,NimRef]]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#nimobj%2Cseq%5Btuple%5BNimRef%2CNimRef%5D%5D"><span class="Identifier">nimobj</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">key</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Creates a new dictionary of Nim objects. Note: keys is a Nim objects.
 
 </dd>
 <a id="nimtype,string"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#nimtype%2Cstring"><span class="Identifier">nimtype</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;NimType&quot;</span><span class="Other">)</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Creates a new Nim type.
 
 </dd>
 <a id="$,NimRef"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CNimRef"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Converts the Nim object to its string representation.
 
 </dd>
 <a id="repr,NimRef"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#repr%2CNimRef"><span class="Identifier">repr</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Converts the Nim object to its string representation.
 
 </dd>
 <a id="==,NimRef,NimRef"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#%3D%3D%2CNimRef%2CNimRef"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Compares two Nim objects.
 
 </dd>
 <a id="+,NimRef,NimRef"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#%2B%2CNimRef%2CNimRef"><span class="Identifier">`+`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a><span class="Other">)</span><span class="Other">:</span> <a href="nim_object.html#NimRef"><span class="Identifier">NimRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Adds two Nim objects.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">var</span>
+  <span class="Identifier">anum</span> <span class="Other">=</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span>
+  <span class="Identifier">bnum</span> <span class="Other">=</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span>
+  <span class="Identifier">astr</span> <span class="Other">=</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="StringLit">&quot;5&quot;</span><span class="Other">)</span>
+  <span class="Identifier">bstr</span> <span class="Other">=</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="StringLit">&quot;5&quot;</span><span class="Other">)</span>
+  <span class="Identifier">aarr</span> <span class="Other">=</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="Operator">@</span><span class="Other">[</span><span class="Identifier">nimobj</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span><span class="Other">]</span><span class="Other">)</span>
+  <span class="Identifier">barr</span> <span class="Other">=</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="Operator">@</span><span class="Other">[</span><span class="Identifier">nimobj</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span><span class="Other">]</span><span class="Other">)</span>
+<span class="Identifier">assert</span> <span class="Identifier">anum</span> <span class="Operator">+</span> <span class="Identifier">bnum</span> <span class="Operator">==</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="DecNumber">10</span><span class="Other">)</span>
+<span class="Identifier">assert</span> <span class="Identifier">astr</span> <span class="Operator">+</span> <span class="Identifier">bstr</span> <span class="Operator">==</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="StringLit">&quot;55&quot;</span><span class="Other">)</span>
+<span class="Identifier">assert</span> <span class="Identifier">aarr</span> <span class="Operator">+</span> <span class="Identifier">barr</span> <span class="Operator">==</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="Operator">@</span><span class="Other">[</span><span class="Identifier">nimobj</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span><span class="Other">,</span> <span class="Identifier">nimobj</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span><span class="Other">]</span><span class="Other">)</span></pre>
 
 </dd>
 <a id="-,NimRef,NimRef"></a>
@@ -560,7 +571,7 @@ Creates a new NimObject Type.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-21 06:52:52 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-21 10:36:52 UTC</small>
       </div>
     </div>
   </div>

@@ -125,6 +125,12 @@ function main() {
     title="contains(a: Rect2Ref; x, y: float): bool"><wbr />contains<span class="attachedType">Rect2Ref</span></a></li>
   <li><a class="reference" href="#contains%2CRect2Ref%2CVector2Ref"
     title="contains(a: Rect2Ref; b: Vector2Ref): bool"><wbr />contains<span class="attachedType">Rect2Ref</span></a></li>
+  <li><a class="reference" href="#contains%2CRect2Ref%2CRect2Ref"
+    title="contains(a, b: Rect2Ref): bool"><wbr />contains<span class="attachedType">Rect2Ref</span></a></li>
+  <li><a class="reference" href="#intersects%2CRect2Ref%2CRect2Ref"
+    title="intersects(a, b: Rect2Ref): bool"><wbr />intersects<span class="attachedType">Rect2Ref</span></a></li>
+  <li><a class="reference" href="#intersectsCircle%2CRect2Ref%2Cfloat%2Cfloat%2Cfloat"
+    title="intersectsCircle(a: Rect2Ref; cx, cy, r: float): bool"><wbr />intersects<wbr />Circle<span class="attachedType">Rect2Ref</span></a></li>
   <li><a class="reference" href="#%24%2CRect2Ref"
     title="`$`(a: Rect2Ref): string"><wbr />`$`<span class="attachedType">Rect2Ref</span></a></li>
 
@@ -141,7 +147,7 @@ function main() {
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="vector2.html">vector2</a>
+<a class="reference external" href="vector2.html">vector2</a>, <a class="reference external" href="mathcore.html">mathcore</a>
 </dl></div>
 <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">Types</a></h1>
@@ -195,11 +201,38 @@ function main() {
 
 
 </dd>
+<a id="contains,Rect2Ref,Rect2Ref"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#contains%2CRect2Ref%2CRect2Ref"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="rect2.html#Rect2Ref"><span class="Identifier">Rect2Ref</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns true, when <tt class="docutils literal"><span class="pre">b</span></tt> inside <tt class="docutils literal"><span class="pre">a</span></tt>.
+
+</dd>
+<a id="intersects,Rect2Ref,Rect2Ref"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#intersects%2CRect2Ref%2CRect2Ref"><span class="Identifier">intersects</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="rect2.html#Rect2Ref"><span class="Identifier">Rect2Ref</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Returns true, when <tt class="docutils literal"><span class="pre">b</span></tt> and <tt class="docutils literal"><span class="pre">a</span></tt> is intersects.
+
+</dd>
+<a id="intersectsCircle,Rect2Ref,float,float,float"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#intersectsCircle%2CRect2Ref%2Cfloat%2Cfloat%2Cfloat"><span class="Identifier">intersectsCircle</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="rect2.html#Rect2Ref"><span class="Identifier">Rect2Ref</span></a><span class="Other">;</span> <span class="Identifier">cx</span><span class="Other">,</span> <span class="Identifier">cy</span><span class="Other">,</span> <span class="Identifier">r</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Returns true, when <tt class="docutils literal"><span class="pre">a</span></tt> intersects with circle.</p>
+<p>Arguments:</p>
+<ul class="simple"><li><tt class="docutils literal"><span class="pre">cx</span></tt> is a circle center at X axis.</li>
+<li><tt class="docutils literal"><span class="pre">cy</span></tt> is a circle center at Y axis.</li>
+<li><tt class="docutils literal"><span class="pre">r</span></tt> is a circle radius.</li>
+</ul>
+
+
+</dd>
 <a id="$,Rect2Ref"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CRect2Ref"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="rect2.html#Rect2Ref"><span class="Identifier">Rect2Ref</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Converts Rect2 to its string representation.
 
 </dd>
 
@@ -212,7 +245,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-21 06:52:53 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-21 10:36:53 UTC</small>
       </div>
     </div>
   </div>
