@@ -37,6 +37,7 @@ Stable version - ?.?.?
 - Little dynamic type.
 - Build nodes with YML-like syntax.
 - Convert the JSON/XML files to the Scenes.
+- Global settings in the root of the project (`global_settings.toshiko`).
 
 
 ## Simple usage

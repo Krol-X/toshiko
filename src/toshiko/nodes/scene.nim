@@ -55,7 +55,7 @@ method exit*(self: SceneRef) {.base.} =
 method handle*(self: SceneRef, event: InputEvent, mouse_on: var NodeRef) =
   {.warning[LockLevel]: off.}
   var childs = self.getAllChilds()
-  for i in countdown(0, childs.len()-1):
+  for i in countdown(childs.high, childs.low):
     if self.paused and childs[i].getPauseMode() == PAUSE_MODE_PAUSE:
       continue
     childs[i].handle(event, mouse_on)
