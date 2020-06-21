@@ -45,7 +45,7 @@ Stable version - ?.?.?
 import toshiko
 
 Window(title="Test window", w=720, h=480)
-setStandardFont("assets/unifont.ttf", 16)
+setStandardFont("assets/unifont.ttf", 16)  # or indicate this in `global_settings.toshiko`
 
 var
   scene = Scene("Main")
@@ -60,11 +60,12 @@ showWindow()
 
 
 ## Export
-Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html) for export to the other OS.
+Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html) for export to the other OS.  
+[Static linking SDL2](https://github.com/nim-lang/sdl2#static-linking-sdl2)
 
 -   CrossPlatform export for Windows (tested on Windows 7 x64 and Windows 10 x64)
     -   `nim c -d:mingw -d:release --opt:speed --noNimblePath file.nim`
-    -   put Runtime binaries in the folder with the program.
+    -   put Runtime binaries in the folder with the program or use static linking.
 
 
 ## F.A.Q
