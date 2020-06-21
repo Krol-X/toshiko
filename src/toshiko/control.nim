@@ -6,8 +6,9 @@ import
   control/box,
   control/hbox,
   control/vbox,
-  control/button
+  control/button,
+  control/gridbox
 
 export
   control, color_rect, texture_rect, label,
-  box, hbox, vbox, button
+  box, hbox, vbox, button, gridbox

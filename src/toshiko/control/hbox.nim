@@ -27,9 +27,10 @@ method getChildsSize*(self: HBoxRef): Vector2Ref =
   result = Vector2()
   for child in self.children:
     if child.nodetype == NODETYPE_CONTROL:
-      if child.ControlRef.rect_size.y > result.y:
-        result.y = child.ControlRef.rect_size.y
-      result.x += child.ControlRef.rect_size.x + self.separator
+      var c = child.ControlRef
+      if c.rect_size.y > result.y:
+        result.y = c.rect_size.y
+      result.x += c.rect_size.x + self.separator
   if result.x > 0:
     result.x -= self.separator
 

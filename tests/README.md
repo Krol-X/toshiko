@@ -19,3 +19,4 @@
 17. [Convert XML string to the Scene.](https://github.com/Ethosa/toshiko/blob/master/tests/test17.nim)
 18. [Use VBox and HBox objects.](https://github.com/Ethosa/toshiko/blob/master/tests/test18.nim)
 19. [Use Button objects.](https://github.com/Ethosa/toshiko/blob/master/tests/test19.nim)
+20. [Use GridBox object.](https://github.com/Ethosa/toshiko/blob/master/tests/test20.nim)

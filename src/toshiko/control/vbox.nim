@@ -27,9 +27,10 @@ method getChildsSize*(self: VBoxRef): Vector2Ref =
   result = Vector2()
   for child in self.children:
     if child.nodetype == NODETYPE_CONTROL:
-      if child.ControlRef.rect_size.x > result.x:
-        result.x = child.ControlRef.rect_size.x
-      result.y += child.ControlRef.rect_size.y + self.separator
+      var c = child.ControlRef
+      if c.rect_size.x > result.x:
+        result.x = c.rect_size.x
+      result.y += c.rect_size.y + self.separator
   if result.y > 0:
     result.y -= self.separator
 
