@@ -1,0 +1,8 @@
+GridBoxObj	toshiko/control/gridbox.html#GridBoxObj	gridbox: GridBoxObj	
+GridBoxRef	toshiko/control/gridbox.html#GridBoxRef	gridbox: GridBoxRef	
+GridBox	toshiko/control/gridbox.html#GridBox,string	gridbox: GridBox(name: string = &quot;GridBox&quot;): GridBoxRef	
+getChildsSize	toshiko/control/gridbox.html#getChildsSize.e,GridBoxRef	gridbox: getChildsSize(self: GridBoxRef): Vector2Ref	
+draw	toshiko/control/gridbox.html#draw.e,GridBoxRef,float,float	gridbox: draw(self: GridBoxRef; w, h: float)	
+setCellSize	toshiko/control/gridbox.html#setCellSize.e,GridBoxRef,Vector2Ref	gridbox: setCellSize(self: GridBoxRef; size: Vector2Ref)	
+setRow	toshiko/control/gridbox.html#setRow.e,GridBoxRef,int	gridbox: setRow(self: GridBoxRef; row: int)	
+setStyle	toshiko/control/gridbox.html#setStyle.e,GridBoxRef,StyleSheetRef	gridbox: setStyle(self: GridBoxRef; s: StyleSheetRef)	
