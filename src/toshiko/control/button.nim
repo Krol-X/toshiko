@@ -67,8 +67,10 @@ method draw*(self: ButtonRef, w, h: float) =
   if self.hovered and self.focused:
     if last_event.kind == MOUSE and self.action_mask == 1 and mouse_pressed and self.button_mask == last_event.button_index:
       self.on_touch(self, last_event.x, last_event.y)
+      last_event.kind = UNKNOWN
     elif last_event.kind == MOUSE and self.action_mask == 0 and not mouse_pressed and self.button_mask == last_event.button_index:
       self.on_touch(self, last_event.x, last_event.y)
+      last_event.kind = UNKNOWN
 
 method getHoverBackground*(self: ButtonRef): DrawableRef {.base.} =
   self.hover_background

@@ -54,10 +54,12 @@ method exit*(self: SceneRef) {.base.} =
 
 method handle*(self: SceneRef, event: InputEvent, mouse_on: var NodeRef) =
   {.warning[LockLevel]: off.}
-  for child in self.getAllChilds():
-    if self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE:
+  var childs = self.getAllChilds()
+  for i in countdown(0, childs.len()-1):
+    if self.paused and childs[i].getPauseMode() == PAUSE_MODE_PAUSE:
       continue
-    child.handle(event, mouse_on)
+    childs[i].handle(event, mouse_on)
+    childs[i].on_input(childs[i], event)
 
 method instance*(self: SceneRef): SceneRef {.base.} =
   ## Special alias for deepCopy proc.
