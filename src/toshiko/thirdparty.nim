@@ -1,6 +1,6 @@
 import
   thirdparty/opengl,
-  thirdparty/opengl/glut
+  thirdparty/sdl2
 
 export
-  opengl, glut
+  opengl, sdl2
