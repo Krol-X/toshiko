@@ -6,8 +6,9 @@
 [![Nim language-plastic](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)
 [![License](https://img.shields.io/github/license/Ethosa/toshiko)](https://github.com/Ethosa/toshiko/blob/master/LICENSE)
 [![time tracker](https://wakatime.com/badge/github/Ethosa/toshiko.svg)](https://wakatime.com/badge/github/Ethosa/toshiko)  
-[![Linux test](https://github.com/Ethosa/toshiko/workflows/tests_linux/badge.svg?branch=master)](https://github.com/Ethosa/toshiko/actions)
-[![Github pages](https://github.com/Ethosa/toshiko/workflows/gh-pages/badge.svg)](https://github.com/Ethosa/toshiko/actions)
+[![Linux test](https://github.com/Ethosa/toshiko/workflows/tests_linux/badge.svg?branch=master)](https://github.com/Ethosa/toshiko/blob/master/tests)
+[![Github pages](https://github.com/Ethosa/toshiko/workflows/gh-pages/badge.svg)](https://ethosa.github.io/toshiko/toshiko.html)
+[![Examples](https://github.com/Ethosa/toshiko/workflows/examples/badge.svg)](https://github.com/Ethosa/toshiko/blob/master/examples)
 
 Latest version - 0.0.1  
 Stable version - ?.?.?
