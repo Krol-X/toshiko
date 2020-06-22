@@ -131,6 +131,8 @@ function main() {
     title="addChild(self: BoxRef; other: NodeRef)"><wbr />add<wbr />Child<span class="attachedType">BoxRef</span></a></li>
   <li><a class="reference" href="#draw.e%2CBoxRef%2Cfloat%2Cfloat"
     title="draw(self: BoxRef; w, h: float)"><wbr />draw<span class="attachedType">BoxRef</span></a></li>
+  <li><a class="reference" href="#setChildAnchor.e%2CBoxRef%2Cfloat%2Cfloat%2Cfloat%2Cfloat"
+    title="setChildAnchor(self: BoxRef; x1, y1, x2, y2: float)"><wbr />set<wbr />Child<wbr />Anchor<span class="attachedType">BoxRef</span></a></li>
   <li><a class="reference" href="#setChildAnchor.e%2CBoxRef%2CAnchorRef"
     title="setChildAnchor(self: BoxRef; anchor: AnchorRef)"><wbr />set<wbr />Child<wbr />Anchor<span class="attachedType">BoxRef</span></a></li>
   <li><a class="reference" href="#setStyle.e%2CBoxRef%2CStyleSheetRef"
@@ -208,11 +210,18 @@ Adds a new child and recalculate rect size.
 This method uses for redraw Box object.
 
 </dd>
+<a id="setChildAnchor.e,BoxRef,float,float,float,float"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#setChildAnchor.e%2CBoxRef%2Cfloat%2Cfloat%2Cfloat%2Cfloat"><span class="Identifier">setChildAnchor</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="box.html#BoxRef"><span class="Identifier">BoxRef</span></a><span class="Other">;</span> <span class="Identifier">x1</span><span class="Other">,</span> <span class="Identifier">y1</span><span class="Other">,</span> <span class="Identifier">x2</span><span class="Other">,</span> <span class="Identifier">y2</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Changes child anchor.
+
+</dd>
 <a id="setChildAnchor.e,BoxRef,AnchorRef"></a>
 <dt><pre><span class="Keyword">method</span> <a href="#setChildAnchor.e%2CBoxRef%2CAnchorRef"><span class="Identifier">setChildAnchor</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="box.html#BoxRef"><span class="Identifier">BoxRef</span></a><span class="Other">;</span> <span class="Identifier">anchor</span><span class="Other">:</span> <a href="../core/anchor.html#AnchorRef"><span class="Identifier">AnchorRef</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Changes child anchor.
 
 </dd>
 <a id="setStyle.e,BoxRef,StyleSheetRef"></a>
@@ -233,7 +242,7 @@ This method uses for redraw Box object.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-21 15:48:23 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-22 05:57:11 UTC</small>
       </div>
     </div>
   </div>

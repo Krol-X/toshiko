@@ -3,6 +3,7 @@ ButtonObj	toshiko/control/button.html#ButtonObj	button: ButtonObj
 ButtonRef	toshiko/control/button.html#ButtonRef	button: ButtonRef	
 Button	toshiko/control/button.html#Button,string,string	button: Button(name: string = &quot;Button&quot;; text: string = &quot;Button&quot;): ButtonRef	
 draw	toshiko/control/button.html#draw.e,ButtonRef,float,float	button: draw(self: ButtonRef; w, h: float)	
+handle	toshiko/control/button.html#handle.e,ButtonRef,InputEvent,NodeRef	button: handle(self: ButtonRef; event: InputEvent; mouse_on: var NodeRef)	
 getHoverBackground	toshiko/control/button.html#getHoverBackground.e,ButtonRef	button: getHoverBackground(self: ButtonRef): DrawableRef	
 getPressBackground	toshiko/control/button.html#getPressBackground.e,ButtonRef	button: getPressBackground(self: ButtonRef): DrawableRef	
 setStyle	toshiko/control/button.html#setStyle.e,ButtonRef,StyleSheetRef	button: setStyle(self: ButtonRef; s: StyleSheetRef)	

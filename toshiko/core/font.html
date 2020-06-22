@@ -162,6 +162,22 @@ function main() {
     title="`$`(c: StyleUnicode): string"><wbr />`$`<span class="attachedType">StyleUnicode</span></a></li>
   <li><a class="reference" href="#%24%2CStyleText"
     title="`$`(text: StyleText): string"><wbr />`$`<span class="attachedType">StyleText</span></a></li>
+  <li><a class="reference" href="#%26%2CStyleText%2CStyleUnicode"
+    title="`&amp;`(text: StyleText; c: StyleUnicode): StyleText"><wbr />`&amp;`<span class="attachedType">StyleText</span></a></li>
+  <li><a class="reference" href="#%26%2CStyleText%2CStyleText"
+    title="`&amp;`(text, t: StyleText): StyleText"><wbr />`&amp;`<span class="attachedType">StyleText</span></a></li>
+  <li><a class="reference" href="#%26%2Cstring%2CStyleUnicode"
+    title="`&amp;`(text: string; c: StyleUnicode): string"><wbr />`&amp;`<span class="attachedType">StyleUnicode</span></a></li>
+  <li><a class="reference" href="#%26%2Cstring%2CStyleText"
+    title="`&amp;`(text: string; t: StyleText): string"><wbr />`&amp;`<span class="attachedType">StyleText</span></a></li>
+  <li><a class="reference" href="#%26%3D%2CStyleText%2CStyleUnicode"
+    title="`&amp;=`(text: var StyleText; c: StyleUnicode)"><wbr />`&amp;=`<span class="attachedType">StyleText</span></a></li>
+  <li><a class="reference" href="#%26%3D%2CStyleText%2CStyleText"
+    title="`&amp;=`(text: var StyleText; t: StyleText)"><wbr />`&amp;=`<span class="attachedType">StyleText</span></a></li>
+  <li><a class="reference" href="#%26%3D%2Cstring%2CStyleUnicode"
+    title="`&amp;=`(text: var string; c: StyleUnicode)"><wbr />`&amp;=`<span class="attachedType">StyleUnicode</span></a></li>
+  <li><a class="reference" href="#%26%3D%2Cstring%2CStyleText"
+    title="`&amp;=`(text: var string; t: StyleText)"><wbr />`&amp;=`<span class="attachedType">StyleText</span></a></li>
   <li><a class="reference" href="#splitLines%2CStyleText"
     title="splitLines(text: StyleText): seq[StyleText]"><wbr />split<wbr />Lines<span class="attachedType">StyleText</span></a></li>
   <li><a class="reference" href="#getTextSize%2CStyleText"
@@ -344,6 +360,62 @@ function main() {
 
 
 </dd>
+<a id="&,StyleText,StyleUnicode"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%26%2CStyleText%2CStyleUnicode"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <a href="font.html#StyleUnicode"><span class="Identifier">StyleUnicode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="&,StyleText,StyleText"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%26%2CStyleText%2CStyleText"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">,</span> <span class="Identifier">t</span><span class="Other">:</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">)</span><span class="Other">:</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="&,string,StyleUnicode"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%26%2Cstring%2CStyleUnicode"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <a href="font.html#StyleUnicode"><span class="Identifier">StyleUnicode</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="&,string,StyleText"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%26%2Cstring%2CStyleText"><span class="Identifier">`&amp;`</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">t</span><span class="Other">:</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="&=,StyleText,StyleUnicode"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%26%3D%2CStyleText%2CStyleUnicode"><span class="Identifier">`&amp;=`</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <a href="font.html#StyleUnicode"><span class="Identifier">StyleUnicode</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="&=,StyleText,StyleText"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%26%3D%2CStyleText%2CStyleText"><span class="Identifier">`&amp;=`</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">;</span> <span class="Identifier">t</span><span class="Other">:</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="&=,string,StyleUnicode"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%26%3D%2Cstring%2CStyleUnicode"><span class="Identifier">`&amp;=`</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <a href="font.html#StyleUnicode"><span class="Identifier">StyleUnicode</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="&=,string,StyleText"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#%26%3D%2Cstring%2CStyleText"><span class="Identifier">`&amp;=`</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">t</span><span class="Other">:</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="splitLines,StyleText"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#splitLines%2CStyleText"><span class="Identifier">splitLines</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="font.html#StyleText"><span class="Identifier">StyleText</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -376,7 +448,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-21 15:48:20 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-22 05:57:09 UTC</small>
       </div>
     </div>
   </div>

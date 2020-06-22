@@ -4,5 +4,6 @@ Box	toshiko/control/box.html#Box,string	box: Box(name: string = &quot;Box&quot;)
 getChildsSize	toshiko/control/box.html#getChildsSize.e,BoxRef	box: getChildsSize(self: BoxRef): Vector2Ref	
 addChild	toshiko/control/box.html#addChild.e,BoxRef,NodeRef	box: addChild(self: BoxRef; other: NodeRef)	
 draw	toshiko/control/box.html#draw.e,BoxRef,float,float	box: draw(self: BoxRef; w, h: float)	
+setChildAnchor	toshiko/control/box.html#setChildAnchor.e,BoxRef,float,float,float,float	box: setChildAnchor(self: BoxRef; x1, y1, x2, y2: float)	
 setChildAnchor	toshiko/control/box.html#setChildAnchor.e,BoxRef,AnchorRef	box: setChildAnchor(self: BoxRef; anchor: AnchorRef)	
 setStyle	toshiko/control/box.html#setStyle.e,BoxRef,StyleSheetRef	box: setStyle(self: BoxRef; s: StyleSheetRef)	

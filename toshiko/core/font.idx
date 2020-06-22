@@ -18,6 +18,14 @@ loadFont	toshiko/core/font.html#loadFont,cstring,cint	font: loadFont(font: cstri
 len	toshiko/core/font.html#len,StyleText	font: len(text: StyleText): int	
 `$`	toshiko/core/font.html#$,StyleUnicode	font: `$`(c: StyleUnicode): string	
 `$`	toshiko/core/font.html#$,StyleText	font: `$`(text: StyleText): string	
+`&amp;`	toshiko/core/font.html#&,StyleText,StyleUnicode	font: `&amp;`(text: StyleText; c: StyleUnicode): StyleText	
+`&amp;`	toshiko/core/font.html#&,StyleText,StyleText	font: `&amp;`(text, t: StyleText): StyleText	
+`&amp;`	toshiko/core/font.html#&,string,StyleUnicode	font: `&amp;`(text: string; c: StyleUnicode): string	
+`&amp;`	toshiko/core/font.html#&,string,StyleText	font: `&amp;`(text: string; t: StyleText): string	
+`&amp;=`	toshiko/core/font.html#&=,StyleText,StyleUnicode	font: `&amp;=`(text: var StyleText; c: StyleUnicode)	
+`&amp;=`	toshiko/core/font.html#&=,StyleText,StyleText	font: `&amp;=`(text: var StyleText; t: StyleText)	
+`&amp;=`	toshiko/core/font.html#&=,string,StyleUnicode	font: `&amp;=`(text: var string; c: StyleUnicode)	
+`&amp;=`	toshiko/core/font.html#&=,string,StyleText	font: `&amp;=`(text: var string; t: StyleText)	
 splitLines	toshiko/core/font.html#splitLines,StyleText	font: splitLines(text: StyleText): seq[StyleText]	
 getTextSize	toshiko/core/font.html#getTextSize,StyleText	font: getTextSize(text: StyleText): Vector2Ref	
 render	toshiko/core/font.html#render,StyleText,Vector2Ref,Vector2Ref,AnchorRef	font: render(text: StyleText; pos, size: Vector2Ref; anchor: AnchorRef)	

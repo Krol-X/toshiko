@@ -134,6 +134,8 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#draw.e%2CButtonRef%2Cfloat%2Cfloat"
     title="draw(self: ButtonRef; w, h: float)"><wbr />draw<span class="attachedType">ButtonRef</span></a></li>
+  <li><a class="reference" href="#handle.e%2CButtonRef%2CInputEvent%2CNodeRef"
+    title="handle(self: ButtonRef; event: InputEvent; mouse_on: var NodeRef)"><wbr />handle<span class="attachedType">ButtonRef</span></a></li>
   <li><a class="reference" href="#getHoverBackground.e%2CButtonRef"
     title="getHoverBackground(self: ButtonRef): DrawableRef"><wbr />get<wbr />Hover<wbr />Background<span class="attachedType">ButtonRef</span></a></li>
   <li><a class="reference" href="#getPressBackground.e%2CButtonRef"
@@ -213,6 +215,14 @@ Creates a new Button object.
 This method uses for redraw Button object.
 
 </dd>
+<a id="handle.e,ButtonRef,InputEvent,NodeRef"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#handle.e%2CButtonRef%2CInputEvent%2CNodeRef"><span class="Identifier">handle</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="button.html#ButtonRef"><span class="Identifier">ButtonRef</span></a><span class="Other">;</span> <span class="Identifier">event</span><span class="Other">:</span> <a href="../core/input.html#InputEvent"><span class="Identifier">InputEvent</span></a><span class="Other">;</span> <span class="Identifier">mouse_on</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="../nodes/node.html#NodeRef"><span class="Identifier">NodeRef</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+This method uses for handle user input.
+
+</dd>
 <a id="getHoverBackground.e,ButtonRef"></a>
 <dt><pre><span class="Keyword">method</span> <a href="#getHoverBackground.e%2CButtonRef"><span class="Identifier">getHoverBackground</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="button.html#ButtonRef"><span class="Identifier">ButtonRef</span></a><span class="Other">)</span><span class="Other">:</span> <a href="../graphics/drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -245,7 +255,7 @@ This method uses for redraw Button object.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-21 15:48:23 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-22 05:57:11 UTC</small>
       </div>
     </div>
   </div>

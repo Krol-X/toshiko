@@ -8,10 +8,15 @@ calcAnchor	toshiko/control/control.html#calcAnchor.e,ControlRef	control: calcAnc
 draw	toshiko/control/control.html#draw.e,ControlRef,float,float	control: draw(self: ControlRef; w, h: float)	
 getBackground	toshiko/control/control.html#getBackground.e,ControlRef	control: getBackground(self: ControlRef): DrawableRef	
 getGlobalMousePosition	toshiko/control/control.html#getGlobalMousePosition.e,ControlRef	control: getGlobalMousePosition(self: ControlRef): Vector2Ref	
+hide	toshiko/control/control.html#hide.e,ControlRef	control: hide(self: ControlRef)	
 move	toshiko/control/control.html#move.e,ControlRef,float,float	control: move(self: ControlRef; x, y: float)	
+move	toshiko/control/control.html#move.e,ControlRef,Vector2Ref	control: move(self: ControlRef; vec2: Vector2Ref)	
 resize	toshiko/control/control.html#resize.e,ControlRef,float,float	control: resize(self: ControlRef; w, h: float)	
 setBackground	toshiko/control/control.html#setBackground.e,ControlRef,DrawableRef	control: setBackground(self: ControlRef; back: DrawableRef)	
 setBackgroundColor	toshiko/control/control.html#setBackgroundColor.e,ControlRef,ColorRef	control: setBackgroundColor(self: ControlRef; color: ColorRef)	
+setAnchor	toshiko/control/control.html#setAnchor.e,ControlRef,float,float,float,float	control: setAnchor(self: ControlRef; x1, y1, x2, y2: float)	
 setAnchor	toshiko/control/control.html#setAnchor.e,ControlRef,AnchorRef	control: setAnchor(self: ControlRef; anchor: AnchorRef)	
+setSizeAnchor	toshiko/control/control.html#setSizeAnchor.e,ControlRef,float,float	control: setSizeAnchor(self: ControlRef; w, h: float)	
 setSizeAnchor	toshiko/control/control.html#setSizeAnchor.e,ControlRef,Vector2Ref	control: setSizeAnchor(self: ControlRef; anchor: Vector2Ref)	
 setStyle	toshiko/control/control.html#setStyle.e,ControlRef,StyleSheetRef	control: setStyle(self: ControlRef; s: StyleSheetRef)	
+show	toshiko/control/control.html#show.e,ControlRef	control: show(self: ControlRef)	
