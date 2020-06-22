@@ -9,7 +9,7 @@ var
     "ColorRect": {
         "name": "rect1",
         "color": "#f6f",
-        "rect_size": {"x": 128, "y": 64},
+        "rect_size": [128, 64],
         "children": [
           {
             "ColorRect": {

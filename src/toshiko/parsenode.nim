@@ -27,59 +27,94 @@ template loadvalue(statement: untyped): untyped =
   if level.len() > 0:
     `statement`
 
+template loadnode(fn, key: untyped): untyped =
+  case `key`
+  of "Node":
+    `fn`(Node)
+  of "Scene":
+    `fn`(Scene)
+  of "Canvas":
+    `fn`(Canvas)
+
+  # Control nodes
+  of "Control":
+    `fn`(Control)
+  of "ColorRect":
+    `fn`(ColorRect)
+  of "TextureRect":
+    `fn`(TextureRect)
+  of "Label":
+    `fn`(Label)
+  of "Box":
+    `fn`(Box)
+  of "HBox":
+    `fn`(HBox)
+  of "VBox":
+    `fn`(VBox)
+  of "Button":
+    `fn`(Button)
+  of "GridBox":
+    `fn`(GridBox)
+  else:
+    discard
+
+template loadval(fn, get_float_func, get_string_func, float_array: untyped) =
+  ## load value from XML or JSON.
+  ##
+  ## Arguments:
+  ## - `fn` is a load value function.
+  ## - `get_float_func` is a function, which should return `float`.
+  ## - `get_string_func` is a function, which should return `string`.
+  ## - `float_array` is a statement which should be float/string array.
+  case key
+  # properties
+  of "name":
+    `fn`:
+      level[^1].name = `get_string_func`(value)
+  of "color":
+    `fn`(level[^1].ColorRectRef.setColor(Color(`get_string_func`(value))))
+  of "background_color":
+    `fn`(level[^1].ControlRef.setBackgroundColor(Color(`get_string_func`(value))))
+  of "position_anchor":
+    let tmp = `float_array`
+    `fn`(level[^1].ControlRef.setAnchor(Anchor(
+      `get_float_func`(tmp[0]), `get_float_func`(tmp[1]), `get_float_func`(tmp[2]), `get_float_func`(tmp[3])
+    )))
+  of "rect_size":
+    let tmp = `float_array`
+    `fn`(level[^1].ControlRef.resize(`get_float_func`(tmp[0]), `get_float_func`(tmp[1])))
+  of "rect_position":
+    let tmp = `float_array`
+    `fn`(level[^1].ControlRef.move(`get_float_func`(tmp[0]), `get_float_func`(tmp[1])))
+  of "text":
+    if level[^1].kind == LABEL_NODE:
+      `fn`(level[^1].LabelRef.setText(`get_string_func`(value)))
+    elif level[^1].kind == BUTTON_NODE:
+      `fn`(level[^1].ButtonRef.setText(`get_string_func`(value)))
+  of "texture":
+    `fn`(level[^1].TextureRectRef.loadTexture(`get_string_func`(value)))
+  of "size_anchor":
+    let tmp = `float_array`
+    `fn`(level[^1].ControlRef.setSizeAnchor(Vector2(`get_float_func`(tmp[0]), `get_float_func`(tmp[1]))))
+  else:
+    discard
+
+
+proc toStr(node: JsonNode): string =
+  if node.kind == JString:
+    return node.getStr
+  else:
+    return $node
 
 proc addJsonNode(level: var seq[NodeRef], jobj: JsonNode) =
   for key, value in jobj.pairs():
-    case key
     # Default nodes
-    of "Node":
-      loadjsonnode(Node)
-    of "Scene":
-      loadjsonnode(Scene)
-    of "Canvas":
-      loadjsonnode(Canvas)
-
-    # Control nodes
-    of "Control":
-      loadjsonnode(Control)
-    of "ColorRect":
-      loadjsonnode(ColorRect)
-    of "TextureRect":
-      loadjsonnode(TextureRect)
-    of "Label":
-      loadjsonnode(Label)
-    of "Box":
-      loadjsonnode(Box)
-    of "HBox":
-      loadjsonnode(HBox)
-    of "VBox":
-      loadjsonnode(VBox)
-    of "Button":
-      loadjsonnode(Button)
-
-    # properties
-    of "name":
-      loadvalue:
-        level[^1].name = getStr(value)
-    of "color":
-      loadvalue(level[^1].ColorRectRef.setColor(Color(getStr(value))))
-    of "position_anchor":
-      loadvalue(level[^1].ControlRef.setAnchor(Anchor(
-        getFloat(value["x1"]), getFloat(value["y1"]), getFloat(value["x2"]), getFloat(value["y2"])
-      )))
-    of "rect_size":
-      loadvalue(level[^1].ControlRef.resize(getFloat(value["x"]), getFloat(value["y"])))
-    of "rect_position":
-      loadvalue(level[^1].ControlRef.move(getFloat(value["x"]), getFloat(value["y"])))
-    of "text":
-      loadvalue(level[^1].LabelRef.setText(getStr(value)))
-    of "texture":
-      loadvalue(level[^1].TextureRectRef.loadTexture(getStr(value)))
-    of "size_anchor":
-      loadvalue(level[^1].ControlRef.setSizeAnchor(Vector2(getFloat(value["x"]), getFloat(value["y"]))))
+    loadnode(loadjsonnode, key)
+    # Properties
+    loadval(loadvalue, getFloat, toStr, value)
 
     # childs
-    of "children":
+    if key == "children":
       if value.kind == JArray:
         for i in value.items():
           addJsonNode(level, i)
@@ -91,61 +126,13 @@ proc addJsonNode(level: var seq[NodeRef], jobj: JsonNode) =
 
 proc addXmlNode(level: var seq[NodeRef], jobj: XmlNode) =
   for xml in jobj.items():
-    case xml.tag
     # Default nodes
-    of "Node":
-      loadxmlnode(Node)
-    of "Scene":
-      loadxmlnode(Scene)
-    of "Canvas":
-      loadxmlnode(Canvas)
-
-    # Control nodes
-    of "Control":
-      loadxmlnode(Control)
-    of "ColorRect":
-      loadxmlnode(ColorRect)
-    of "TextureRect":
-      loadxmlnode(TextureRect)
-    of "Label":
-      loadxmlnode(Label)
-    of "Box":
-      loadxmlnode(Box)
-    of "HBox":
-      loadxmlnode(HBox)
-    of "VBox":
-      loadxmlnode(VBox)
-    of "Button":
-      loadxmlnode(Button)
-    else:
-      discard
+    loadnode(loadxmlnode, xml.tag)
 
     level.add(level[^1].children[^1])
+
     for key, value in xml.attrs.pairs:  # properties
-      case key
-      of "name":
-        loadvalue:
-          level[^1].name = value
-      of "color":
-        loadvalue(level[^1].ColorRectRef.setColor(Color(value)))
-      of "position_anchor":
-        let tmp = value.split(Whitespace)
-        loadvalue(level[^1].ControlRef.setAnchor(Anchor(
-          parseFloat(tmp[0]), parseFloat(tmp[1]), parseFloat(tmp[2]), parseFloat(tmp[3])
-        )))
-      of "rect_size":
-        let tmp = value.split(Whitespace)
-        loadvalue(level[^1].ControlRef.resize(parseFloat(tmp[0]), parseFloat(tmp[1])))
-      of "rect_position":
-        let tmp = value.split(Whitespace)
-        loadvalue(level[^1].ControlRef.move(parseFloat(tmp[0]), parseFloat(tmp[1])))
-      of "text":
-        loadvalue(level[^1].LabelRef.setText(value))
-      of "texture":
-        loadvalue(level[^1].TextureRectRef.loadTexture(value))
-      of "size_anchor":
-        let tmp = value.split(Whitespace)
-        loadvalue(level[^1].ControlRef.setSizeAnchor(Vector2(parseFloat(tmp[0]), parseFloat(tmp[1]))))
+      loadval(loadvalue, parseFloat, `$`, value.split(Whitespace))
 
     for child in jobj.items():  # children
       addXmlNode(level, child)
