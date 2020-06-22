@@ -57,6 +57,9 @@ addMainScene(scene)
 showWindow()
 ```
 
+## Now availale
+See [`Nodes list`](https://github.com/Ethosa/toshiko/blob/master/NODES_LIST.md) file.
+
 
 ## Export
 Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html) for export to the other OS.  
