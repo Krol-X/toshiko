@@ -35,7 +35,7 @@ method addChild*(self: BoxRef, other: NodeRef) =
   procCall self.NodeRef.addChild(other)
   self.rect_min_size = self.getChildsSize()
 
-  var anch: Vector2Ref = nil
+  var anch: Vector2Ref
   if not self.size_anchor.isNil():
     anch = Vector2(self.size_anchor)
 
@@ -52,7 +52,12 @@ method draw*(self: BoxRef, w, h: float) =
       c.rect_position.x = self.rect_size.x*self.child_anchor.x1 - c.rect_size.x*self.child_anchor.x2
       c.rect_position.y = self.rect_size.y*self.child_anchor.y1 - c.rect_size.y*self.child_anchor.y2
 
+method setChildAnchor*(self: BoxRef, x1, y1, x2, y2: float) {.base.} =
+  ## Changes child anchor.
+  self.child_anchor = Anchor(x1, y1, x2, y2)
+
 method setChildAnchor*(self: BoxRef, anchor: AnchorRef) {.base.} =
+  ## Changes child anchor.
   self.child_anchor = anchor
 
 method setStyle*(self: BoxRef, s: StyleSheetRef) =

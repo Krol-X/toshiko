@@ -74,14 +74,15 @@ method calcRectGlobalPosition*(self: ControlRef) {.base.} =
 method calcAnchor*(self: ControlRef) {.base.} =
   ## Calculates `rect_position` and `rect_size`, if available.
   if not self.parent.isNil() and self.parent.nodetype == NODETYPE_CONTROL:
+    var parent = self.parent.ControlRef
     if not self.size_anchor.isNil():
       if self.size_anchor.x > 0:
-        self.rect_size.x = self.parent.ControlRef.rect_size.x * self.size_anchor.x
+        self.rect_size.x = parent.rect_size.x * self.size_anchor.x
       if self.size_anchor.y > 0:
-        self.rect_size.y = self.parent.ControlRef.rect_size.y * self.size_anchor.y
+        self.rect_size.y = parent.rect_size.y * self.size_anchor.y
     if not self.position_anchor.isNil():
-      self.rect_position.x = self.parent.ControlRef.rect_size.x*self.position_anchor.x1 - self.rect_size.x*self.position_anchor.x2
-      self.rect_position.y = self.parent.ControlRef.rect_size.y*self.position_anchor.y1 - self.rect_size.y*self.position_anchor.y2
+      self.rect_position.x = parent.rect_size.x*self.position_anchor.x1 - self.rect_size.x*self.position_anchor.x2
+      self.rect_position.y = parent.rect_size.y*self.position_anchor.y1 - self.rect_size.y*self.position_anchor.y2
 
 method draw*(self: ControlRef, w, h: float) =
   ## This method uses for redraw Control object.
@@ -137,12 +138,21 @@ method handle(self: ControlRef, event: InputEvent, mouse_on: var NodeRef) =
     self.pressed = false
     self.on_release(self, event.x, event.y)
 
+method hide*(self: ControlRef) {.base.} =
+  self.visible = false
+
 method move*(self: ControlRef, x, y: float) {.base.} =
   ## Moves Control node by `x` and `y`.
   ## Note: It also disables `position_anchor`.
   self.position_anchor = nil
   self.rect_position.x += x
   self.rect_position.y += y
+
+method move*(self: ControlRef, vec2: Vector2Ref) {.base.} =
+  ## Moves Control node by `x` and `y`.
+  ## Note: It also disables `position_anchor`.
+  self.position_anchor = nil
+  self.rect_position += vec2
 
 method resize*(self: ControlRef, w, h: float) {.base.} =
   ## Resizes Control, if `w` or `h` more then `rect_size`.
@@ -156,7 +166,7 @@ method resize*(self: ControlRef, w, h: float) {.base.} =
     self.size_anchor = nil
   else:
     self.rect_size.x = self.rect_min_size.x
-  if w > self.rect_min_size.y:
+  if h > self.rect_min_size.y:
     self.rect_size.y = h
     self.size_anchor = nil
   else:
@@ -176,9 +186,17 @@ method setBackgroundColor*(self: ControlRef, color: ColorRef) {.base.} =
   ## - `color` is a new drawable color.
   self.background.setColor(color)
 
+method setAnchor*(self: ControlRef, x1, y1, x2, y2: float) {.base.} =
+  ## Changes `position_anchor`.
+  self.position_anchor = Anchor(x1, y1, x2, y2)
+
 method setAnchor*(self: ControlRef, anchor: AnchorRef) {.base.} =
   ## Changes `position_anchor`.
   self.position_anchor = anchor
+
+method setSizeAnchor*(self: ControlRef, w, h: float) {.base.} =
+  ## Changes `size_anchor`.
+  self.size_anchor = Vector2(w, h)
 
 method setSizeAnchor*(self: ControlRef, anchor: Vector2Ref) {.base.} =
   ## Changes `size_anchor`.
@@ -211,3 +229,6 @@ method setStyle*(self: ControlRef, s: StyleSheetRef) {.base.} =
         )
     else:
       discard
+
+method show*(self: ControlRef) {.base.} =
+  self.visible = true

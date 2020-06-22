@@ -33,10 +33,10 @@ type
 proc Drawable*: DrawableRef =
   DrawableRef(
     texture: GlTextureObj(), border_width: 0,
-    border_detail_lefttop: 50,
-    border_detail_righttop: 50,
-    border_detail_leftbottom: 50,
-    border_detail_rightbottom: 50,
+    border_detail_lefttop: 20,
+    border_detail_righttop: 20,
+    border_detail_leftbottom: 20,
+    border_detail_rightbottom: 20,
     border_radius_lefttop: 0,
     border_radius_righttop: 0,
     border_radius_leftbottom: 0,

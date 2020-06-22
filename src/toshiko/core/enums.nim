@@ -14,7 +14,8 @@ type
     BOX_NODE,
     HBOX_NODE,
     VBOX_NODE,
-    BUTTON_NODE
+    BUTTON_NODE,
+    GRIDBOX_NODE
   NodeType* {.pure.} = enum
     NODETYPE_DEFAULT,
     NODETYPE_CONTROL

@@ -11,6 +11,7 @@ type
   NodeInputHandler* = proc(self: NodeRef, event: InputEvent)
   NodeObj* = object of RootObj
     is_ready*: bool
+    visible*: bool
     name*: string
     kind*: NodeKind
     nodetype*: NodeType
@@ -36,6 +37,7 @@ var
 template nodepattern*(t: untyped) =
   result = `t`()
   result.is_ready = false
+  result.visible = true
   result.name = name
   result.children = @[]
   result.nodetype = NODETYPE_DEFAULT

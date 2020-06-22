@@ -96,6 +96,33 @@ proc `$`*(text: StyleText): string =
   for i in text.chars:
     result &= $i
 
+proc `&`*(text: StyleText, c: StyleUnicode): StyleText =
+  result = text
+  result.chars.add(c)
+
+proc `&`*(text, t: StyleText): StyleText =
+  result = text
+  for c in t.chars:
+    result.chars.add(c)
+
+proc `&`*(text: string, c: StyleUnicode): string =
+  text & $c
+
+proc `&`*(text: string, t: StyleText): string =
+  text & $t
+
+proc `&=`*(text: var StyleText, c: StyleUnicode) =
+  text = text & c
+
+proc `&=`*(text: var StyleText, t: StyleText) =
+  text = text & t
+
+proc `&=`*(text: var string, c: StyleUnicode) =
+  text = text & $c
+
+proc `&=`*(text: var string, t: StyleText) =
+  text = text & $t
+
 
 proc splitLines*(text: StyleText): seq[StyleText] =
   result = @[stext""]

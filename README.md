@@ -70,7 +70,7 @@ Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html) for exp
 
 ## F.A.Q
 *Q*: Where can I see examples?  
-*A*: You can see this in the [`tests`](https://github.com/Ethosa/toshiko/blob/master/tests) folder
+*A*: You can see this in the [`tests`](https://github.com/Ethosa/toshiko/blob/master/tests) or [`examples`](https://github.com/Ethosa/toshiko/blob/master/examples) folder
 
 *Q*: Where can I read the docs?   
 *A*: You can read docs [here](https://ethosa.github.io/toshiko/toshiko.html)

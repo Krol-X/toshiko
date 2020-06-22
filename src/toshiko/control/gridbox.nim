@@ -23,7 +23,7 @@ proc GridBox*(name: string = "GridBox"): GridBoxRef =
   result.cell_size = Vector2(40, 40)
   result.separator = 2f
   result.row = 3
-  result.kind = VBOX_NODE
+  result.kind = GRIDBOX_NODE
 
 
 method getChildsSize*(self: GridBoxRef): Vector2Ref =
@@ -36,10 +36,11 @@ method getChildsSize*(self: GridBoxRef): Vector2Ref =
     if child.nodetype == NODETYPE_CONTROL:
       inc row
       if row >= self.row or result.y == 0f:
+        result.y += self.cell_size.y + self.separator
         if result.x < x:
           result.x = x
-        result.y += self.cell_size.y + self.separator
         row = 0
+        x = 0
       x += self.cell_size.x + self.separator
   if result.x > 0:
     result.x -= self.separator

@@ -22,7 +22,7 @@ proc Scene*(name: string = "Scene"): SceneRef =
 method draw*(self: SceneRef, w, h: float) =
   {.warning[LockLevel]: off.}
   for child in self.getAllChilds():
-    if self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE:
+    if (self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE) or not child.visible:
       continue
     if not child.is_ready:
       child.is_ready = true
@@ -34,7 +34,7 @@ method draw*(self: SceneRef, w, h: float, paused: bool) {.base.} =
   {.warning[LockLevel]: off.}
   self.paused = paused
   for child in self.getAllChilds():
-    if self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE:
+    if (self.paused and child.getPauseMode() == PAUSE_MODE_PAUSE) or not child.visible:
       continue
     if not child.is_ready:
       child.is_ready = true
@@ -56,7 +56,7 @@ method handle*(self: SceneRef, event: InputEvent, mouse_on: var NodeRef) =
   {.warning[LockLevel]: off.}
   var childs = self.getAllChilds()
   for i in countdown(childs.high, childs.low):
-    if self.paused and childs[i].getPauseMode() == PAUSE_MODE_PAUSE:
+    if (self.paused and childs[i].getPauseMode() == PAUSE_MODE_PAUSE) or not childs[i].visible:
       continue
     childs[i].handle(event, mouse_on)
     childs[i].on_input(childs[i], event)

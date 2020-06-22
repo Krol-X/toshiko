@@ -1,0 +1,5 @@
+# Use it to change the global setting in your project.
+
+[GUI]
+standard-font="../../tests/assets/unifont.ttf"
+standard-font-size=16
