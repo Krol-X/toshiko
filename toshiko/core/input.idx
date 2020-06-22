@@ -8,11 +8,13 @@ InputEventMouseMotion	toshiko/core/input.html#InputEventMouseMotion	input: Input
 InputEventMouseWheel	toshiko/core/input.html#InputEventMouseWheel	input: InputEventMouseWheel	
 InputEventTouchScreen	toshiko/core/input.html#InputEventTouchScreen	input: InputEventTouchScreen	
 InputEventKeyboard	toshiko/core/input.html#InputEventKeyboard	input: InputEventKeyboard	
-BUTTON_LEFT	toshiko/core/input.html#BUTTON_LEFT	input: BUTTON_LEFT	
-BUTTON_MIDDLE	toshiko/core/input.html#BUTTON_MIDDLE	input: BUTTON_MIDDLE	
-BUTTON_RIGHT	toshiko/core/input.html#BUTTON_RIGHT	input: BUTTON_RIGHT	
-BUTTON_RELEASE	toshiko/core/input.html#BUTTON_RELEASE	input: BUTTON_RELEASE	
-BUTTON_CLICK	toshiko/core/input.html#BUTTON_CLICK	input: BUTTON_CLICK	
+INPUT_BUTTON_LEFT	toshiko/core/input.html#INPUT_BUTTON_LEFT	input: INPUT_BUTTON_LEFT	
+INPUT_BUTTON_MIDDLE	toshiko/core/input.html#INPUT_BUTTON_MIDDLE	input: INPUT_BUTTON_MIDDLE	
+INPUT_BUTTON_RIGHT	toshiko/core/input.html#INPUT_BUTTON_RIGHT	input: INPUT_BUTTON_RIGHT	
+INPUT_BUTTON_X1	toshiko/core/input.html#INPUT_BUTTON_X1	input: INPUT_BUTTON_X1	
+INPUT_BUTTON_X2	toshiko/core/input.html#INPUT_BUTTON_X2	input: INPUT_BUTTON_X2	
+INPUT_BUTTON_RELEASE	toshiko/core/input.html#INPUT_BUTTON_RELEASE	input: INPUT_BUTTON_RELEASE	
+INPUT_BUTTON_CLICK	toshiko/core/input.html#INPUT_BUTTON_CLICK	input: INPUT_BUTTON_CLICK	
 K_F1	toshiko/core/input.html#K_F1	input: K_F1	
 K_F2	toshiko/core/input.html#K_F2	input: K_F2	
 K_F3	toshiko/core/input.html#K_F3	input: K_F3	
@@ -62,7 +64,6 @@ K_RIGHT_ALT	toshiko/core/input.html#K_RIGHT_ALT	input: K_RIGHT_ALT
 K_DELETE	toshiko/core/input.html#K_DELETE	input: K_DELETE	
 pressed_keys	toshiko/core/input.html#pressed_keys	input: pressed_keys	
 pressed_keys_ints	toshiko/core/input.html#pressed_keys_ints	input: pressed_keys_ints	
-pressed_keys_cints	toshiko/core/input.html#pressed_keys_cints	input: pressed_keys_cints	
 last_event	toshiko/core/input.html#last_event	input: last_event	
 last_key_state	toshiko/core/input.html#last_key_state	input: last_key_state	
 key_state	toshiko/core/input.html#key_state	input: key_state	
@@ -77,7 +78,7 @@ isInputEventTouchScreen	toshiko/core/input.html#isInputEventTouchScreen,InputEve
 isInputEventKeyboard	toshiko/core/input.html#isInputEventKeyboard,InputEvent	input: isInputEventKeyboard(a: InputEvent): bool	
 addButtonAction	toshiko/core/input.html#addButtonAction,,string,cint	input: addButtonAction(a: type Input; name: string; button: cint)	
 addKeyAction	toshiko/core/input.html#addKeyAction,,string,string	input: addKeyAction(a: type Input; name, key: string)	
-addKeyAction	toshiko/core/input.html#addKeyAction,,string,int8	input: addKeyAction(a: type Input; name: string; key: int8)	
+addKeyAction	toshiko/core/input.html#addKeyAction,,string,cint	input: addKeyAction(a: type Input; name: string; key: cint)	
 addTouchAction	toshiko/core/input.html#addTouchAction,,string	input: addTouchAction(a: type Input; name: string)	
 isActionJustPressed	toshiko/core/input.html#isActionJustPressed,,string	input: isActionJustPressed(a: type Input; name: string): bool	
 isActionPressed	toshiko/core/input.html#isActionPressed,,string	input: isActionPressed(a: type Input; name: string): bool	
