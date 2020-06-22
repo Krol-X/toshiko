@@ -13,8 +13,7 @@ type
 
   InputAction* = object
     kind*: InputEventType
-    key_int*: int8
-    key_cint*: cint
+    key_int*: cint
     button_index*: cint
     name*, key*: string
 
@@ -23,8 +22,7 @@ type
   InputEvent* = ref object
     kind*: InputEventType
     pressed*: bool
-    key_int*: int8
-    key_cint*: cint
+    key_int*: cint
     button_index*: cint
     x*, y*, xrel*, yrel*: float
     key*: string
@@ -38,12 +36,14 @@ type
 
 
 const
-  BUTTON_LEFT* = 0
-  BUTTON_MIDDLE* = 1
-  BUTTON_RIGHT* = 2
+  INPUT_BUTTON_LEFT* = 1
+  INPUT_BUTTON_MIDDLE* = 2
+  INPUT_BUTTON_RIGHT* = 3
+  INPUT_BUTTON_X1* = 4
+  INPUT_BUTTON_X2* = 5
 
-  BUTTON_RELEASE* = 0
-  BUTTON_CLICK* = 1
+  INPUT_BUTTON_RELEASE* = 0
+  INPUT_BUTTON_CLICK* = 1
 
   K_F1* = 1
   K_F2* = 2
@@ -96,8 +96,7 @@ const
 
 var
   pressed_keys*: seq[string] = @[]
-  pressed_keys_ints*: seq[int8] = @[]
-  pressed_keys_cints*: seq[cint] = @[]
+  pressed_keys_ints*: seq[cint] = @[]
   last_event*: InputEvent = InputEvent()
   last_key_state*: bool = false
   key_state*: bool = false
@@ -147,7 +146,7 @@ proc addKeyAction*(a: type Input, name, key: string) =
   ## - `key` - key, e.g.: "w", "1", etc.
   actionlist.add(InputAction(kind: KEYBOARD, name: name, key: key))
 
-proc addKeyAction*(a: type Input, name: string, key: int8) =
+proc addKeyAction*(a: type Input, name: string, key: cint) =
   ## Adds a new action on keyboard.
   ##
   ## Arguments:
@@ -225,12 +224,14 @@ proc `$`*(event: InputEvent): string =
     "Unknown event."
   of MOUSE:
     var button =
-      if event.button_index == BUTTON_RIGHT:
+      if event.button_index == INPUT_BUTTON_RIGHT:
         "right"
-      elif event.button_index == BUTTON_LEFT:
+      elif event.button_index == INPUT_BUTTON_LEFT:
         "left"
-      else:
+      elif event.button_index == INPUT_BUTTON_MIDDLE:
         "middle"
+      else:
+        "x1"
     "InputEventMouseButton(x: " & $event.x & ", y: " & $event.y & ", pressed:" & $event.pressed & ", button: " & button & ")"
   of MOTION:
     "InputEventMotionButton(x: " & $event.x & ", y: " & $event.y & ", xrel:" & $event.xrel & ", yrel:" & $event.yrel & ")"

@@ -38,8 +38,8 @@ proc Button*(name: string = "Button", text: string = "Button"): ButtonRef =
   result.press_background.setColor(Color(1f, 1f, 1f, 0.1))
   result.on_touch = standard_button_handler
   result.uppercase = true
-  result.action_mask = BUTTON_RELEASE
-  result.button_mask = BUTTON_LEFT
+  result.action_mask = INPUT_BUTTON_RELEASE
+  result.button_mask = INPUT_BUTTON_LEFT
   result.kind = BUTTON_NODE
 
 

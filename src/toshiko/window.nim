@@ -1,7 +1,8 @@
 # author: Ethosa
 import
   thirdparty/opengl,
-  thirdparty/opengl/glut,
+  thirdparty/sdl2,
+  thirdparty/sdl2/image,
 
   core/color,
   core/input,
@@ -14,19 +15,25 @@ import
   os
 
 
-var
-  cmdLine {.importc: "cmdLine".}: array[0..255, cstring]
-  cmdCount {.importc: "cmdCount".}: cint
+discard sdl2.init(INIT_EVERYTHING)
 
+discard glSetAttribute(SDL_GL_DOUBLEBUFFER, 1)
+discard glSetAttribute(SDL_GL_RED_SIZE, 5)
+discard glSetAttribute(SDL_GL_GREEN_SIZE, 6)
+discard glSetAttribute(SDL_GL_BLUE_SIZE, 5)
 
 
 var
   env* = EnvironmentRef(delay: 17, background_color: Color("#333"))
   width, height: cint
-  main_scene*: SceneRef = nil
+  main_scenesdl*: SceneRef = nil
+  windowptr: WindowPtr
+  glcontext: GlContextPtr
   current_scene*: SceneRef = nil
   scenes*: seq[SceneRef] = @[]
   paused*: bool = false
+  running*: bool = true
+  event = sdl2.defaultEvent
 
 
 # --- Callbacks --- #
@@ -48,7 +55,7 @@ proc display {.cdecl.} =
 
   # Update window.
   glFlush()
-  glutSwapBuffers()
+  windowptr.glSwapWindow()
   os.sleep(env.delay)
 
 
@@ -75,39 +82,35 @@ template check(event, condition, conditionelif: untyped): untyped =
   else:
     press_state = 0
 
-proc mouse(button, state, x, y: cint) {.cdecl.} =
+proc mouse(button, x, y: cint, pressed: bool) {.cdecl.} =
   ## Handle mouse input.
-  check(InputEventMouseButton, last_event.pressed and state == GLUT_DOWN, state == GLUT_DOWN)
+  check(InputEventMouseButton, last_event.pressed and pressed, pressed)
   last_event.button_index = button
   last_event.x = x.float
   last_event.y = y.float
   last_event.kind = MOUSE
-  mouse_pressed = state == GLUT_DOWN
-  last_event.pressed = state == GLUT_DOWN
+  mouse_pressed = pressed
+  last_event.pressed = pressed
 
   current_scene.handle(last_event, mouse_on)
 
-proc wheel(button, dir, x, y: cint) {.cdecl.} =
+proc wheel(x, y: cint) {.cdecl.} =
   ## Handle mouse wheel input.
   check(InputEventMouseWheel, false, false)
-  last_event.button_index = button
-  last_event.x = x.float
-  last_event.y = y.float
   last_event.kind = WHEEL
-  last_event.yrel = dir.float
+  last_event.xrel = x.float
+  last_event.yrel = y.float
 
   current_scene.handle(last_event, mouse_on)
 
-proc keyboardpress(c: int8, x, y: cint) {.cdecl.} =
+proc keyboardpress(c: cint) {.cdecl.} =
   ## Called when press any key on keyboard.
   if c < 0:
     return
-  let key = $c.char
+  let key = $c
   check(InputEventKeyboard, last_event.pressed, true)
   last_event.key = key
   last_event.key_int = c
-  last_event.x = x.float
-  last_event.y = y.float
   if key notin pressed_keys:
     pressed_keys.add(key)
     pressed_keys_ints.add(c)
@@ -117,16 +120,14 @@ proc keyboardpress(c: int8, x, y: cint) {.cdecl.} =
 
   current_scene.handle(last_event, mouse_on)
 
-proc keyboardup(c: int8, x, y: cint) {.cdecl.} =
+proc keyboardup(c: cint) {.cdecl.} =
   ## Called when any key no more pressed.
   if c < 0:
     return
-  let key = $c.char
+  let key = $c
   check(InputEventKeyboard, false, false)
   last_event.key = key
   last_event.key_int = c
-  last_event.x = x.float
-  last_event.y = y.float
   last_event.kind = KEYBOARD
   last_key_state = key_state
   key_state = false
@@ -135,43 +136,6 @@ proc keyboardup(c: int8, x, y: cint) {.cdecl.} =
     if k == key:
       pressed_keys.delete(i)
       pressed_keys_ints.delete(i)
-      break
-    inc i
-
-  current_scene.handle(last_event, mouse_on)
-
-proc keyboardspecialpress(c: cint, x, y: cint) {.cdecl.} =
-  ## Called when press any key on keyboard.
-  if c < 0:
-    return
-  check(InputEventKeyboard, last_event.pressed, true)
-  last_event.key = $c
-  last_event.key_cint = c
-  last_event.x = x.float
-  last_event.y = y.float
-  if c notin pressed_keys_cints:
-    pressed_keys_cints.add(c)
-  last_event.kind = KEYBOARD
-  last_key_state = key_state
-  key_state = true
-
-  current_scene.handle(last_event, mouse_on)
-
-proc keyboardspecialup(c: cint, x, y: cint) {.cdecl.} =
-  ## Called when any key no more pressed.
-  if c < 0:
-    return
-  check(InputEventKeyboard, false, false)
-  last_event.key_cint = c
-  last_event.x = x.float
-  last_event.y = y.float
-  last_event.kind = KEYBOARD
-  last_key_state = key_state
-  key_state = false
-  var i = 0
-  for k in pressed_keys_cints:
-    if k == c:
-      pressed_keys_cints.delete(i)
       break
     inc i
 
@@ -204,7 +168,7 @@ proc addMainScene*(scene: SceneRef) =
   ## - `scene` - pointer to the Scene object.
   if scene notin scenes:
     scenes.add(scene)
-  main_scene = scene
+  main_scenesdl = scene
 
 proc changeScene*(name: string): bool {.discardable.} =
   ## Changes current scene.
@@ -230,13 +194,18 @@ proc setMainScene*(name: string) =
   ## - `name` - name of the added scene.
   for scene in scenes:
     if scene.name == name:
-      main_scene = scene
+      main_scenesdl = scene
       break
 
 proc setTitle*(title: cstring) =
   ## Changes window title.
   if window_created:
-    glutSetWindowTitle(title)
+    windowptr.setTitle(title)
+
+proc setIcon*(icon_path: cstring) =
+  ## Changes window title.
+  if window_created:
+    windowptr.setIcon(image.load(icon_path))
 
 proc Window*(title: cstring, w: cint = 640, h: cint = 360) {.cdecl.} =
   ## Creates a new window pointer
@@ -247,12 +216,12 @@ proc Window*(title: cstring, w: cint = 640, h: cint = 360) {.cdecl.} =
   once:
     when not defined(android) and not defined(ios):
       loadExtensions()  # Load OpenGL extensions.
-
-    glutInit(addr cmdCount, addr cmdLine) # Initializ glut lib.
-    glutInitDisplayMode(GLUT_DOUBLE)
-  glutInitWindowSize(w, h)
-  glutInitWindowPosition(100, 100)
-  discard glutCreateWindow(title)
+      discard captureMouse(True32)
+  windowptr = createWindow(
+    title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, w, h,
+    SDL_WINDOW_SHOWN or SDL_WINDOW_OPENGL or SDL_WINDOW_RESIZABLE or
+    SDL_WINDOW_ALLOW_HIGHDPI or SDL_WINDOW_FOREIGN or SDL_WINDOW_INPUT_FOCUS or SDL_WINDOW_MOUSE_FOCUS)
+  glcontext = windowptr.glCreateContext()
 
   # Set up OpenGL
   glClearColor(env.background_color.r, env.background_color.g, env.background_color.b, env.background_color.a)
@@ -264,20 +233,44 @@ proc Window*(title: cstring, w: cint = 640, h: cint = 360) {.cdecl.} =
 
 
 proc showWindow* =
-  ## Start main window loop.
-  glutDisplayFunc(display)
-  glutIdleFunc(display)
-  glutReshapeFunc(reshape)
-  when not defined(android) and not defined(ios):
-    glutReshapeFunc(reshape)
-    glutMouseWheelFunc(wheel)
-  glutMouseFunc(mouse)
-  glutKeyboardFunc(keyboardpress)
-  glutKeyboardUpFunc(keyboardup)
-  glutSpecialFunc(keyboardspecialpress)
-  glutSpecialUpFunc(keyboardspecialup)
-  glutMotionFunc(motion)
-  glutPassiveMotionFunc(motion)
-  changeScene(main_scene.name)
-  glutMainLoop()
+  changeScene(main_scenesdl.name)
+
+  while running:
+    while sdl2.pollEvent(event):
+      case event.kind
+      of QuitEvent:
+        running = false
+      of WindowEvent:
+        let e = evWindow(event)
+        case e.event
+        of WindowEvent_Resized, WindowEvent_SizeChanged, WindowEvent_Minimized, WindowEvent_Maximized, WindowEvent_Restored:
+          windowptr.getSize(width, height)
+          reshape(width, height)
+        else:
+          discard
+      of KeyDown:
+        let e = evKeyboard(event)
+        keyboardpress(e.keysym.sym)
+      of KeyUp:
+        let e = evKeyboard(event)
+        keyboardup(e.keysym.sym)
+      of MouseMotion:
+        let e = evMouseMotion(event)
+        motion(e.x, e.y)
+      of MouseButtonDown:
+        let e = evMouseButton(event)
+        mouse(e.button.cint, e.x, e.y, true)
+      of MouseButtonUp:
+        let e = evMouseButton(event)
+        mouse(e.button.cint, e.x, e.y, false)
+      of MouseWheel:
+        let e = evMouseWheel(event)
+        wheel(e.x, e.y)
+      else:
+        discard
+    display()
+
   current_scene.exit()
+  sdl2.glDeleteContext(glcontext)
+  sdl2.destroy(windowptr)
+  sdl2.quit()
