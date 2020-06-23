@@ -132,8 +132,18 @@ function main() {
 <li>
   <a class="reference reference-toplevel" href="#14" id="64">Methods</a>
   <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#draw.e%2CProgressBarRef%2Cfloat%2Cfloat"
+      <li><a class="reference" href="#changeProgressBar.e%2CProgressBarRef%2CProgressBarType"
+    title="changeProgressBar(self: ProgressBarRef; ptype: ProgressBarType)"><wbr />change<wbr />Progress<wbr />Bar<span class="attachedType">ProgressBarRef</span></a></li>
+  <li><a class="reference" href="#draw.e%2CProgressBarRef%2Cfloat%2Cfloat"
     title="draw(self: ProgressBarRef; w, h: float)"><wbr />draw<span class="attachedType">ProgressBarRef</span></a></li>
+  <li><a class="reference" href="#enableIndeterminate.e%2CProgressBarRef%2Cbool"
+    title="enableIndeterminate(self: ProgressBarRef; val: bool = true)"><wbr />enable<wbr />Indeterminate<span class="attachedType">ProgressBarRef</span></a></li>
+  <li><a class="reference" href="#setMaxValue.e%2CProgressBarRef%2Cint"
+    title="setMaxValue(self: ProgressBarRef; val: int)"><wbr />set<wbr />Max<wbr />Value<span class="attachedType">ProgressBarRef</span></a></li>
+  <li><a class="reference" href="#setProgressColor.e%2CProgressBarRef%2CColorRef"
+    title="setProgressColor(self: ProgressBarRef; color: ColorRef)"><wbr />set<wbr />Progress<wbr />Color<span class="attachedType">ProgressBarRef</span></a></li>
+  <li><a class="reference" href="#setValue.e%2CProgressBarRef%2Cint"
+    title="setValue(self: ProgressBarRef; val: int)"><wbr />set<wbr />Value<span class="attachedType">ProgressBarRef</span></a></li>
 
   </ul>
 </li>
@@ -198,12 +208,52 @@ Creates a new ProgressBar object.
 <div class="section" id="14">
 <h1><a class="toc-backref" href="#14">Methods</a></h1>
 <dl class="item">
+<a id="changeProgressBar.e,ProgressBarRef,ProgressBarType"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#changeProgressBar.e%2CProgressBarRef%2CProgressBarType"><span class="Identifier">changeProgressBar</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="progressbar.html#ProgressBarRef"><span class="Identifier">ProgressBarRef</span></a><span class="Other">;</span> <span class="Identifier">ptype</span><span class="Other">:</span> <a href="progressbar.html#ProgressBarType"><span class="Identifier">ProgressBarType</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+<p>Changes ProgressBar type.</p>
+<p><tt class="docutils literal"><span class="pre">ptype</span></tt> should be <tt class="docutils literal"><span class="pre">PROGRESS_BAR_HORIZONTAL</span></tt>.</p>
+
+
+</dd>
 <a id="draw.e,ProgressBarRef,float,float"></a>
 <dt><pre><span class="Keyword">method</span> <a href="#draw.e%2CProgressBarRef%2Cfloat%2Cfloat"><span class="Identifier">draw</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="progressbar.html#ProgressBarRef"><span class="Identifier">ProgressBarRef</span></a><span class="Other">;</span> <span class="Identifier">w</span><span class="Other">,</span> <span class="Identifier">h</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">GLerror</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 It uses for redraw ProgressBar.
+
+</dd>
+<a id="enableIndeterminate.e,ProgressBarRef,bool"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#enableIndeterminate.e%2CProgressBarRef%2Cbool"><span class="Identifier">enableIndeterminate</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="progressbar.html#ProgressBarRef"><span class="Identifier">ProgressBarRef</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">true</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Enables or disables ProgressBar indeterminate.
+
+</dd>
+<a id="setMaxValue.e,ProgressBarRef,int"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#setMaxValue.e%2CProgressBarRef%2Cint"><span class="Identifier">setMaxValue</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="progressbar.html#ProgressBarRef"><span class="Identifier">ProgressBarRef</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Changes progress bar max value, if <tt class="docutils literal"><span class="pre">val</span></tt> &gt; <tt class="docutils literal"><span class="pre">value</span></tt>
+
+</dd>
+<a id="setProgressColor.e,ProgressBarRef,ColorRef"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#setProgressColor.e%2CProgressBarRef%2CColorRef"><span class="Identifier">setProgressColor</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="progressbar.html#ProgressBarRef"><span class="Identifier">ProgressBarRef</span></a><span class="Other">;</span> <span class="Identifier">color</span><span class="Other">:</span> <a href="../core/color.html#ColorRef"><span class="Identifier">ColorRef</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Changes progress color.
+
+</dd>
+<a id="setValue.e,ProgressBarRef,int"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#setValue.e%2CProgressBarRef%2Cint"><span class="Identifier">setValue</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="progressbar.html#ProgressBarRef"><span class="Identifier">ProgressBarRef</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Changes progress bar value, if 0 &lt; <tt class="docutils literal"><span class="pre">val</span></tt> &lt; <tt class="docutils literal"><span class="pre">max_value</span></tt>.
 
 </dd>
 
@@ -216,7 +266,7 @@ It uses for redraw ProgressBar.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-23 10:13:54 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-23 10:30:58 UTC</small>
       </div>
     </div>
   </div>
