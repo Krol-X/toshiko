@@ -36,6 +36,12 @@ proc ProgressBar*(name: string = "ProgressBar"): ProgressBarRef =
   result.kind = PROGRESS_BAR_NODE
 
 
+method changeProgressBar*(self: ProgressBarRef, ptype: ProgressBarType) {.base.} =
+  ## Changes ProgressBar type.
+  ##
+  ## `ptype` should be `PROGRESS_BAR_HORIZONTAL`.
+  self.progress_type = ptype
+
 method draw*(self: ProgressBarRef, w, h: float) =
   ## It uses for redraw ProgressBar.
   procCall self.ControlRef.draw(w, h)
@@ -61,3 +67,21 @@ method draw*(self: ProgressBarRef, w, h: float) =
         normalize(x + self.indeterminate_val + progress_width, x, x + self.rect_size.x), y - self.rect_size.y)
     else:
       glRectf(x, y, x + progress_width, y - self.rect_size.y)
+
+method enableIndeterminate*(self: ProgressBarRef, val: bool = true) {.base.} =
+  ## Enables or disables ProgressBar indeterminate.
+  self.indeterminate = val
+
+method setMaxValue*(self: ProgressBarRef, val: int) {.base.} =
+  ## Changes progress bar max value, if `val` > `value`
+  if val > self.value:
+    self.max_value = val
+
+method setProgressColor*(self: ProgressBarRef, color: ColorRef) {.base.} =
+  ## Changes progress color.
+  self.progress_color = color
+
+method setValue*(self: ProgressBarRef, val: int) {.base.} =
+  ## Changes progress bar value, if 0 < `val` < `max_value`.
+  if val > 0 and val < self.max_value:
+    self.value = val
