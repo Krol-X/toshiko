@@ -1,0 +1,5 @@
+ProgressBarType	toshiko/control/progressbar.html#ProgressBarType	progressbar: ProgressBarType	
+ProgressBarObj	toshiko/control/progressbar.html#ProgressBarObj	progressbar: ProgressBarObj	
+ProgressBarRef	toshiko/control/progressbar.html#ProgressBarRef	progressbar: ProgressBarRef	
+ProgressBar	toshiko/control/progressbar.html#ProgressBar,string	progressbar: ProgressBar(name: string = &quot;ProgressBar&quot;): ProgressBarRef	
+draw	toshiko/control/progressbar.html#draw.e,ProgressBarRef,float,float	progressbar: draw(self: ProgressBarRef; w, h: float)	
