@@ -10,7 +10,7 @@ var
 
 
 scene.addChild(ctrl)
-env.background_color = Color("#eee")
+setBackgroundColor(Color("#eee"))
 ctrl.resize(256, 96)
 ctrl.move(64, 64)
 ctrl.setStyle(style(

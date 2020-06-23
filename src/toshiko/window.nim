@@ -24,7 +24,6 @@ discard glSetAttribute(SDL_GL_BLUE_SIZE, 5)
 
 
 var
-  env* = EnvironmentRef(delay: 17, background_color: Color("#333"))
   width, height: cint
   main_scenesdl*: SceneRef = nil
   windowptr: WindowPtr
@@ -245,7 +244,8 @@ proc showWindow* =
         case e.event
         of WindowEvent_Resized, WindowEvent_SizeChanged, WindowEvent_Minimized, WindowEvent_Maximized, WindowEvent_Restored:
           windowptr.getSize(width, height)
-          reshape(width, height)
+          if env.screen_mode == SCREEN_MODE_NONE:
+            reshape(width, height)
         else:
           discard
       of KeyDown:

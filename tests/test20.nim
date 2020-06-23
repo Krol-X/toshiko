@@ -3,7 +3,7 @@ import toshiko
 
 
 Window("Test 20")
-env.background_color = Color("#fed")
+setBackgroundColor(Color("#fed"))
 
 
 build:

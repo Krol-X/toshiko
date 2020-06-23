@@ -3,7 +3,7 @@ import toshiko
 
 
 Window("Test 19")
-env.background_color = Color("#cba")
+setBackgroundColor(Color("#cba"))
 
 # Note: This function may not be called because the standard font is specified in the global_settings.toshiko file
 # setStandardFont("assets/unifont.ttf", 16)  # global setting
