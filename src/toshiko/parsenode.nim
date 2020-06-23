@@ -137,8 +137,9 @@ proc addXmlNode(level: var seq[NodeRef], xml: XmlNode) =
   level.add(level[^1].children[^1])
 
   # properties
-  for key, value in xml.attrs.pairs:
-    loadval(loadvalue, parseFloat, `$`, value.split(Whitespace))
+  if not xml.attrs.isNil():
+    for key, value in xml.attrs.pairs:
+      loadval(loadvalue, parseFloat, `$`, value.split(Whitespace))
 
   # children
   for child in xml.items():
