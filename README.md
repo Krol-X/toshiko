@@ -78,5 +78,8 @@ Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html) for exp
 *Q*: Where can I read the docs?   
 *A*: You can read docs [here](https://ethosa.github.io/toshiko/toshiko.html)
 
+*Q*: Can I create my own Node?  
+*A*: Yeap, you can :eyes:, follow this [tutorial](https://github.com/Ethosa/toshiko/wiki/Own-Nodes) ^^
+
 
 <div align="center">Copyright Ethosa 2020</div>

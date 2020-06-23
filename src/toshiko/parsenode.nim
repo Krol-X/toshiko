@@ -6,10 +6,14 @@ import
   xmlparser,
   xmltree,
   strtabs,
+  tables,
   strutils,
   nodes,
   control,
   core
+
+
+var parsable_nodes = initTable[system.string, proc(name: string = "Node"): NodeRef]()
 
 
 template loadjsonnode(fn: untyped): untyped =
@@ -58,7 +62,8 @@ template loadnode(fn, key: untyped): untyped =
   of "ProgressBar":
     `fn`(ProgressBar)
   else:
-    discard
+    if parsable_nodes.hasKey(`key`):
+      `fn`(parsable_nodes[`key`])
 
 template loadval(fn, get_float_func, get_string_func, float_array: untyped) =
   ## load value from XML or JSON.
@@ -126,18 +131,19 @@ proc addJsonNode(level: var seq[NodeRef], jobj: JsonNode) =
     discard level.pop()
 
 
-proc addXmlNode(level: var seq[NodeRef], jobj: XmlNode) =
-  for xml in jobj.items():
-    # Default nodes
-    loadnode(loadxmlnode, xml.tag)
+proc addXmlNode(level: var seq[NodeRef], xml: XmlNode) =
+  # nodes
+  loadnode(loadxmlnode, xml.tag)
+  level.add(level[^1].children[^1])
 
-    level.add(level[^1].children[^1])
+  # properties
+  for key, value in xml.attrs.pairs:
+    loadval(loadvalue, parseFloat, `$`, value.split(Whitespace))
 
-    for key, value in xml.attrs.pairs:  # properties
-      loadval(loadvalue, parseFloat, `$`, value.split(Whitespace))
+  # children
+  for child in xml.items():
+    addXmlNode(level, child)
 
-    for child in jobj.items():  # children
-      addXmlNode(level, child)
   if level.len() > 0:
     discard level.pop()
 
@@ -164,6 +170,20 @@ proc xml2node*(src: string): SceneRef =
     level: seq[NodeRef] = @[]
   level.add(result)
   addXmlNode(level, jobj)
+
+proc makeParsable*(nodefunc: proc(name: string = "Node"): NodeRef, str: system.string) =
+  ## Makes node parselable.
+  ##
+  ## Arguments:
+  ## - `nodefunc` is a Node constructor.
+  ## - `str` is a Node string.
+  ##
+  ## Example:
+  ##
+  ## .. code-block:: nim
+  ##
+  ##    makeParsable(addr MyOwnNode, "MyOwnNode")
+  parsable_nodes[str] = nodefunc
 
 proc loadScene*(file: string): SceneRef =
   ## Loads a new Scene object from JSON or XML file.

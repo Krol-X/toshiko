@@ -21,3 +21,4 @@
 19. [Use Button objects.](https://github.com/Ethosa/toshiko/blob/master/tests/test19.nim)
 20. [Use GridBox object.](https://github.com/Ethosa/toshiko/blob/master/tests/test20.nim)
 21. [Use ProgressBar object.](https://github.com/Ethosa/toshiko/blob/master/tests/test21.nim)
+22. [Make parsable your own nodes.](https://github.com/Ethosa/toshiko/blob/master/tests/test22.nim)
