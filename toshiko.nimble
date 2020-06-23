@@ -2,7 +2,7 @@
 name = "toshiko"
 description = "The game engine writing on Nim."
 author = "Ethosa"
-version = "0.0.1"
+version = "0.0.2"
 srcDir = "src"
 license = "MIT"
 

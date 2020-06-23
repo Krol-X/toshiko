@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Toshiko</h1>
-  The game engine writing on Nim.
+  The game engine writing in Nim.
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![Nim language-plastic](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)
@@ -10,8 +10,8 @@
 [![Github pages](https://github.com/Ethosa/toshiko/workflows/gh-pages/badge.svg)](https://ethosa.github.io/toshiko/toshiko.html)
 [![Examples](https://github.com/Ethosa/toshiko/workflows/examples/badge.svg)](https://github.com/Ethosa/toshiko/blob/master/examples)
 
-Latest version - 0.0.1  
-Stable version - ?.?.?
+Latest version - 0.0.2  
+Stable version - 0.0.1
 
 </div>
 
