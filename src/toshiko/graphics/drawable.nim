@@ -113,7 +113,7 @@ template draw_texture_template(drawtype, color, function, secondfunc: untyped): 
 proc draw*(self: DrawableRef, x, y, width, height: float) =
   var vertex: seq[Vector2Ref] = @[]
   recalc()
-  if self.texture.texture > 0:
+  if self.texture.texture > 0'u32:
     draw_texture_template(GL_POLYGON, background_color, vd(), vd())
   else:
     draw_template(GL_POLYGON, background_color, vd(), vd())

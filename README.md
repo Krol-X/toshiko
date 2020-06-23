@@ -6,7 +6,7 @@
 [![Nim language-plastic](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)](https://github.com/Ethosa/yukiko/blob/master/nim-lang.svg)
 [![License](https://img.shields.io/github/license/Ethosa/toshiko)](https://github.com/Ethosa/toshiko/blob/master/LICENSE)
 [![time tracker](https://wakatime.com/badge/github/Ethosa/toshiko.svg)](https://wakatime.com/badge/github/Ethosa/toshiko)  
-[![Linux test](https://github.com/Ethosa/toshiko/workflows/tests_linux/badge.svg?branch=master)](https://github.com/Ethosa/toshiko/blob/master/tests)
+[![Ubuntu test](https://github.com/Ethosa/toshiko/workflows/tests_linux/badge.svg?branch=master)](https://github.com/Ethosa/toshiko/blob/master/tests)
 [![Github pages](https://github.com/Ethosa/toshiko/workflows/gh-pages/badge.svg)](https://ethosa.github.io/toshiko/toshiko.html)
 [![Examples](https://github.com/Ethosa/toshiko/workflows/examples/badge.svg)](https://github.com/Ethosa/toshiko/blob/master/examples)
 
@@ -18,9 +18,10 @@ Stable version - 0.0.1
 
 ## Install
 1. Install this repo
-   -  `nimble install https://github.com/Ethosa/toshiko.git`
+   -  last stable version `nimble install https://github.com/Ethosa/toshiko.git`
+   -  specific version `nimble install https://github.com/Ethosa/toshiko.git@1.2.3`
 2. Install dependencies
-   -  Linux (tested on Ubuntu and Mint):
+   -  Linux (tested on Ubuntu, Debian and Mint):
       - `sudo apt install --fix-missing -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev`
    -  Windows / MacOS:
       -  [SDL2](https://www.libsdl.org/download-2.0.php)
