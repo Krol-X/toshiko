@@ -1,1 +1,6 @@
+ScreenMode	toshiko/environment.html#ScreenMode	environment: ScreenMode	
 EnvironmentRef	toshiko/environment.html#EnvironmentRef	environment: EnvironmentRef	
+env	toshiko/environment.html#env	environment: env	
+setBackgroundColor	toshiko/environment.html#setBackgroundColor,ColorRef	environment: setBackgroundColor(color: ColorRef)	
+setFps	toshiko/environment.html#setFps,int	environment: setFps(fps: int)	
+setScreenMode	toshiko/environment.html#setScreenMode,ScreenMode	environment: setScreenMode(mode: ScreenMode)	
