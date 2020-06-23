@@ -55,6 +55,8 @@ template loadnode(fn, key: untyped): untyped =
     `fn`(Button)
   of "GridBox":
     `fn`(GridBox)
+  of "ProgressBar":
+    `fn`(ProgressBar)
   else:
     discard
 

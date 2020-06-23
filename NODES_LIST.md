@@ -22,7 +22,7 @@
 |[Input][input]           |                 |[Label][label]      |
 |[Math][math]             |                 |[TextureRect][trect]|
 |[Nim object][nimobj]     |                 |[VBox][vbox]        |
-|[Rect2][rect2]           |                 |                    |
+|[Rect2][rect2]           |                 |[ProgressBar][pbar] |
 |[StyleSheet][ssheet]     |                 |                    |
 |[Vector2][vec2]          |                 |                    |
 
@@ -38,6 +38,7 @@
    -  [ColorRect][clrrect]
    -  [Label][label]
       -  [Button][button]
+   -  [ProgressBar][pbar]
    -  [TextureRect][trect]
 
 
@@ -71,5 +72,6 @@
 [gridbox]:https://ethosa.github.io/toshiko/toshiko/control/gridbox.html
 [hbox]:https://ethosa.github.io/toshiko/toshiko/control/hbox.html
 [label]:https://ethosa.github.io/toshiko/toshiko/control/label.html
+[pbar]:https://ethosa.github.io/toshiko/toshiko/control/progressbar.html
 [trect]:https://ethosa.github.io/toshiko/toshiko/control/trect.html
 [vbox]:https://ethosa.github.io/toshiko/toshiko/control/vbox.html

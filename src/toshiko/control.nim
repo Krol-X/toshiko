@@ -7,8 +7,9 @@ import
   control/hbox,
   control/vbox,
   control/button,
-  control/gridbox
+  control/gridbox,
+  control/progressbar
 
 export
   control, color_rect, texture_rect, label,
-  box, hbox, vbox, button, gridbox
+  box, hbox, vbox, button, gridbox, progressbar
