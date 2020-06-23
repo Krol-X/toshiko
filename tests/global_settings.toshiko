@@ -3,3 +3,9 @@
 [GUI]
 standard-font="assets/unifont.ttf"
 standard-font-size=16
+
+[Window]
+icon="assets/2.jpg"
+# title="MyTitle"
+# width="720"
+# height="480"
