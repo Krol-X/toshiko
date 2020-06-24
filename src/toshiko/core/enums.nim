@@ -6,6 +6,7 @@ type
     NODE_NODE,
     SCENE_NODE,
     CANVAS_NODE,
+    AUDIO_STREAM_PLAYER_NODE,
     # Control nodes
     CONTROL_NODE,
     COLOR_RECT_NODE,

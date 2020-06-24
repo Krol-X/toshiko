@@ -11,20 +11,21 @@
 - [Drawable][drbl]
 
 ### Nodes and types
-|Core                     |Default nodes    |Control nodes       |
-|:--:                     |:--:             |:--:                |
-|[Anchor][anchor]         |[Node][node]     |[Box][box]          |
-|[Color][color]           |[Canvas][canvas] |[Button][button]    |
-|[Enums][enums]           |[Scene][scene]   |[ColorRect][clrrect]|
-|[Font][font]             |                 |[Control][control]  |
-|[Global settings][gsetts]|                 |[GridBox][gridbox]  |
-|[Image][image]           |                 |[HBox][hbox]        |
-|[Input][input]           |                 |[Label][label]      |
-|[Math][math]             |                 |[TextureRect][trect]|
-|[Nim object][nimobj]     |                 |[VBox][vbox]        |
-|[Rect2][rect2]           |                 |[ProgressBar][pbar] |
-|[StyleSheet][ssheet]     |                 |                    |
-|[Vector2][vec2]          |                 |                    |
+|Core                     |Default nodes                |Control nodes       |
+|:--:                     |:--:                         |:--:                |
+|[Anchor][anchor]         |[Node][node]                 |[Box][box]          |
+|[Color][color]           |[Canvas][canvas]             |[Button][button]    |
+|[Enums][enums]           |[Scene][scene]               |[ColorRect][clrrect]|
+|[Font][font]             |[AudioStreamPlayer][asplayer]|[Control][control]  |
+|[Global settings][gsetts]|                             |[GridBox][gridbox]  |
+|[Image][image]           |                             |[HBox][hbox]        |
+|[Input][input]           |                             |[Label][label]      |
+|[Math][math]             |                             |[TextureRect][trect]|
+|[Nim object][nimobj]     |                             |[VBox][vbox]        |
+|[Rect2][rect2]           |                             |[ProgressBar][pbar] |
+|[StyleSheet][ssheet]     |                             |                    |
+|[Vector2][vec2]          |                             |                    |
+|[AudioStream][astream]   |                             |                    |
 
 ### In inherit
 [Node][node]
@@ -47,6 +48,7 @@
 [window]:https://ethosa.github.io/toshiko/toshiko/window.html
 
 [anchor]:https://ethosa.github.io/toshiko/toshiko/core/anchor.html
+[astream]:https://ethosa.github.io/toshiko/toshiko/core/audio_stream.html
 [color]:https://ethosa.github.io/toshiko/toshiko/core/color.html
 [enums]:https://ethosa.github.io/toshiko/toshiko/core/enums.html
 [font]:https://ethosa.github.io/toshiko/toshiko/core/font.html
@@ -61,6 +63,7 @@
 
 [drbl]:https://ethosa.github.io/toshiko/toshiko/graphics/drawable.html
 
+[asplayer]:https://ethosa.github.io/toshiko/toshiko/nodes/audio_stream_player.html
 [node]:https://ethosa.github.io/toshiko/toshiko/nodes/node.html
 [canvas]:https://ethosa.github.io/toshiko/toshiko/nodes/canvas.html
 [scene]:https://ethosa.github.io/toshiko/toshiko/nodes/scene.html
