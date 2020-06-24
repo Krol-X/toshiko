@@ -65,6 +65,7 @@ jobs:
 
           lists = [
             ("https://www.libsdl.org/release/%s.zip", "SDL2-2.0.12-win32-x64"),
+            ("https://www.libsdl.org/projects/SDL_mixer/release/%s.zip", "SDL2_mixer-2.0.4-win32-x64"),
             ("https://www.libsdl.org/projects/SDL_image/release/%s.zip", "SDL2_image-2.0.5-win32-x64"),
             ("https://www.libsdl.org/projects/SDL_ttf/release/%s.zip", "SDL2_ttf-2.0.15-win32-x64"),
           ]
