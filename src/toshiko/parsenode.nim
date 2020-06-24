@@ -106,7 +106,8 @@ template loadval(fn, get_float_func, get_string_func, float_array: untyped) =
     let tmp = `float_array`
     `fn`(level[^1].ControlRef.setSizeAnchor(Vector2(`get_float_func`(tmp[0]), `get_float_func`(tmp[1]))))
   of "stream":
-    `fn`(level[^1].AudioStreamPlayerRef.stream = loadAudio(`get_string_func`(value)))
+    `fn`:
+      level[^1].AudioStreamPlayerRef.stream = loadAudio(`get_string_func`(value))
   else:
     discard
 
