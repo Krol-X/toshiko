@@ -133,6 +133,10 @@ function main() {
     title="play(self: AudioStreamPlayerRef)"><wbr />play<span class="attachedType">AudioStreamPlayerRef</span></a></li>
   <li><a class="reference" href="#resume.e%2CAudioStreamPlayerRef"
     title="resume(self: AudioStreamPlayerRef)"><wbr />resume<span class="attachedType">AudioStreamPlayerRef</span></a></li>
+  <li><a class="reference" href="#setStream.e%2CAudioStreamPlayerRef%2CAudioStreamRef"
+    title="setStream(self: AudioStreamPlayerRef; newstream: AudioStreamRef)"><wbr />set<wbr />Stream<span class="attachedType">AudioStreamPlayerRef</span></a></li>
+  <li><a class="reference" href="#setStream.e%2CAudioStreamPlayerRef%2Cstring"
+    title="setStream(self: AudioStreamPlayerRef; newstream: string)"><wbr />set<wbr />Stream<span class="attachedType">AudioStreamPlayerRef</span></a></li>
   <li><a class="reference" href="#setVolume.e%2CAudioStreamPlayerRef%2Ccint"
     title="setVolume(self: AudioStreamPlayerRef; value: cint)"><wbr />set<wbr />Volume<span class="attachedType">AudioStreamPlayerRef</span></a></li>
 
@@ -219,6 +223,22 @@ Play stream.
 Resume stream.
 
 </dd>
+<a id="setStream.e,AudioStreamPlayerRef,AudioStreamRef"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#setStream.e%2CAudioStreamPlayerRef%2CAudioStreamRef"><span class="Identifier">setStream</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="audio_stream_player.html#AudioStreamPlayerRef"><span class="Identifier">AudioStreamPlayerRef</span></a><span class="Other">;</span> <span class="Identifier">newstream</span><span class="Other">:</span> <a href="../core/audio_stream.html#AudioStreamRef"><span class="Identifier">AudioStreamRef</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Changes stream.
+
+</dd>
+<a id="setStream.e,AudioStreamPlayerRef,string"></a>
+<dt><pre><span class="Keyword">method</span> <a href="#setStream.e%2CAudioStreamPlayerRef%2Cstring"><span class="Identifier">setStream</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="audio_stream_player.html#AudioStreamPlayerRef"><span class="Identifier">AudioStreamPlayerRef</span></a><span class="Other">;</span> <span class="Identifier">newstream</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Loads audio from <tt class="docutils literal"><span class="pre">newstream</span></tt> file path.
+
+</dd>
 <a id="setVolume.e,AudioStreamPlayerRef,cint"></a>
 <dt><pre><span class="Keyword">method</span> <a href="#setVolume.e%2CAudioStreamPlayerRef%2Ccint"><span class="Identifier">setVolume</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="audio_stream_player.html#AudioStreamPlayerRef"><span class="Identifier">AudioStreamPlayerRef</span></a><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -240,7 +260,7 @@ Resume stream.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-24 04:54:36 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-24 04:59:07 UTC</small>
       </div>
     </div>
   </div>
