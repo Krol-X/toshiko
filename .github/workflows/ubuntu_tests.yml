@@ -108,7 +108,7 @@ jobs:
           nim c test9.nim; timeout 2 ./test9 || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
           nim c test10.nim; timeout 2 ./test10 || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
           #nim c test11.nim; timeout 2 ./test11 || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
-          nim c test12.nim; timeout 2 ./test12 || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
+          #nim c test12.nim; timeout 2 ./test12 || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
           nim c test13.nim; timeout 2 ./test13 || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
           nim c test14.nim; timeout 2 ./test14 || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
           nim c test15.nim; timeout 2 ./test15 || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
