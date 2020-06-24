@@ -22,7 +22,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          #- windows-latest
+          - windows-latest
           #- macOS-latest
         nim_version:
           - '1.2.0'
@@ -38,6 +38,7 @@ jobs:
         with:
           path: ~/.nimble
           key: ${{ runner.os }}-nimble-${{ hashFiles('*.nimble') }}
+        if: runner.os == 'Linux'
       - uses: jiro4989/setup-nim-action@v1
         with:
           nim-version: ${{ matrix.nim_version }}
@@ -47,14 +48,35 @@ jobs:
           # see. https://github.com/actions/virtual-environments/issues/675
           sudo sed -i 's/azure\.//' /etc/apt/sources.list
           sudo apt update -yqq
+        if: runner.os == 'Linux'
 
       - name: Install xvfb
         run: sudo apt install -y xvfb
+        if: runner.os == 'Linux'
 
-      - name: Install sdl2
+      - name: Install sdl2 on Ubuntu
         run: sudo apt install --fix-missing -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+        if: runner.os == 'Linux'
 
-      - name: Build tests
+      - name: Install sdl2 on Windows
+        run: |
+          from urllib import request
+          import os
+
+          lists = [
+            ("https://www.libsdl.org/release/%s.zip", "SDL2-2.0.12-win32-x64"),
+            ("https://www.libsdl.org/projects/SDL_image/release/%s.zip", "SDL2_image-2.0.5-win32-x64"),
+            ("https://www.libsdl.org/projects/SDL_ttf/release/%s.zip", "SDL2_ttf-2.0.15-win32-x64"),
+          ]
+          for elem in lists:
+            url = elem[0] % elem[1]
+            file = "%s.zip" % elem[1]
+            request.urlretrieve(url, file)
+            os.system("7z x -y %s" % file)
+        shell: python
+        if: runner.os == 'Windows'
+
+      - name: Build tests on Ubuntu
         run: |
           cd tests
           for file in $(ls -v test*.nim); do
@@ -63,3 +85,16 @@ jobs:
             timeout 2 xvfb-run --auto-servernum --server-num=1 ./${file%%.nim} || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
           done
         shell: bash
+        if: runner.os == 'Linux'
+
+      - name: Build tests on Windows
+        run: |
+          cp *.dll tests/
+          cd tests
+          for file in $(ls -v test*.nim); do
+            echo "test: $file"
+            nim c $file
+            timeout 2 ./${file%%.nim} || [ $? -eq ${{ env.TIMEOUT_EXIT_STATUS }} ]
+          done
+        shell: bash
+        if: runner.os == 'Windows'
