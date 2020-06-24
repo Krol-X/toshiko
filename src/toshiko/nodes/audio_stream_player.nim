@@ -46,6 +46,14 @@ method resume*(self: AudioStreamPlayerRef) {.base.} =
   if paused(self.stream.channel) > -1:
     resume(self.stream.channel)
 
+method setStream*(self: AudioStreamPlayerRef, newstream: AudioStreamRef) {.base.} =
+  ## Changes stream.
+  self.stream = newstream
+
+method setStream*(self: AudioStreamPlayerRef, newstream: string) {.base.} =
+  ## Loads audio from `newstream` file path.
+  self.stream = loadAudio(newstream)
+
 method setVolume*(self: AudioStreamPlayerRef, value: cint) {.base.} =
   ## Changes stream volume.
   ##
