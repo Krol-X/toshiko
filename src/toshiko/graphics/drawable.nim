@@ -15,6 +15,7 @@ import
 
 type
   DrawableObj* = object
+    shadow: bool
     border_width: float
     border_detail_lefttop: int
     border_detail_righttop: int
@@ -24,6 +25,7 @@ type
     border_radius_righttop: float
     border_radius_leftbottom: float
     border_radius_rightbottom: float
+    shadow_offset: Vector2Ref
     border_color: ColorRef
     background_color: ColorRef
     texture*: GlTextureObj
@@ -45,6 +47,7 @@ proc Drawable*: DrawableRef =
     background_color: Color(0, 0, 0, 0)
   )
 
+let shadow_color: ColorRef = Color(0f, 0f, 0f, 0.5f)
 
 
 template vd = discard
@@ -84,7 +87,7 @@ template recalc =
 
 
 template draw_template(drawtype, color, function, secondfunc: untyped): untyped =
-  glColor4f(self.`color`.r, self.`color`.g, self.`color`.b, self.`color`.a)
+  glColor4f(`color`.r, `color`.g, `color`.b, `color`.a)
   `function`
   glBegin(`drawtype`)
 
@@ -97,7 +100,7 @@ template draw_template(drawtype, color, function, secondfunc: untyped): untyped 
 template draw_texture_template(drawtype, color, function, secondfunc: untyped): untyped =
   glEnable(GL_TEXTURE_2D)
   glBindTexture(GL_TEXTURE_2D, self.texture.texture)
-  glColor4f(self.`color`.r, self.`color`.g, self.`color`.b, self.`color`.a)
+  glColor4f(`color`.r, `color`.g, `color`.b, `color`.a)
   `function`
   glBegin(`drawtype`)
 
@@ -110,15 +113,34 @@ template draw_texture_template(drawtype, color, function, secondfunc: untyped): 
   glDisable(GL_TEXTURE_2D)
 
 
-proc draw*(self: DrawableRef, x, y, width, height: float) =
-  var vertex: seq[Vector2Ref] = @[]
+proc enableShadow*(self: DrawableRef, val: bool) =
+  ## Enables shadow, when `val` is true.
+  self.shadow = val
+
+proc draw*(self: DrawableRef, x1, y1, width, height: float) =
+  var
+    vertex: seq[Vector2Ref] = @[]
+    x = x1 + self.shadow_offset.x
+    y = y1 - self.shadow_offset.y
+
+  if self.shadow:
+    recalc()
+    if self.texture.texture > 0'u32:
+      draw_texture_template(GL_POLYGON, shadow_color, vd(), vd())
+    else:
+      draw_template(GL_POLYGON, shadow_color, vd(), vd())
+
+  vertex = @[]
+  x = x1
+  y = y1
   recalc()
+
   if self.texture.texture > 0'u32:
-    draw_texture_template(GL_POLYGON, background_color, vd(), vd())
+    draw_texture_template(GL_POLYGON, self.background_color, vd(), vd())
   else:
-    draw_template(GL_POLYGON, background_color, vd(), vd())
+    draw_template(GL_POLYGON, self.background_color, vd(), vd())
   if self.border_width > 0f:
-    draw_template(GL_LINE_LOOP, border_color, glLineWidth(self.border_width), glLineWidth(1))
+    draw_template(GL_LINE_LOOP, self.border_color, glLineWidth(self.border_width), glLineWidth(1))
 
 
 proc getColor*(self: DrawableRef): ColorRef =
@@ -196,6 +218,10 @@ proc setTexture*(self: DrawableRef, texture: GlTextureObj) =
   self.texture = texture
   self.background_color = Color(1f, 1f, 1f, 1f)
 
+proc setShadowOffset*(self: DrawableRef, offset: Vector2Ref) =
+  ## Changes shadow offset.
+  self.shadow_offset = offset
+
 proc setStyle*(self: DrawableRef, s: StyleSheetRef) =
   ## Sets a new stylesheet.
   for i in s.dict:
@@ -253,5 +279,15 @@ proc setStyle*(self: DrawableRef, s: StyleSheetRef) =
       let tmp = i.value.rsplit(Whitespace, 1)
       self.setCornerRadius(parseFloat(tmp[0]))
       self.setBorderColor(Color(tmp[1]))
+    # shadow: true
+    of "shadow":
+      self.enableShadow(parseBool(i.value))
+    # shadow-offset: 3 3
+    of "shadow-offset":
+      let tmp = i.value.split(Whitespace, 1)
+      if tmp.len() == 1:
+        self.setShadowOffset(Vector2(parseFloat(tmp[0])))
+      elif tmp.len() == 2:
+        self.setShadowOffset(Vector2(parseFloat(tmp[0]), parseFloat(tmp[1])))
     else:
       discard

@@ -18,7 +18,9 @@ ctrl.setStyle(style(
     background-color: turquoise,
     border-radius: 8,
     border-width: 1,
-    border-color: black
+    border-color: black,
+    shadow: yes,
+    shadow-offset: 3
   }
 ))
 
