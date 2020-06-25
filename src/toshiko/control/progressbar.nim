@@ -10,7 +10,8 @@ import
 
 type
   ProgressBarType* {.pure.} = enum
-    PROGRESS_BAR_HORIZONTAL
+    PROGRESS_BAR_HORIZONTAL,
+    PROGRESS_BAR_VERTICAL
   ProgressBarObj* = object of ControlObj
     indeterminate*: bool
     value*, max_value*: int
@@ -67,6 +68,18 @@ method draw*(self: ProgressBarRef, w, h: float) =
         normalize(x + self.indeterminate_val + progress_width, x, x + self.rect_size.x), y - self.rect_size.y)
     else:
       glRectf(x, y, x + progress_width, y - self.rect_size.y)
+  of PROGRESS_BAR_VERTICAL:
+    let progress_width = progress_percent * self.rect_size.y
+    if self.indeterminate:
+      if self.indeterminate_val - progress_width < self.rect_size.y:
+        self.indeterminate_val += self.rect_size.y * 0.01
+      else:
+        self.indeterminate_val = -progress_width
+      glRectf(
+        x, normalize(y - self.indeterminate_val, y - self.rect_size.y, y),
+        x + self.rect_size.x, normalize(y - self.indeterminate_val - progress_width, y - self.rect_size.y, y))
+    else:
+      glRectf(x, y, x + self.rect_size.x, y - progress_width)
 
 method enableIndeterminate*(self: ProgressBarRef, val: bool = true) {.base.} =
   ## Enables or disables ProgressBar indeterminate.
