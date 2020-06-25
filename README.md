@@ -64,7 +64,7 @@ See [`Nodes list`](https://github.com/Ethosa/toshiko/blob/master/NODES_LIST.md) 
 
 ## Export
 Use the [`Nim compiler user guide`](https://nim-lang.org/docs/nimc.html) for export to the other OS.  
-[Static linking SDL2](https://github.com/nim-lang/sdl2#static-linking-sdl2)
+[Static linking SDL2](https://github.com/nim-lang/sdl2#static-linking-sdl2) (or compile with `-d:static_sdl2 --dynlibOverride:libSDL2`)
 
 -   CrossPlatform export for Windows (tested on Windows 7 x64 and Windows 10 x64)
     -   `nim c -d:mingw -d:release --opt:speed --noNimblePath file.nim`
