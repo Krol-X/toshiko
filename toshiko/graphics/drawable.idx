@@ -1,7 +1,8 @@
 DrawableObj	toshiko/graphics/drawable.html#DrawableObj	drawable: DrawableObj	
 DrawableRef	toshiko/graphics/drawable.html#DrawableRef	drawable: DrawableRef	
 Drawable	toshiko/graphics/drawable.html#Drawable	drawable: Drawable(): DrawableRef	
-draw	toshiko/graphics/drawable.html#draw,DrawableRef,float,float,float,float	drawable: draw(self: DrawableRef; x, y, width, height: float)	
+enableShadow	toshiko/graphics/drawable.html#enableShadow,DrawableRef,bool	drawable: enableShadow(self: DrawableRef; val: bool)	
+draw	toshiko/graphics/drawable.html#draw,DrawableRef,float,float,float,float	drawable: draw(self: DrawableRef; x1, y1, width, height: float)	
 getColor	toshiko/graphics/drawable.html#getColor,DrawableRef	drawable: getColor(self: DrawableRef): ColorRef	
 loadTexture	toshiko/graphics/drawable.html#loadTexture,DrawableRef,string	drawable: loadTexture(self: DrawableRef; path: string)	
 setBorderColor	toshiko/graphics/drawable.html#setBorderColor,DrawableRef,ColorRef	drawable: setBorderColor(self: DrawableRef; color: ColorRef)	
@@ -12,4 +13,5 @@ setCornerRadius	toshiko/graphics/drawable.html#setCornerRadius,DrawableRef,float
 setCornerDetail	toshiko/graphics/drawable.html#setCornerDetail,DrawableRef,int	drawable: setCornerDetail(self: DrawableRef; detail: int)	
 setCornerDetail	toshiko/graphics/drawable.html#setCornerDetail,DrawableRef,int,int,int,int	drawable: setCornerDetail(self: DrawableRef; d1, d2, d3, d4: int)	
 setTexture	toshiko/graphics/drawable.html#setTexture,DrawableRef,GlTextureObj	drawable: setTexture(self: DrawableRef; texture: GlTextureObj)	
+setShadowOffset	toshiko/graphics/drawable.html#setShadowOffset,DrawableRef,Vector2Ref	drawable: setShadowOffset(self: DrawableRef; offset: Vector2Ref)	
 setStyle	toshiko/graphics/drawable.html#setStyle,DrawableRef,StyleSheetRef	drawable: setStyle(self: DrawableRef; s: StyleSheetRef)	
