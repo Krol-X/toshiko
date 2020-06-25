@@ -12,8 +12,9 @@ type
   ButtonTouchHandler* = proc(self: ButtonRef, x, y: float): void
   ButtonObj* = object of LabelObj
     uppercase*: bool
-    action_mask*: cint
-    button_mask*: cint
+    disabled*: bool  ## not called `on_touch`, when true.
+    action_mask*: cint  ## `INPUT_BUTTON_RELEASE` or `INPUT_BUTTON_CLICK`.
+    button_mask*: cint  ## `INPUT_BUTTON_LEFT`, `INPUT_BUTTON_MIDDLE`, `INPUT_BUTTON_RIGHT`, `INPUT_BUTTON_X1` or `INPUT_BUTTON_X2`.
     on_touch*: ButtonTouchHandler
 
     hover_background*: DrawableRef
@@ -38,6 +39,7 @@ proc Button*(name: string = "Button", text: string = "Button"): ButtonRef =
   result.press_background.setColor(Color(1f, 1f, 1f, 0.1))
   result.on_touch = standard_button_handler
   result.uppercase = true
+  result.disabled = false
   result.action_mask = INPUT_BUTTON_RELEASE
   result.button_mask = INPUT_BUTTON_LEFT
   result.kind = BUTTON_NODE
@@ -84,7 +86,7 @@ method handle*(self: ButtonRef, event: InputEvent, mouse_on: var NodeRef) =
       self.focused = true
       self.on_focus(self, event.x, event.y)
     # Click
-    if mouse_pressed and not self.pressed:
+    if mouse_pressed and not self.pressed and not self.disabled:
       self.pressed = true
       self.on_click(self, event.x, event.y)
   elif not hasmouse or mouse_on != self:
@@ -99,7 +101,7 @@ method handle*(self: ButtonRef, event: InputEvent, mouse_on: var NodeRef) =
     self.pressed = false
     self.on_release(self, event.x, event.y)
 
-  if self.hovered and self.focused:
+  if self.hovered and self.focused and not self.disabled:
     if event.kind == MOUSE and self.action_mask == 1 and event.pressed and self.button_mask == event.button_index:
       self.on_touch(self, event.x, event.y)
     elif event.kind == MOUSE and self.action_mask == 0 and not event.pressed and self.button_mask == event.button_index:

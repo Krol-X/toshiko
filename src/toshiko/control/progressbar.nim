@@ -93,8 +93,8 @@ method draw*(self: ProgressBarRef, w, h: float) =
       progress_width = progress_percent * TAU
       cx = x + (self.rect_size.x / 2)
       cy = y - (self.rect_size.y / 2)
-      orad = max(self.rect_size.x, self.rect_size.y) / 2
-      irad = (max(self.rect_size.x, self.rect_size.y) / 2) - 5f
+      orad = min(self.rect_size.x, self.rect_size.y) / 2
+      irad = (min(self.rect_size.x, self.rect_size.y) / 2) - 5f
     # background:
     glColor4f(self.background.getColor().r, self.background.getColor().g, self.background.getColor().b, self.background.getColor().a)
     glBegin(GL_TRIANGLE_STRIP)
