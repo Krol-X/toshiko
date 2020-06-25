@@ -26,6 +26,18 @@ build:
       rect_size: Vector2(20, 120)
       progress_type: PROGRESS_BAR_VERTICAL
       indeterminate: true
+    # circle
+    - ProgressBar bar5:
+      value: 45
+      rect_position: Vector2(163, 0)
+      rect_size: Vector2(40, 40)
+      progress_type: PROGRESS_BAR_CIRCLE
+    - ProgressBar bar6:
+      value: 45
+      rect_position: Vector2(204, 0)
+      rect_size: Vector2(40, 40)
+      progress_type: PROGRESS_BAR_CIRCLE
+      indeterminate: true
 
 
 addMainScene(main)

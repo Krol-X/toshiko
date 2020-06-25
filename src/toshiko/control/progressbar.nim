@@ -5,13 +5,17 @@ import
   ../core,
   ../graphics/drawable,
   ../nodes/node,
-  control
+  control,
+  math
 
+
+const CIRCLE_STEP: float = TAU * 0.01
 
 type
   ProgressBarType* {.pure.} = enum
     PROGRESS_BAR_HORIZONTAL,
-    PROGRESS_BAR_VERTICAL
+    PROGRESS_BAR_VERTICAL,
+    PROGRESS_BAR_CIRCLE
   ProgressBarObj* = object of ControlObj
     indeterminate*: bool
     value*, max_value*: int
@@ -45,18 +49,17 @@ method changeProgressBar*(self: ProgressBarRef, ptype: ProgressBarType) {.base.}
 
 method draw*(self: ProgressBarRef, w, h: float) =
   ## It uses for redraw ProgressBar.
-  procCall self.ControlRef.draw(w, h)
   let
     x = -w/2 + self.rect_global_position.x
     y = h/2 - self.rect_global_position.y
 
   # draw progress
   let progress_percent = self.value / self.max_value
-  
-  glColor4f(self.progress_color.r, self.progress_color.g, self.progress_color.b, self.progress_color.a)
 
   case self.progress_type
   of PROGRESS_BAR_HORIZONTAL:
+    procCall self.ControlRef.draw(w, h)
+    glColor4f(self.progress_color.r, self.progress_color.g, self.progress_color.b, self.progress_color.a)
     let progress_width = progress_percent * self.rect_size.x
     if self.indeterminate:
       if self.indeterminate_val - progress_width < self.rect_size.x:
@@ -68,7 +71,10 @@ method draw*(self: ProgressBarRef, w, h: float) =
         normalize(x + self.indeterminate_val + progress_width, x, x + self.rect_size.x), y - self.rect_size.y)
     else:
       glRectf(x, y, x + progress_width, y - self.rect_size.y)
+
   of PROGRESS_BAR_VERTICAL:
+    procCall self.ControlRef.draw(w, h)
+    glColor4f(self.progress_color.r, self.progress_color.g, self.progress_color.b, self.progress_color.a)
     let progress_width = progress_percent * self.rect_size.y
     if self.indeterminate:
       if self.indeterminate_val - progress_width < self.rect_size.y:
@@ -80,6 +86,47 @@ method draw*(self: ProgressBarRef, w, h: float) =
         x + self.rect_size.x, normalize(y - self.indeterminate_val - progress_width, y - self.rect_size.y, y))
     else:
       glRectf(x, y, x + self.rect_size.x, y - progress_width)
+
+  of PROGRESS_BAR_CIRCLE:
+    self.calcRectGlobalPosition()
+    let
+      progress_width = progress_percent * TAU
+      cx = x + (self.rect_size.x / 2)
+      cy = y - (self.rect_size.y / 2)
+      orad = max(self.rect_size.x, self.rect_size.y) / 2
+      irad = (max(self.rect_size.x, self.rect_size.y) / 2) - 5f
+    # background:
+    glColor4f(self.background.getColor().r, self.background.getColor().g, self.background.getColor().b, self.background.getColor().a)
+    glBegin(GL_TRIANGLE_STRIP)
+    for i in 0..90:
+      let angle = TAU * (i/90)
+      glVertex2f(cx + orad*cos(angle), cy - orad*sin(angle))
+      glVertex2f(cx + irad*cos(angle), cy - irad*sin(angle))
+    glEnd()
+
+    # progress:
+    glColor4f(self.progress_color.r, self.progress_color.g, self.progress_color.b, self.progress_color.a)
+    if self.indeterminate:
+      if self.indeterminate_val - progress_width < TAU:
+        self.indeterminate_val += CIRCLE_STEP
+      else:
+        self.indeterminate_val = -progress_width
+      glBegin(GL_TRIANGLE_STRIP)
+      for i in 0..90:
+        let angle = TAU * (i/90)
+        if angle > self.indeterminate_val and angle < progress_width + self.indeterminate_val:
+          glVertex2f(cx + orad*cos(angle), cy - orad*sin(angle))
+          glVertex2f(cx + irad*cos(angle), cy - irad*sin(angle))
+      glEnd()
+    else:
+      glBegin(GL_TRIANGLE_STRIP)
+      for i in 0..90:
+        let angle = TAU * (i/90)
+        if angle < progress_width:
+          glVertex2f(cx + orad*cos(angle), cy - orad*sin(angle))
+          glVertex2f(cx + irad*cos(angle), cy - irad*sin(angle))
+      glEnd()
+
 
 method enableIndeterminate*(self: ProgressBarRef, val: bool = true) {.base.} =
   ## Enables or disables ProgressBar indeterminate.
