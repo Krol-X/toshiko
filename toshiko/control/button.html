@@ -111,8 +111,9 @@ function main() {
   <li><a class="reference" href="#ButtonObj"
     title="ButtonObj = object of LabelObj
   uppercase*: bool
-  action_mask*: cint
-  button_mask*: cint
+  disabled*: bool              ## not called `on_touch`, when true.
+  action_mask*: cint           ## `INPUT_BUTTON_RELEASE` or `INPUT_BUTTON_CLICK`.
+  button_mask*: cint           ## `INPUT_BUTTON_LEFT`, `INPUT_BUTTON_MIDDLE`, `INPUT_BUTTON_RIGHT`, `INPUT_BUTTON_X1` or `INPUT_BUTTON_X2`.
   on_touch*: ButtonTouchHandler
   hover_background*: DrawableRef
   press_background*: DrawableRef"><wbr />Button<wbr />Obj<span class="attachedType"></span></a></li>
@@ -171,8 +172,9 @@ function main() {
 <a id="ButtonObj"></a>
 <dt><pre><a href="button.html#ButtonObj"><span class="Identifier">ButtonObj</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="label.html#LabelObj"><span class="Identifier">LabelObj</span></a>
   <span class="Identifier">uppercase</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
-  <span class="Identifier">action_mask</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
-  <span class="Identifier">button_mask</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
+  <span class="Identifier">disabled</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>              <span class="Comment">## not called `on_touch`, when true.</span>
+  <span class="Identifier">action_mask</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>           <span class="Comment">## `INPUT_BUTTON_RELEASE` or `INPUT_BUTTON_CLICK`.</span>
+  <span class="Identifier">button_mask</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>           <span class="Comment">## `INPUT_BUTTON_LEFT`, `INPUT_BUTTON_MIDDLE`, `INPUT_BUTTON_RIGHT`, `INPUT_BUTTON_X1` or `INPUT_BUTTON_X2`.</span>
   <span class="Identifier">on_touch</span><span class="Operator">*</span><span class="Other">:</span> <a href="button.html#ButtonTouchHandler"><span class="Identifier">ButtonTouchHandler</span></a>
   <span class="Identifier">hover_background</span><span class="Operator">*</span><span class="Other">:</span> <a href="../graphics/drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a>
   <span class="Identifier">press_background</span><span class="Operator">*</span><span class="Other">:</span> <a href="../graphics/drawable.html#DrawableRef"><span class="Identifier">DrawableRef</span></a>
@@ -255,7 +257,7 @@ This method uses for handle user input.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-25 07:44:43 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-06-25 08:06:45 UTC</small>
       </div>
     </div>
   </div>
